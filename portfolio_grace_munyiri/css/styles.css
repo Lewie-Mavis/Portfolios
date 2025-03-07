@@ -1,0 +1,1630 @@
+/* Base Styles */
+:root {
+    --primary-color: #40E0D0;
+    --secondary-color: #f2f1f3;
+    --accent-color: #40E0D0;
+    --text-color: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+     scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+body {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+/* 🌟 Modern & Elegant Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 18px 50px;
+    background: rgba(106, 13, 173, 0.9); /* Semi-transparent background */
+    backdrop-filter: blur(12px); /* Glass effect */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 📌 Shrinking Effect on Scroll */
+header.scrolled {
+    background: rgba(106, 13, 173, 1);
+    padding: 12px 40px;
+}
+
+/* Logo */
+.logo {
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+    animation: pulse 2s infinite;
+}
+
+
+/* Navigation Links (Desktop) */
+/* Default Navigation Links (Desktop) */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+/* 🔥 Neon Glow Effect on Hover */
+.nav-links a:hover {
+    color: #40E0D0;
+    text-shadow: 0 0 10px rgba(64, 224, 208, 0.8), 0 0 20px rgba(64, 224, 208, 0.5);
+    transform: scale(1.05);
+}
+
+/* ✨ Underline Animation */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -3px;
+    left: 50%;
+    background: #40E0D0;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* 🍔 Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* 📱 Mobile Navigation */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Initially hidden */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%; /* Full width */
+        height: auto;
+        background: rgba(106, 13, 173, 0.9); /* Semi-transparent background */
+        backdrop-filter: blur(12px); /* Glass effect */
+        text-align: center;
+        padding: 20px 0;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 15px;
+        font-size: 1.0rem;
+        color: #fff;
+        transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: #40E0D0;
+        transform: scale(1.1);
+    }
+
+    /* Show full-width menu when toggled */
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+
+
+/*Hero Section*/
+.hero {
+    height: 70vh; /* Adjusted height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 10% 60px; /* Increased top padding to prevent overlap */
+    background: linear-gradient(135deg, #F0F8FF, #F5FFFA); /* Soft gradient background */
+    text-align: center;
+    position: relative;
+}
+
+/* Hero Content */
+.hero-content {
+    max-width: 80%; /* Increased width */
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15); /* Light Glassmorphism Effect */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 30px 50px; /* Balanced padding */
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2); /* Smooth 3D Shadow */
+    animation: fadeIn 1.5s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.hero-content:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25); /* Deeper Shadow on Hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        height: auto; /* Auto height for better responsiveness */
+        padding: 140px 5% 40px; /* Increased top padding for mobile */
+    }
+
+    .hero-content {
+        max-width: 95%; /* Full width on smaller screens */
+        padding: 25px;
+    }
+}
+
+
+
+/* Heading Styling */
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #6A0DAD;
+    font-weight: 700;
+
+}
+
+/* Subheading paragraph */
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Base Button Styling */
+.cta-button, .services-button {
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    display: inline-block;
+    min-width: 180px;
+    text-align: center;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    border: none;
+}
+
+/* CTA Button */
+.cta-button {
+    background: #6A0DAD;
+    box-shadow: 0 5px 15px rgba(106, 13, 173, 0.3);
+}
+
+.cta-button:hover {
+    background: #40E0D0;
+    box-shadow: 0 8px 20px rgba(64, 224, 208, 0.4);
+    transform: translateY(-3px);
+}
+
+/* Services Button */
+.services-button {
+    background: #40E0D0;
+    box-shadow: 0 5px 15px rgba(64, 224, 208, 0.3);
+}
+
+.services-button:hover {
+    background: #6A0DAD;
+    box-shadow: 0 8px 20px rgba(106, 13, 173, 0.4);
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding: 120px 5% 0; /* Extra top padding for mobile */
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cta-button, .services-button {
+        width: 100%;
+    }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* About Me Section */
+/* About Section */
+/* 🌟 Modern About Section */
+#about {
+    padding: 100px 10%;
+    background: linear-gradient(135deg, #F5FFFA, #E6E6FA); /* Subtle gradient for a premium feel */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🎭 Soft Floating Effect */
+#about:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ✨ About Section Grid */
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+/* 📸 Profile Image */
+.about-photo img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 40px rgba(106, 13, 173, 0.35);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+/* 💎 3D Hover Effect */
+.about-photo img:hover {
+    transform: scale(1.07) rotate(2deg);
+    box-shadow: 0 15px 50px rgba(106, 13, 173, 0.4);
+}
+
+/* 📝 About Description */
+.about-description {
+    max-width: 750px;
+    text-align: left;
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.8;
+    font-weight: 400;
+    transition: color 0.3s ease-in-out;
+}
+
+/* 📜 Smooth Paragraphs */
+.about-description p {
+    margin-bottom: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.about-description p:hover {
+    color: #6A0DAD;
+}
+
+/* 🚀 Read More Button */
+.btn-read-more {
+    background: linear-gradient(135deg, #40E0D0, #6A0DAD);
+    color: #fff;
+    border: none;
+    padding: 6px 11px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    display: inline-block;
+    margin-left: 10px;
+    box-shadow: 0 5px 12px rgba(64, 224, 208, 0.35);
+}
+
+/* 🎨 Button Hover Effect */
+.btn-read-more:hover {
+    background: linear-gradient(135deg, #6A0DAD, #40E0D0);
+    box-shadow: 0 8px 18px rgba(64, 224, 208, 0.4);
+    transform: translateY(-2px);
+}
+
+/* 🎯 Premium Consultation Button */
+.btn-consultation {
+    background: #40E0D0;
+	
+    color: #ffffff;
+    padding: 10px 22px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+    
+}
+
+/* 🚀 Hover Glow Effect */
+.btn-consultation:hover {
+    background: #6A0DAD;
+    box-shadow:0 8px 20px rgba(106, 13, 173, 0.35) ;
+    transform: translateY(-3px);
+}
+
+/* 📱 Responsive Design */
+@media screen and (max-width: 768px) {
+    #about {
+        padding: 80px 5%;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-photo img {
+        width: 240px;
+        height: 240px;
+    }
+
+    .about-description {
+        font-size: 1.1rem;
+    }
+
+    .about-description h2 {
+        font-size: 2.3rem;
+    }
+}
+
+/* 🎯 Center Button on Mobile */
+@media screen and (max-width: 768px) {
+    .btn-consultation {
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        width: fit-content;
+    }
+}
+
+
+/* Sections Common Styles */
+section {
+    padding: 100px 10%;
+    min-height: 100vh;
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+	color: #6A0DAD;
+}
+
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--primary-color);
+}
+
+/* Services Grid */
+#services {
+    padding: 80px 10%;
+    background:linear-gradient(135deg, #F0F8FF, #F5FFFA); /* Soft gradient background */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    color: #f0f0f0;
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+
+.service-card i {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+.service-card:hover i {
+    transform: scale(1.1) rotate(10deg);
+}
+
+.service-card {
+    background: linear-gradient(135deg, #6A0DAD 30%, #40E0D0 100%); /* Smooth blend of purple and turquoise */
+    padding: 45px;
+    border-radius: 18px; /* Modern rounded corners */
+    transition: all 0.4s ease-in-out;
+    border: 2px solid rgba(100, 255, 218, 0.3); /* Slightly brighter border */
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0px 10px 25px rgba(106, 13, 173, 0.4); /* Elegant glow */
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(8px); /* Glassmorphism effect */
+}
+
+
+
+/* 🟣 Add a subtle glowing effect on hover */
+.service-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0px 15px 40px rgba(100, 255, 218, 0.4); /* More glow */
+    background: linear-gradient(135deg, #6A0DAD, #9D4EDD);
+}
+
+/* ✨ Glow Animation Effect */
+.service-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(64, 224, 208, 0.3) 10%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+/* 💎 Modern Text Styling */
+.service-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+/* 🟢 Subtle Border Animation */
+.service-card:hover {
+    border-color: rgba(100, 255, 218, 0.6);
+}
+
+
+/* Portfolio Section */
+/* 🎨 Portfolio Section */
+#portfolio {
+    padding: 100px 10%;
+    background:F0F8FF;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    text-align: center;
+}
+
+/* 🔥 Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+}
+
+/* 🏆 Portfolio Card */
+.portfolio-item {
+    background: linear-gradient(135deg, rgba(106, 13, 173, 0.9), rgba(64, 224, 208, 0.9)); /* Bold gradient */
+    padding: 50px;
+    border-radius: 20px;
+    transition: all 0.4s ease-in-out;
+    border: 2px solid rgba(100, 255, 218, 0.3);
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0px 12px 30px rgba(106, 13, 173, 0.3);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🎯 Portfolio Item Hover */
+.portfolio-item:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0px 15px 40px rgba(100, 255, 218, 0.4);
+    background: linear-gradient(135deg, #6A0DAD, #9D4EDD);
+}
+
+/* ✨ Glow Animation */
+.portfolio-item::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(64, 224, 208, 0.3) 10%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.portfolio-item:hover::before {
+    opacity: 1;
+}
+
+/* 🔥 Portfolio Icon */
+.portfolio-item i {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #f8f8f8;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 🎯 Portfolio Title */
+.portfolio-item h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 💎 Portfolio Description */
+.portfolio-item p {
+    font-size: 16px;
+    opacity: 0.85;
+    max-width: 80%;
+}
+
+/* 🔥 Icon Hover Animation */
+.portfolio-item:hover i {
+    transform: scale(1.1) rotate(10deg);
+}
+
+/* 🛑 Border Animation */
+.portfolio-item:hover {
+    border-color: rgba(100, 255, 218, 0.7);
+}
+
+/* 📱 Responsive Design */
+@media screen and (max-width: 768px) {
+    #portfolio {
+        padding: 80px 5%;
+    }
+
+    .portfolio-item {
+        padding: 35px;
+    }
+
+    .portfolio-item i {
+        font-size: 3rem;
+    }
+
+    .portfolio-item h3 {
+        font-size: 22px;
+    }
+
+    .portfolio-item p {
+        font-size: 15px;
+    }
+}
+
+
+/* Numbers Section */
+/* Background for the numbers area */
+#numbers {
+    padding: 80px 10%;
+    background: linear-gradient(135deg, #f4f9ff, #dbeaff); /* Light gradient that complements purple */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    color: #f0f0f0;
+}
+.numbers-background {
+    background: rgba(106, 13, 173, 0.9); /* Semi-transparent background */
+    backdrop-filter: blur(12px); /* Glass effect */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 50px 10%;
+    border-radius: 0 50px 0 50px; /* Curvy on two sides, pointy on the other two */
+    margin: 50px 0;
+}
+
+/* Flexbox to display number cards in one row */
+.numbers-grid {
+    display: flex;
+    justify-content: space-between; /* Even spacing between the cards */
+    align-items: center; /* Center vertically */
+    gap: 20px; /* Space between number cards */
+}
+
+/* Number card styles */
+.number-card {
+    background: rgba(255, 255, 255, 0.08); /* Slightly more visible glass effect */
+    padding: 10px;
+    border-radius: 15px;
+    transition: all 0.4s ease-in-out;
+    border: 2px solid rgba(100, 255, 218, 0.2); /* Subtle neon border */
+    text-align: center;
+    flex: 1; /* Cards take equal width */
+    min-width: 180px; /* Ensuring good fit */
+    position: relative;
+    box-shadow: 0px 5px 20px rgba(106, 13, 173, 0.1); /* Soft shadow for depth */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    color: #fff;
+}
+
+/* 🟣 Elegant Hover Effect */
+.number-card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0px 10px 30px rgba(100, 255, 218, 0.4); /* Neon glow */
+    border-color: rgba(100, 255, 218, 0.6);
+}
+
+/* 🔥 Animated Glow Effect */
+.number-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(64, 224, 208, 0.3) 10%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.number-card:hover::before {
+    opacity: 1;
+}
+
+/* 💎 Modern Typography */
+.numbers-grid .number-card h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #40E0D0; /* Bright turquoise for contrast */
+    text-shadow: 0px 0px 10px rgba(64, 224, 208, 0.6); /* Soft neon glow */
+}
+
+/* Plus Sign Styling */
+.numbers-grid .number-card span {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #40E0D0; /* Royal purple */
+    margin-left: 5px;
+    text-shadow: 0px 0px 10px rgba(106, 13, 173, 0.6);
+}
+
+/* 🟢 Subtle Pulsing Animation */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.8; }
+}
+
+.number-card:hover h3,
+.number-card:hover span {
+    animation: pulse 0.8s infinite alternate ease-in-out;
+}
+
+
+/* Mobile View Adjustments */
+@media screen and (max-width: 768px) {
+    .numbers-background {
+        padding: 30px 5%; /* Reduced padding for smaller screens */
+    }
+
+    .numbers-grid {
+        flex-direction: column; /* Stack the cards vertically */
+        align-items: center; /* Center the cards */
+        gap: 20px; /* Space between the cards */
+    }
+
+    .number-card {
+        min-width: unset; /* Remove minimum width to allow the cards to be smaller */
+        width: 100%; /* Full width of the container */
+        padding: 20px;
+    }
+
+    .numbers-grid .number-card h3 {
+        font-size: 2rem; /* Smaller font size for numbers */
+    }
+
+    .numbers-grid .number-card span {
+        font-size: 2rem; /* Smaller font size for plus sign */
+    }
+}
+
+/* Articles Section Styling */
+/* Articles Section */
+#articles {
+    text-align: center;
+    padding: 60px 20px;
+    background: #EAE6FA; /* Light Lavender Mist - Complements Purple */
+    color: #333;
+}
+
+/* Articles Grid */
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Article Cards */
+.article-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    border-left: 6px solid #4B0082; /* Purple Accent */
+}
+
+.article-card i {
+    font-size: 2.2rem;
+    color: #40E0D0; /* Turquoise Icon */
+    margin-bottom: 15px;
+    transition: 0.3s ease-in-out;
+    display: block; /* Ensures it behaves as a block element */
+    text-align: center; /* Centers the icon */
+    width: 100%; /* Makes sure it spans the entire width */
+}
+
+
+/* Article Titles */
+.article-card h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #4B0082; /* Deep Purple */
+}
+
+/* Article Description */
+.article-card p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Hover Effects */
+.article-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    border-left: 6px solid #40E0D0; /* Switch to Turquoise */
+}
+
+.article-card:hover i {
+    color: #4B0082; /* Switch to Deep Purple */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Mentorship Section */
+/* Mentorship Section */
+#mentorship {
+    padding: 100px 10%;
+    background: linear-gradient(135deg, #f4f9ff, #dbeaff); /* Light gradient that complements purple */
+    color: #333;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.mentorship-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.mentorship-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Mentorship Content Layout */
+.mentorship-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Mentorship Image Styling */
+.mentorship-image {
+    flex: 1;
+    max-width: 350px;
+    text-align: center;
+}
+
+.mentorship-image img {
+    width: 100%;
+    max-height: 250px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.mentorship-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Mission & Impact */
+.mentorship-info {
+    flex: 1;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 20px rgba(106, 13, 173, 0.2);
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.mentorship-info h3 {
+    font-size: 2rem;
+    color: #40E0D0; /* Turquoise accent */
+    margin-bottom: 10px;
+}
+
+.mentorship-info p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Call-to-Action Button */
+.mentorship-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: #6A0DAD;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.mentorship-btn:hover {
+    background: #40E0D0;
+    transform: scale(1.05);
+}
+
+/* Success Stories */
+.mentorship-stories {
+    margin-top: 50px;
+}
+
+.mentorship-stories h3 {
+    font-size: 2rem;
+    color: #6A0DAD;
+    margin-bottom: 20px;
+}
+
+/* Stories Grid */
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Story Cards */
+.story-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    text-align: left;
+    transition: 0.3s ease-in-out;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.story-card h4 {
+    font-size: 1.3rem;
+    color: #40E0D0;
+    margin-bottom: 5px;
+}
+
+.story-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .mentorship-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mentorship-info, .mentorship-image {
+        max-width: 100%;
+    }
+}
+
+
+/* 📖 Blog Section */
+/* 📖 Blog Section */
+#blog {
+    padding: 100px 10%;
+    background: #EAE6FA; /* Light Lavender Mist - Complements Purple */
+    text-align: center;
+    position: relative;
+}
+
+/* 📝 Blog Grid */
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* 📄 Blog Card */
+.blog-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(64, 224, 208, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+/* ✨ Hover Effect */
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(64, 224, 208, 0.2);
+}
+
+/* 🔷 Font Awesome Icons */
+.blog-icon {
+    font-size: 3rem;
+    color: #6A0DAD;
+    margin-bottom: 15px;
+}
+
+/* 📝 Blog Content */
+.blog-content {
+    text-align: center;
+    padding: 15px;
+}
+
+/* 🏷️ Blog Title */
+.blog-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #6A0DAD;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* 📜 Blog Description */
+.blog-content p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* 🔗 Read More Button */
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #40E0D0;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* ✨ Hover Effect */
+.blog-card:hover .blog-content p {
+    color: #6A0DAD;
+    font-weight: 600;
+    transform: scale(1.05);
+}
+
+.read-more:hover {
+    color: #6A0DAD;
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+/* 📱 Responsive Design */
+@media screen and (max-width: 768px) {
+    #blog {
+        padding: 80px 5%;
+    }
+
+    .blog-card {
+        padding: 20px;
+    }
+
+    .blog-icon {
+        font-size: 2.5rem;
+    }
+
+    .blog-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .blog-content p {
+        font-size: 0.95rem;
+    }
+
+    .read-more {
+        font-size: 1rem;
+    }
+}
+
+
+
+/* 🌟 Awards Section */
+#awards {
+    padding: 100px 10%;
+    background: #f9f9f9; /* Clean, modern background */
+    text-align: center;
+    position: relative;
+}
+
+/* 🎖️ Awards Grid */
+.awards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* 🏅 Award Card */
+.award-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(106, 13, 173, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    text-decoration: none; /* Remove link underline */
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden; /* Prevents content overflow */
+}
+
+/* 🏆 Hover Effect */
+.award-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(106, 13, 173, 0.2);
+}
+
+/* 🖼️ Award Image */
+.award-card img {
+    width: 100%;
+    max-height: 250px; /* Allows dynamic height */
+    object-fit: contain; /* Ensures image maintains its original aspect ratio */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* 🏅 Award Info */
+.award-info {
+    text-align: center;
+    padding: 15px;
+}
+
+/* 🏅 Award Title */
+.award-info h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #6A0DAD;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* 🔗 Award Description */
+.award-info p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* ✨ Hover Effect for Award Description */
+.award-card:hover .award-info p {
+    color: #6A0DAD; /* Change text color on hover */
+    font-weight: 600;
+    transform: scale(1.05);
+}
+
+/* 🛑 Remove Underline for All Links */
+.award-card,
+.award-card:hover {
+    text-decoration: none;
+}
+
+/* 📱 Responsive Design */
+@media screen and (max-width: 768px) {
+    #awards {
+        padding: 80px 5%;
+    }
+
+    .award-card {
+        padding: 20px;
+    }
+
+    .award-card img {
+        max-height: 200px; /* Adjust image height for mobile */
+    }
+
+    .award-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .award-info p {
+        font-size: 0.95rem;
+    }
+}
+
+
+
+
+/* Testimonials Section */
+#testimonials {
+    padding: 100px 10%;
+    background: #EFFBFF;
+    color: #333;
+    text-align: center;
+    position: relative;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(106, 13, 173, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(106, 13, 173, 0.2);
+}
+
+.testimonial-quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #444;
+    text-align: center;
+    line-height: 1.6;
+    position: relative;
+}
+
+.testimonial-quote i {
+    color: #6A0DAD;
+    font-size: 1.3rem;
+    margin: 0 5px;
+}
+
+.testimonial-author {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #6A0DAD;
+    margin-top: 15px;
+}
+
+.stars {
+    margin-top: 10px;
+    color: #FFD700;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+    #testimonials {
+        padding: 80px 5%;
+    }
+
+    .testimonial-card {
+        padding: 20px;
+    }
+
+    .testimonial-quote {
+        font-size: 1rem;
+    }
+
+    .testimonial-author {
+        font-size: 1rem;
+    }
+}
+
+
+
+/* Contact Section Styles */
+/* Contact Section */
+#contact {
+    padding: 80px 10%;
+    background: linear-gradient(135deg, #ffffff, #B2EBF2, #6A0DAD); /* Smooth white, turquoise, and purple blend */
+    color: #333;
+    text-align: center;
+}
+
+/* Section Title */
+#contact .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+    color: #6A0DAD;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Contact Container with Glassmorphism */
+.contact-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.2); /* Glass effect */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-container:hover {
+    transform: translateY(-12px);
+}
+
+/* Input & Textarea Styling */
+.contact-form .input-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #333;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: 2px solid #6A0DAD;
+    background: #f9f9f9;
+}
+
+/* Placeholder Text */
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: #888;
+}
+
+/* Submit Button */
+.submit-button {
+    width: auto;
+    padding: 15px;
+    background: linear-gradient(135deg, #40E0D0, #6A0DAD);
+    color: #ffffff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(106, 13, 173, 0.3);
+    
+    /* Center the button */
+    display: block;
+    margin: 20px auto; /* Ensures centering */
+    text-align: center;
+}
+
+.submit-button i {
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+
+.submit-button:hover {
+        background: linear-gradient(135deg, #6A0DAD, #40E0D0);
+        box-shadow: 0 6px 15px rgba(64, 224, 208, 0.4);
+        transform: translateY(-4px);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #contact {
+        padding: 60px 5%;
+    }
+
+    .contact-container {
+        padding: 30px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 1rem;
+    }
+
+    .submit-button {
+        font-size: 1rem;
+    }
+}
+
+
+/* Footer Styles */
+/* Footer Styling */
+#footer {
+    background: rgba(106, 13, 173, 0.9); /* Semi-transparent background */
+    backdrop-filter: blur(12px); /* Glass effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: var(--text-color);
+    padding: 40px 10%;
+    font-size: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+	
+	
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Left Section (Address, Hours, Phone, Email) */
+.footer-left {
+    flex: 1;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-left p {
+    margin: 5px 0;
+}
+
+/* Middle Section (Menu) */
+.footer-menu {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-menu ul li {
+    margin: 10px 0;
+}
+
+.footer-menu ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-menu ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* Right Section (Social Links) */
+.footer-social {
+    flex: 1;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--accent-color);
+}
+
+/* Footer Bottom (Copyright) */
+.footer-bottom {
+    text-align: center;
+    font-size: 1.0rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    /* Stack the sections on smaller screens */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjust Menu Section */
+    .footer-menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-menu ul li {
+        margin: 5px 0;
+    }
+
+    /* Adjust Social Icons */
+    .footer-social {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .footer-social a {
+        margin: 0 8px;
+    }
+}
+
+/* Chat Button */
+.chat-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background:var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+.chat-btn:hover{
+	
+	    background: linear-gradient(135deg, #40E0D0, #6A0DAD);
+        box-shadow: 0 6px 15px rgba(64, 224, 208, 0.4);
+        transform: translateY(-2px);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
