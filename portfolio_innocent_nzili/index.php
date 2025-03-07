@@ -180,7 +180,7 @@
             </div>
             <div class="number-card">
                 <h3 class="count" data-target="10">0</h3><span>+</span>
-                <p>Years Experience</p>
+                <p>Years of Experience</p>
             </div>
         </div>
     </div>
