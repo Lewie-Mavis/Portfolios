@@ -1,0 +1,986 @@
+/* Base Styles */
+:root {
+    --primary-color: #DC143C;
+    --secondary-color: #D3D3D3;
+    --accent-color: #E0115F;
+    --text-color: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+     scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+body {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+/* Header Styling */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+    background: #0A1128;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+    animation: pulse 2s infinite;
+}
+
+/* Navigation Links (Desktop) */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #F479A2; /* Change text color */
+}
+
+/* Underline animation */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: var(--primary-color);
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* Mobile Responsive Navigation */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide menu on small screens */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #0A1128;
+        text-align: center;
+        padding: 20px 0;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 15px 0;
+        font-size: 1.2rem;
+    }
+
+    .menu-toggle {
+        display: block; /* Show hamburger menu */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show menu when toggled */
+    }
+}
+
+
+/* Hero Section */
+/* Hero Section */
+.hero {
+    height: 100vh; /* Full viewport height for desktop */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10%;
+    background: linear-gradient(45deg, #0a192f, #020c1b);
+    background: url('1.jpg') no-repeat center center/cover;
+}
+
+/* Hero Content */
+.hero-content {
+    max-width: 700px;
+    background: #f2f1f3; /* Solid light beige background */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(16, 40, 32, 0.3); /* Classy shadow */
+    backdrop-filter: blur(10px); /* Glass effect (optional, can be removed if not needed) */
+    text-align: center;
+    z-index: 2;
+
+    /* Centering */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        height: auto; /* Allow the height to adjust for mobile */
+        padding: 0 5%; /* Reduce the horizontal padding for smaller screens */
+    }
+
+    .hero-content {
+        margin-top: 10vh; /* Add margin-top to avoid content from getting too close to the top */
+        padding: 30px 20px; /* Adjust padding for mobile */
+    }
+}
+
+
+.hero h1 {
+    font-size: 3.7rem;
+    margin-bottom: 20px;
+    background:  #f2f1f3;
+    color:#0A1128;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+	color:#0A1128;
+}
+
+/* Container for buttons */
+.button-container {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: flex-start; /* Align buttons to the left */
+    gap: 20px; /* Add some space between the buttons */
+    flex-wrap: nowrap; /* Prevent buttons from wrapping to the next line */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any padding */
+    width: 100%; /* Ensure the container takes full width */
+}
+
+/* Base button styling */
+.cta-button, .services-button {
+    font-size: 1.1rem;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 0 50px 0 50px; /* Curvy on two sides, pointy on the other two */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: 0.3s;
+    padding: 20px;
+    display: inline-block;
+    min-width: 150px; /* Prevents buttons from becoming too small */
+    text-align: center; /* Center the text inside */
+}
+
+/* Styling for the CTA button */
+.cta-button {
+    background: #0A1128;
+}
+
+.cta-button:hover {
+    background-color: #DC143C;
+}
+
+/* Styling for the Services button */
+.services-button {
+    background: #DC143C;
+}
+
+.services-button:hover {
+    background-color: #0A1128;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .cta-button, .services-button {
+        width: 45%; /* Make each button take up 45% of the container */
+        padding: 15px; /* Slightly smaller padding for mobile */
+        font-size: 1rem; /* Slightly smaller font size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-button, .services-button {
+        width: 45%; /* Keep the buttons at 45% width for very small screens */
+        font-size: 0.9rem; /* Further reduce font size */
+        padding: 12px; /* Smaller padding for very small screens */
+    }
+}
+@media (max-width: 768px) {
+    .hero-content {
+        top: auto; /* Remove absolute centering */
+        transform: none; /* Disable translate */
+        left: auto;
+        position: relative; /* Use normal positioning */
+        margin-top: 20vh; /* Increased margin to show box shadow */
+        padding: 50px 30px; /* Increased padding */
+        box-shadow: 0 10px 30px rgba(16, 40, 32, 0.3); /* Ensure the shadow is visible */
+    }
+}
+
+
+
+
+
+/* About Me Section */
+#about {
+    padding: 80px 10%;
+    background-color: #E5E5E5;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.about-photo img {
+    width: 250px; /* Defined image size */
+    height: 250px;
+    border-radius: 5%;
+    object-fit: cover;
+    animation: bounce 2s infinite;
+    transition: transform 0.3s ease;
+}
+
+.about-photo img:hover {
+    transform: scale(1.1);
+}
+
+.about-description {
+    max-width: 700px;
+    font-size: 1.2rem;
+    color: #000000;
+    text-align: left;
+}
+
+.about-description p {
+    margin-bottom: 20px;
+
+}
+
+.btn-consultation {
+    background-color: #0A1128;
+    color: #ffffff;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 10px; /* Curvy on two sides, pointy on the other two */
+    transition: background-color 0.3s ease;
+	
+}
+
+.btn-consultation:hover {
+    background-color:#DC143C;
+	color:#ffffff;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #about {
+        padding: 60px 5%;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-photo img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-description {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+
+/* Sections Common Styles */
+section {
+    padding: 100px 10%;
+    min-height: 100vh;
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+	color: #0A1128;
+}
+
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--primary-color);
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: #0A1128; /* Deep dark green */
+    padding: 30px;
+    border-radius: 0 50px 0 50px; /* Curvy on two sides, pointy on the other two */
+    transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
+    border: 1px solid rgba(181, 157, 123, 0.3); /* Subtle beige border */
+    text-align: center;
+    color: #E3D5B8; /* Soft beige text */
+    position: relative; /* To allow absolute positioning of pseudo-elements */
+    overflow: hidden; /* To prevent pseudo-elements from overflowing */
+}
+
+.service-card i {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #DC143C; /* Beige accent */
+    transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
+}
+
+.service-card h3 {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+    color: #DC143C; /* Beige accent */
+    transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
+}
+.service-card p {
+    color: #FFFFFF; /* Beige accent */
+}    
+
+/* Hover Effect */
+.service-card:hover {
+    background: #1A1F3B; /* Slightly brighter dark blue */
+    transform: translateY(-5px); /* Slight elevation effect */
+    
+}
+
+/* Hover Effects for Icon and Heading */
+.service-card:hover i {
+    color: #E0115F; /* Change icon color to match text on hover */
+}
+
+.service-card:hover h3 {
+    color: #E0115F; /* Slightly lighter beige for the heading */
+}
+
+
+
+/* Portfolio Section */
+#portfolio {
+    padding: 80px 10%;
+    background: #E5E5E5; /* Deep dark green */
+    border-radius: 15px; /* Slightly rounded corners for modern appeal */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+    color: #E3D5B8; /* Soft beige text */
+    position: relative; /* To manage overlay elements */
+    overflow: hidden; /* Prevent overflow from pseudo-elements */
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    transition: grid-template-columns 0.3s ease; /* Smooth grid animation */
+}
+
+/* Portfolio Item */
+.portfolio-item {
+    background:  #0A1128; /* Dark green background */
+    padding: 30px;
+    border-radius: 15px; /* More rounded corners for a sleek look */
+    text-align: center;
+    border: 1px solid rgba(181, 157, 123, 0.3); /* Subtle beige border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    color: #E3D5B8; /* Beige text */
+    position: relative;
+    overflow: hidden; /* For containing pseudo-elements */
+}
+
+/* Portfolio Icons */
+.portfolio-icon {
+    font-size: 3rem;
+    color: #DC143C; /* Beige accent */
+    margin-bottom: 20px;
+    transition: color 0.3s ease; /* Smooth icon color change */
+}
+
+/* Portfolio Title */
+.portfolio-item h3 {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+    color: #DC143C; /* Beige accent */
+    font-weight: bold; /* Slight emphasis */
+    transition: color 0.3s ease;
+}
+
+/* Portfolio Description */
+.portfolio-item p {
+    color: #FFFFFF; /* Soft beige for readability */
+}
+
+/* Hover Effect for Portfolio Item */
+.portfolio-item:hover {
+    background: #1A1F3B; /* Slightly brighter dark blue */
+    transform: translateY(-5px); /* Slight elevation effect */
+}
+
+.portfolio-item:hover h3 {
+    color: #E0115F; /* Lighter beige for heading on hover */
+}
+
+.portfolio-item:hover p {
+    color: #FFFFFF; /* Dark green text for description */
+}
+
+/* Hover effect for the Icon */
+.portfolio-item:hover .portfolio-icon {
+    color: #E0115F; /* Change icon color to dark green */
+}
+
+/* Show pseudo-element overlay on hover */
+.portfolio-item:hover::before {
+    opacity: 1; /* Reveal the overlay */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #portfolio {
+        padding: 60px 5%;
+    }
+
+    .portfolio-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-item {
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 30px;
+    }
+}
+
+
+
+
+/* Numbers Section */
+/* Background for the numbers area */
+#numbers{
+	
+	background: #E1E0E3;
+}
+.numbers-background {
+    background: #0A1128; /* Dark background */
+    padding: 50px 10%;
+    border-radius: 0 50px 0 50px; /* Curvy on two sides, pointy on the other two */
+    margin: 50px 0;
+    backdrop-filter: blur(10px); /* Blur effect */
+}
+
+/* Flexbox to display number cards in one row */
+.numbers-grid {
+    display: flex;
+    justify-content: space-between; /* Even spacing between the cards */
+    align-items: center; /* Center vertically */
+    gap: 20px; /* Space between number cards */
+}
+
+/* Number card styles */
+.number-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    transition: 0.3s;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    text-align: center;
+    flex: 1; /* Cards take equal width */
+    min-width: 150px; /* Minimum width for better text fit */
+}
+
+/* Styling for the plus sign */
+.numbers-grid .number-card h3 {
+    display: inline-block;
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.numbers-grid .number-card span {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-left: 5px;
+}
+
+/* Mobile View Adjustments */
+@media screen and (max-width: 768px) {
+    .numbers-background {
+        padding: 30px 5%; /* Reduced padding for smaller screens */
+    }
+
+    .numbers-grid {
+        flex-direction: column; /* Stack the cards vertically */
+        align-items: center; /* Center the cards */
+        gap: 20px; /* Space between the cards */
+    }
+
+    .number-card {
+        min-width: unset; /* Remove minimum width to allow the cards to be smaller */
+        width: 100%; /* Full width of the container */
+        padding: 20px;
+    }
+
+    .numbers-grid .number-card h3 {
+        font-size: 2rem; /* Smaller font size for numbers */
+    }
+
+    .numbers-grid .number-card span {
+        font-size: 2rem; /* Smaller font size for plus sign */
+    }
+}
+
+/* Collaboration Grid */
+.collaboration-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+/* Collaboration Card */
+.collaboration-card {
+    background:  #0A1128; 
+    padding: 30px;
+    border-radius: 15px; /* Rounded corners for a modern look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border: 1px solid rgba(181, 157, 123, 0.3); /* Subtle beige border */
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+    color: #E3D5B8; /* Soft beige text */
+    position: relative;
+    overflow: hidden; /* Contain pseudo-elements */
+}
+
+/* Collaboration Icon */
+.collaboration-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #DC143C; /* Beige accent */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Collaboration Title */
+.collaboration-card h3 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #DC143C; /* Lighter beige for the title */
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+/* Collaboration Description */
+.collaboration-card p {
+    color: #FFFFFF; /* Soft beige for readability */
+}
+
+/* Hover Effect for Collaboration Card */
+.collaboration-card:hover {
+    background: #1A1F3B; /* Slightly brighter dark blue */
+    transform: translateY(-5px); /* Slight elevation effect */
+}
+
+/* Hover Effects for Icon, Title, and Description */
+.collaboration-card:hover h3 {
+    color: #E0115F; /* Lighter beige on hover */
+}
+
+.collaboration-card:hover p {
+    color: #FFFFFF; /* Dark green for text on hover */
+}
+
+.collaboration-card:hover .collaboration-icon {
+    color: #E0115F; /* Dark green icon color on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .collaboration-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .collaboration-card {
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 30px;
+    }
+}
+
+
+
+
+/* Testimonials Section */
+#testimonials {
+    background-color:#E5E5E5;
+}
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: var(--text-color);
+    padding: 30px;
+    border-radius: 0 50px 0 50px; /* Curvy on two sides, pointy on the other two */
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    color: #0A1128;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.stars {
+    margin-top: 10px;
+}
+
+.stars i {
+    color: #FFD700;
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+
+
+
+/* Contact Section Styles */
+/* Contact Section */
+#contact {
+    padding: 80px 10%;
+    background:  #0A1128;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#contact .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+	color: var(--primary-color);
+	
+}
+
+/* Contact Container */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--secondary-color);
+    padding: 30px;
+    border-radius: 0 50px 0 50px; /* Curvy on two sides, pointy on the other two */
+    border: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+/* Input & Textarea Styling */
+.contact-form .input-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #f7f7f7;
+    color: #000000;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    background: #ffffff;
+    outline: none;
+}
+
+/* Placeholder Text */
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: #717171;
+}
+
+/* Submit Button */
+.submit-button {
+    width: 100%;
+    padding: 15px;
+	background: #0A1128; 
+    color: #ffffff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button i {
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+
+.submit-button:hover {
+    background: var(--primary-color) ;
+    transform: translateY(-5px);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #contact {
+        padding: 60px 5%;
+    }
+
+    .contact-container {
+        padding: 25px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 1rem;
+    }
+
+    .submit-button {
+        font-size: 1rem;
+    }
+}
+
+
+/* Footer Styles */
+/* Footer Styling */
+#footer {
+    background-color: #0A1128;
+    color: var(--text-color);
+    padding: 40px 10%;
+    font-size: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Left Section (Address, Hours, Phone, Email) */
+.footer-left {
+    flex: 1;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-left p {
+    margin: 5px 0;
+}
+
+/* Middle Section (Menu) */
+.footer-menu {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-menu ul li {
+    margin: 10px 0;
+}
+
+.footer-menu ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-menu ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* Right Section (Social Links) */
+.footer-social {
+    flex: 1;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--accent-color);
+}
+
+/* Footer Bottom (Copyright) */
+.footer-bottom {
+    text-align: center;
+    font-size: 1.0rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    /* Stack the sections on smaller screens */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjust Menu Section */
+    .footer-menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-menu ul li {
+        margin: 5px 0;
+    }
+
+    /* Adjust Social Icons */
+    .footer-social {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .footer-social a {
+        margin: 0 8px;
+    }
+}
+
+/* Chat Button */
+.chat-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background:#DC143C;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+.chat-btn:hover{
+	
+	background-color: #E0115F;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
