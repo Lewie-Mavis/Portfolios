@@ -1,7 +1,7 @@
 /* Base Styles */
 :root {
     --primary-color:#33DAB4;
-    --secondary-color: #f2f1f3;
+    --secondary-color: #E1FFF4;
     --accent-color:#66E5D3;
     --text-color: #ffffff;
 }
@@ -329,7 +329,7 @@ section {
 #services {
     position: relative;
     overflow: hidden;
-    background: #f2f1f3; /* Light Grey Background */
+    background: #E1FFF4; /* Light Grey Background */
     padding: 80px 10%;
     text-align: center;
 }
@@ -427,7 +427,7 @@ section {
 /* Portfolio Section */
 #portfolio {
     padding: 100px 10%;
-    background: #f2f1f3; /* Light grey background */
+    background: #E1FFF4; /* Light grey background */
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -545,7 +545,7 @@ section {
 /* Background for the numbers area */
 #numbers{
 	
-	background: #E0E6FB;
+	background: #CCFFEB;
 }
 .numbers-background {
     background: #003B28; /* Dark background */
