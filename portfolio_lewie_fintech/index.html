@@ -33,7 +33,7 @@
     <!-- Hero Section -->
 <section class="hero">
     <div class="hero-content">
-        <h1>Innovation in FinTech, Blockchain & Cryptocurrencies</h1>
+        <h1>FinTech, Blockchain & Crypto Currencies</h1>
         <p>Next-Gen Financial Solutions | Secure Blockchain Technology | Expert in Digital Currencies</p>
         <div class="button-container">
             <a href="#contact" class="cta-button">Get In Touch</a>
