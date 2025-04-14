@@ -1,0 +1,1354 @@
+/* Base Styles */
+:root {
+    --primary-color:#FFFFFF;
+    --secondary-color: #F5F5F5;
+    --accent-color:#8B5E00;
+    --text-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+     scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+body {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+/* Header Styling */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+    background: #DAA520;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    font-size: 2rem;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Navigation Links (Desktop) */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color:var(--primary-color);
+    text-decoration: none;
+    position: relative;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background:#FFFFFF;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+/* Mobile Responsive Navigation */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide menu on small screens */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #DAA520; 
+        text-align: center;
+        padding: 20px 0;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 15px 0;
+        font-size: 1.2rem;
+    }
+
+    .menu-toggle {
+        display: block; /* Show hamburger menu */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show menu when toggled */
+    }
+}
+
+
+
+/* Hero Section */
+.hero {
+    min-height: 100vh; /* Allow section to grow if needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('1.jpg') no-repeat center center/cover;
+    box-sizing: border-box;
+}
+
+
+/* Centered content within hero */
+.hero-content {
+    max-width: 800px;
+    text-align: center; /* Ensure the content is centered horizontally */
+}
+
+.hero h1 {
+    font-size: 4rem;
+    color: #696880;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #000000;
+}
+
+/* Container for buttons */
+.button-container {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center buttons horizontally */
+    gap: 20px; /* Add some space between the buttons */
+    flex-wrap: nowrap; /* Prevent buttons from wrapping to the next line */
+    margin: 0 0 20px 0; /* Space at the bottom to separate from other content */
+    padding: 0; /* Remove any padding */
+    width: 100%; /* Ensure the container takes full width */
+    z-index: 0; /* Ensure the button container is above other content */
+}
+
+/* Auth Button Container (Sign Up and Login) */
+.auth-button-container {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the left */
+    gap: 20px; /* Add space between buttons */
+    margin-top: 20px; /* Add space between other content and buttons */
+    width: 100%; /* Ensure the container takes full width */
+    padding-left: 20px; /* Add padding on the left side */
+}
+
+/* Base button styling */
+.cta-button, .services-button {
+    font-size: 1.1rem;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 0 50px 0 50px; /* Curvy on two sides, pointy on the other two */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: 0.3s;
+    padding: 20px;
+    display: inline-block;
+    min-width: 150px; /* Prevents buttons from becoming too small */
+    text-align: center; /* Center the text inside */
+    z-index: 0; /* Ensure buttons are clickable above other content */
+}
+
+/* Styling for the CTA button */
+.cta-button {
+    background: #DAA520;
+}
+
+.cta-button:hover {
+    background-color: #696880;
+}
+
+/* Styling for the Services button */
+.services-button {
+    background: #696880;
+}
+
+.services-button:hover {
+    background-color: #DAA520;
+}
+
+/* Sign Up Button */
+.signup-button {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    border: 2px solid #4CAF50;
+    padding: 8px 20px;
+    font-size: 1.1rem; /* Smaller font size */
+    font-weight: bold;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.signup-button:hover {
+    background-color: #45a049;
+    border-color: #45a049;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Login Button */
+.login-button {
+    background-color: #3498db; /* Blue background */
+    color: white;
+    border: 2px solid #2980b9;
+    padding: 8px 20px;
+    font-size: 1.1rem; /* Smaller font size */
+    font-weight: bold;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.login-button:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Optional: Mobile Responsiveness */
+@media (max-width: 768px) {
+    .cta-button, .services-button {
+        width: 45%; /* Make each button take up 45% of the container */
+        padding: 15px; /* Slightly smaller padding for mobile */
+        font-size: 1rem; /* Slightly smaller font size for mobile */
+    }
+
+    .signup-button, .login-button {
+        width: 100%; /* Full width on mobile for better usability */
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-button, .services-button {
+        width: 100%; /* Buttons take full width on very small screens */
+        font-size: 0.9rem; /* Further reduce font size */
+        padding: 12px; /* Smaller padding for very small screens */
+    }
+}
+
+
+
+
+/* About Me Section */
+#about {
+    padding: 80px 10%;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* Image Slider Styling */
+.about-photo-slider {
+    position: relative;
+    width: 100%; /* Set to 100% to cover the full width of the screen */
+    max-width: 1200px; /* You can adjust this value to control the maximum width */
+    height: 500px; /* Adjust the height as needed */
+    overflow: hidden;
+    border-radius: 20px; /* Apply rounded corners to the slider container */
+    margin: 0 auto; /* Center the slider horizontally */
+	background-color: #000000;
+}
+
+.about-photo-slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Ensure the slide takes up the full height of the container */
+    opacity: 0; /* Initially set all slides as hidden */
+    transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
+}
+
+.about-photo-slider .slide img {
+    width: 100%; /* Make sure image takes the full width of the container */
+    height: 100%; /* Make sure image takes the full height of the container */
+    object-fit: contain; /* Ensures the entire image is visible without cropping */
+    transition: transform 0.3s ease; /* Smooth transitions */
+    border-radius: 20px; /* Rounded corners for the images */
+}
+
+/* Hover effect for the images */
+.about-photo-slider .slide img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Ensure the images are responsive on mobile */
+@media (max-width: 768px) {
+    .about-photo-slider {
+        height: 400px; /* Adjust the height for smaller screens */
+    }
+}
+
+.about-description {
+    max-width: 700px;
+    font-size: 1.2rem;
+    color: #000000;
+    text-align: left;
+    padding-top: 10px;
+}
+
+.about-description p {
+    margin-bottom: 20px;
+}
+
+.btn-consultation {
+    background-color: #DAA520;
+    color: #FFFFFF;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 10px; /* Curvy on two sides, pointy on the other two */
+    transition: background-color 0.3s ease;
+}
+
+.btn-consultation:hover {
+    background-color: #696880;
+    color: #ffffff;
+}
+
+/* Responsive Design Adjustments */
+@media screen and (max-width: 768px) {
+    #about {
+        padding: 60px 5%;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-photo img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-description {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+
+
+
+
+/* Sections Common Styles */
+section {
+    padding: 100px 10%;
+    min-height: 100vh;
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+	color: #DAA520;
+}
+
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background:#696880;
+}
+
+/* Services Section */
+#services {
+    position: relative;
+    background: #f9f9f9;
+    padding: 100px 8% 80px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Grid Layout */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+/* Service Card */
+.service-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon Styling */
+.service-card i {
+    font-size: 3rem;
+    color:#DAA520; /* Deep Green/Navy Accent */
+    margin-bottom: 20px;
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover i {
+    transform: rotateY(360deg) scale(1.1);
+}
+
+/* Service Title */
+.service-card h3 {
+    font-size: 1.6rem;
+    color: #1F1F1F;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Service Description */
+.service-card p {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 5px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    #services {
+        padding: 70px 5% 60px;
+    }
+
+    .services-grid {
+        gap: 30px;
+    }
+
+    .service-card {
+        padding: 30px 20px;
+    }
+}
+
+
+/* Books Section */
+/* Styling the Slider */
+.about-photo-sliderbooks {
+    width: 100%;
+    max-width: 800px; /* Adjust as per your requirement */
+    margin: 0 auto;
+    overflow: hidden; /* Hides the images outside the container */
+    position: relative;
+}
+
+.slides-container {
+    display: flex;
+    transition: transform 1s ease-in-out; /* Smooth transition for sliding */
+}
+
+.slide {
+    min-width: 100%;
+    transition: opacity 1s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Styling the Image Container */
+.image-container {
+    width: 100%; /* Make the container fill the width of the screen */
+    height: 400px; /* Limit the height of the image */
+    overflow: hidden; /* Hide any overflow from the image */
+    margin-bottom: 30px; /* Space between the image and the books section */
+    position: relative;
+}
+
+.dr-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container, cropping if necessary */
+}
+
+/* Styling the Introduction Paragraph */
+.introduction {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px; /* Space between the introduction and books container */
+    padding: 0 20px; /* Optional: padding for spacing on smaller screens */
+}
+
+/* Styling the Books Container */
+.books-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Makes the layout responsive */
+    gap: 20px; /* Space between items */
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Styling Each Book Item */
+.book-item {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.book-item:hover {
+    transform: translateY(-10px); /* Adds a hover effect */
+}
+
+/* Styling the Book Image */
+.book-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Styling the Book Description */
+.book-description {
+    padding: 15px;
+}
+
+.book-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.book-summary {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Optional: Add a container for book items on smaller screens */
+@media (max-width: 768px) {
+    .books-container {
+        justify-content: center;
+    }
+
+    .book-item {
+        width: 80%; /* Smaller width on mobile */
+    }
+}
+
+#books {
+    padding: 80px 10%;
+    background: #F5F5F5; /* Light grey background */
+    text-align: center;
+}
+
+/* Books Container */
+.books-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Book Card */
+.book-card {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure the content takes full height */
+    height: 100%;
+}
+
+.book-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Book Image */
+.book-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Book Details */
+.book-details {
+    padding: 20px;
+    flex-grow: 1; /* Ensures the book details take the remaining space */
+}
+
+/* Book Title */
+.book-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Book Description */
+.book-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Rating Stars */
+.stars i {
+    color: #FFD700; /* Gold for stars */
+    margin-right: 5px;
+}
+
+/* Book Price */
+.book-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Floating CTA Button */
+.ctab-button {
+    font-size: 1.1rem; /* Font size */
+    background: #DAA520; /* Gold background for button */
+    color: #ffffff;
+    padding: 8px 16px; /* Reduced padding for a more compact button */
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: auto; /* Pushes the button to the bottom of the card */
+    margin-bottom: 30px; /* Increased space between button and card bottom */
+    width: 50%; /* Sets width to 50% of the card */
+    text-align: center; /* Centers the text inside the button */
+    box-sizing: border-box; /* Ensures padding doesn't affect width calculation */
+    margin-left: auto;
+    margin-right: auto; /* Centers the button horizontally */
+}
+
+
+.ctab-button:hover {
+    background-color: #696880; /* Lighter gold for hover */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .book-card {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 30px;
+    }
+}
+/* Book Link */
+.book-link {
+    text-decoration: none; /* Remove underline from the link */
+    color: inherit; /* Ensure the text color is inherited from the parent */
+}
+
+/* Optional: Remove underline specifically for the 'Add to Cart' CTA button */
+.ctab-button {
+    text-decoration: none; /* Remove underline */
+}
+
+
+/* Numbers Section */
+/* Background for the numbers area */
+#numbers{
+	
+	background: #F5F5F5;
+}
+.numbers-background {
+    background: #DAA520; /* Dark background */
+    padding: 50px 10%;
+    border-radius: 0 50px 0 50px; /* Curvy on two sides, pointy on the other two */
+    margin: 50px 0;
+    backdrop-filter: blur(10px); /* Blur effect */
+}
+
+/* Flexbox to display number cards in one row */
+.numbers-grid {
+    display: flex;
+    justify-content: space-between; /* Even spacing between the cards */
+    align-items: center; /* Center vertically */
+    gap: 20px; /* Space between number cards */
+}
+
+/* Number card styles */
+.number-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    transition: 0.3s;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    text-align: center;
+    flex: 1; /* Cards take equal width */
+    min-width: 150px; /* Minimum width for better text fit */
+}
+
+/* Styling for the plus sign */
+.numbers-grid .number-card h3 {
+    display: inline-block;
+    font-size: 3rem;
+    color:var(--primary-color);
+}
+
+.numbers-grid .number-card span {
+    font-size: 3rem;
+    color:var(--primary-color);
+    margin-left: 5px;
+}
+.numbers-grid .number-card p {
+    color:var(--primary-color);
+}
+
+/* Mobile View Adjustments */
+@media screen and (max-width: 768px) {
+    .numbers-background {
+        padding: 30px 5%; /* Reduced padding for smaller screens */
+    }
+
+    .numbers-grid {
+        flex-direction: column; /* Stack the cards vertically */
+        align-items: center; /* Center the cards */
+        gap: 20px; /* Space between the cards */
+    }
+
+    .number-card {
+        min-width: unset; /* Remove minimum width to allow the cards to be smaller */
+        width: 100%; /* Full width of the container */
+        padding: 20px;
+    }
+
+    .numbers-grid .number-card h3 {
+        font-size: 2rem; /* Smaller font size for numbers */
+    }
+
+    .numbers-grid .number-card span {
+        font-size: 2rem; /* Smaller font size for plus sign */
+    }
+}
+
+/* Events Section Styling */
+#events {
+    background: #F5F5F5; /* Light gray background */
+    padding: 80px 10%;
+    text-align: center;
+}
+
+/* Events Container (Grid Layout) */
+.events-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Responsive grid */
+    gap: 30px;
+}
+
+/* Individual Event Card */
+.event-card {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Event Icon */
+.event-icon {
+    background-color: #DAA520; /* Gold background for icons */
+    color: #ffffff;
+    font-size: 3rem;
+    padding: 20px;
+    border-radius: 50%; /* Make the icon container circular */
+    width: 80px; /* Set the width to make it a perfect circle */
+    height: 80px; /* Set the height to match the width */
+    display: flex; /* Use flexbox to center the content */
+    justify-content: center; /* Horizontally center the icon */
+    align-items: center; /* Vertically center the icon */
+    margin: 20px auto; /* Center the icon horizontally within the card */
+}
+
+
+/* Event Details Section */
+.event-details {
+    padding: 20px;
+}
+
+.event-title {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.event-date, .event-location {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.event-description {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Register Button */
+.event-button {
+    display: inline-block;
+    background-color: #DAA520; /* Gold Button */
+    padding: 12px 30px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+.event-button:hover {
+    background-color: #696880;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .events-container {
+        grid-template-columns: 1fr; /* Stack events on small screens */
+    }
+
+    .event-title {
+        font-size: 1.5rem; /* Smaller font size for the title on mobile */
+    }
+
+    .event-description {
+        font-size: 0.9rem; /* Smaller text for mobile */
+    }
+
+    .event-button {
+        padding: 10px 20px; /* Smaller button for mobile */
+    }
+}
+
+
+
+
+/* Styling the Featured In Section */
+.featured-in-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Default 4 items per row for desktop */
+    gap: 30px; /* Space between logos */
+    justify-items: center;
+    align-items: center;
+    margin: 0; /* No margin, ensuring full width */
+    padding: 0 10px; /* Adds slight padding to prevent logos from touching the edges */
+    width: 100%; /* Full width of the screen */
+}
+
+/* Styling Each Featured Item */
+.featured-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 250px; /* Max width for each logo */
+    height: auto;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Featured Logo */
+.featured-logo {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensures logos are contained within their div */
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect for Featured Logos */
+.featured-item:hover .featured-logo {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.featured-item:hover {
+    transform: translateY(-10px); /* Slight lift effect on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add box-shadow for hover */
+}
+
+/* Mobile View (1 item per row) */
+@media (max-width: 768px) {
+    .featured-in-section {
+        grid-template-columns: 1fr; /* One item per row on mobile */
+    }
+}
+
+/* Newsletter Section */
+
+.newsletter-content p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Newsletter Form */
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Email Input */
+.email-input {
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    width: 60%;
+    max-width: 400px;
+    transition: border-color 0.3s ease;
+}
+
+.email-input:focus {
+    border-color: #3498db; /* Focus effect */
+    outline: none;
+}
+
+/* Sign Up Button */
+.signup-button {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.signup-button:hover {
+    background-color: #45a049;
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .newsletter-form {
+        flex-direction: column; /* Stack input and button on smaller screens */
+        gap: 10px;
+    }
+
+    .email-input {
+        width: 100%; /* Make email input full width on mobile */
+    }
+
+    .signup-button {
+        width: 100%; /* Make the button full width on mobile */
+    }
+}
+
+
+/* Testimonial Card Styling */
+.testimonial-card {
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    transition: 0.3s;
+	color:#000000;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Star Rating Above the Image */
+.stars {
+    margin-bottom: 20px; /* Add space between stars and the name/image */
+    color: #FFD700; /* Gold color for stars */
+    font-size: 1.2rem;
+}
+
+/* Flexbox for the Name and Image */
+.testimonial-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Space between the text and the name */
+}
+
+.testimonial-image {
+    margin-right: 15px; /* Space between the image and the name */
+}
+
+.testimonial-image img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Round the image */
+    object-fit: cover;
+}
+
+.testimonial-info h3 {
+    font-size: 1.2rem;
+    color: #333; /* Dark text for the name */
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Grid Layout */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px 0;
+}
+
+/* Ensure that the text content doesn't overlap with the image */
+.testimonial-card p, .testimonial-card .stars {
+    margin-bottom: 30px; /* Space between text and star rating */
+}
+
+
+
+
+/* Contact Section Styles */
+/* Contact Section */
+#contact {
+    padding: 80px 10%;
+    background-color: #DAA520;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#contact .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+	color:var(--primary-color);
+	
+}
+
+/* Contact Container */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #E0E0E0;
+    padding: 30px;
+    border-radius: 0 50px 0 50px; /* Curvy on two sides, pointy on the other two */
+    border: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+/* Input & Textarea Styling */
+.contact-form .input-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #f7f7f7;
+    color: #000000;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    background: #ffffff;
+    outline: none;
+}
+
+/* Placeholder Text */
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: #717171;
+}
+
+/* Submit Button */
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    background:  #DAA520;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button i {
+    margin-right: 10px;
+    font-size: 1.3rem;
+	color:#FFFFFF;
+}
+
+.submit-button:hover {
+    background: #B8860B ;
+    transform: translateY(-5px);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #contact {
+        padding: 60px 5%;
+    }
+
+    .contact-container {
+        padding: 25px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 1rem;
+    }
+
+    .submit-button {
+        font-size: 1rem;
+    }
+}
+
+
+/* Footer Styles */
+/* Footer Styling */
+#footer {
+    background-color: #DAA520;
+    color: #000000;
+    padding: 40px 10%;
+    font-size: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Left Section (Address, Hours, Phone, Email) */
+.footer-left {
+    flex: 1;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-left p {
+    margin: 5px 0;
+}
+
+/* Middle Section (Menu) */
+.footer-menu {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-menu ul li {
+    margin: 10px 0;
+}
+
+.footer-menu ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-menu ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* Right Section (Social Links) */
+.footer-social {
+    flex: 1;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.footer-social a {
+    text-decoration: none;
+    color:#000000;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--accent-color);
+}
+
+/* Footer Bottom (Copyright) */
+.footer-bottom {
+    text-align: center;
+    font-size: 1.0rem;
+    color:#000000;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    /* Stack the sections on smaller screens */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjust Menu Section */
+    .footer-menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-menu ul li {
+        margin: 5px 0;
+    }
+
+    /* Adjust Social Icons */
+    .footer-social {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .footer-social a {
+        margin: 0 8px;
+    }
+}
+
+/* Chat Button */
+.chat-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #B8860B;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+.chat-btn:hover{
+	
+	background-color: #8B5E00;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
