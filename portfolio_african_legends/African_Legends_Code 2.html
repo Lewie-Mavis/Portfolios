@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>African Legends Publishing</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #8b0000;
+      --secondary: #d4af37;
+      --accent: #006b3f;
+      --dark: #1a1a1a;
+      --light: #f9f6f0;
+      --text: #333;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text);
+      background-color: var(--light);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+
+    /* Header Styles */
+    header {
+      background: linear-gradient(to right, var(--dark), var(--primary));
+      color: white;
+      padding: 15px 5%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo {
+      height: 60px;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    }
+
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--secondary);
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links li {
+      margin: 0 12px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-links a:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--secondary);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover:after {
+      width: 100%;
+    }
+
+    .nav-links a:hover {
+      color: var(--secondary);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                  url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 120px 5%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 90vh;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      line-height: 1.2;
+      max-width: 900px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .hero p {
+      font-size: 1.4rem;
+      margin-bottom: 40px;
+      max-width: 700px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 14px 32px;
+      border: none;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .btn-primary {
+      background: var(--secondary);
+      color: var(--dark);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid var(--secondary);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary:hover {
+      background: #c19b2c;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(212, 175, 55, 0.1);
+    }
+
+    /* Section Styles */
+    .section {
+      padding: 80px 5%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+      position: relative;
+    }
+
+    .section-title h2 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      display: inline-block;
+    }
+
+    .section-title h2:after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: var(--secondary);
+      margin: 15px auto;
+      border-radius: 2px;
+    }
+
+    /* Featured Authors */
+    .authors {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 40px;
+      justify-content: center;
+    }
+
+    .author-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .author-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .author-img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .author-content {
+      padding: 25px;
+      position: relative;
+    }
+
+    .author-content h3 {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      color: var(--dark);
+    }
+
+    .author-content em {
+      color: var(--primary);
+      font-style: normal;
+      display: block;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .author-content p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .author-link {
+      display: inline-flex;
+      align-items: center;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .author-link:hover {
+      color: var(--primary);
+      transform: translateX(5px);
+    }
+
+    /* Why Publish Section */
+    .why-publish {
+      background: linear-gradient(to right, var(--dark), var(--primary));
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .why-publish .section-title h2 {
+      color: var(--secondary);
+    }
+
+    .why-publish-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .publish-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      transition: var(--transition);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    .publish-card:hover {
+      transform: translateY(-8px);
+      background: rgba(212, 175, 55, 0.15);
+      border-color: var(--secondary);
+    }
+
+    .publish-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: var(--secondary);
+    }
+
+    .publish-card strong {
+      display: block;
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+
+    .quote-container {
+      max-width: 800px;
+      margin: 60px auto 0;
+      text-align: center;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      border-left: 4px solid var(--secondary);
+    }
+
+    .quote {
+      font-style: italic;
+      font-size: 1.4rem;
+      line-height: 1.6;
+      position: relative;
+      padding: 0 30px;
+    }
+
+    .quote:before, .quote:after {
+      content: '"';
+      font-size: 3rem;
+      position: absolute;
+      color: var(--secondary);
+      opacity: 0.3;
+    }
+
+    .quote:before {
+      top: -20px;
+      left: -10px;
+    }
+
+    .quote:after {
+      bottom: -40px;
+      right: -10px;
+    }
+
+    /* Stories Section */
+    .stories-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 25px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .story-card {
+      display: flex;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .story-card:hover {
+      transform: translateX(10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .story-img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .story-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .story-content strong {
+      font-size: 1.2rem;
+      display: block;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    .story-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .story-link:hover {
+      color: var(--primary);
+    }
+
+    /* Mission Section */
+    .mission {
+      background: url('https://images.unsplash.com/photo-1542662565-7e4b66bae529?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center;
+      background-size: cover;
+      position: relative;
+      text-align: center;
+    }
+
+    .mission-overlay {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 80px 5%;
+    }
+
+    .mission .section-title h2 {
+      color: var(--secondary);
+    }
+
+    .mission-quote {
+      font-size: 1.8rem;
+      max-width: 900px;
+      margin: 0 auto 40px;
+      color: white;
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    .mission-quote span {
+      color: var(--secondary);
+      font-weight: 700;
+    }
+
+    /* Contact Section */
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .contact-icon {
+      font-size: 1.8rem;
+      color: var(--secondary);
+      min-width: 50px;
+      text-align: center;
+    }
+
+    .contact-details h3 {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+      color: var(--primary);
+    }
+
+    .contact-form {
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-group {
+      margin-bottom: 25px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      border-color: var(--secondary);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+    }
+
+    textarea.form-control {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(to right, var(--dark), var(--primary));
+      color: white;
+      padding: 60px 5% 30px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      max-width: 1400px;
+      margin: 0 auto 50px;
+    }
+
+    .footer-logo {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .footer-logo img {
+      width: 180px;
+      filter: brightness(0) invert(1);
+    }
+
+    .footer-logo p {
+      max-width: 300px;
+      opacity: 0.8;
+    }
+
+    .footer-links h3, .footer-social h3 {
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+      color: var(--secondary);
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      transition: var(--transition);
+      display: inline-block;
+    }
+
+    .footer-links a:hover {
+      color: var(--secondary);
+      transform: translateX(5px);
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .social-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: white;
+      font-size: 1.2rem;
+      transition: var(--transition);
+    }
+
+    .social-icon:hover {
+      background: var(--secondary);
+      transform: translateY(-5px);
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      opacity: 0.7;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+      
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .nav-links {
+        position: fixed;
+        top: 90px;
+        left: -100%;
+        background: var(--dark);
+        width: 100%;
+        height: calc(100vh - 90px);
+        flex-direction: column;
+        align-items: center;
+        padding-top: 40px;
+        transition: var(--transition);
+      }
+      
+      .nav-links.active {
+        left: 0;
+      }
+      
+      .nav-links li {
+        margin: 15px 0;
+      }
+      
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+      
+      .hero p {
+        font-size: 1.2rem;
+      }
+      
+      .story-card {
+        flex-direction: column;
+      }
+      
+      .story-img {
+        width: 100%;
+        height: 200px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero {
+        padding: 80px 5%;
+      }
+      
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+      
+      .btn {
+        width: 100%;
+      }
+      
+      .section-title h2 {
+        font-size: 2rem;
+      }
+      
+      .quote {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <div class="logo-text">African Legends</div>
+    </div>
+    
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#publish">Get Published</a></li>
+        <li><a href="#authors">Authors</a></li>
+        <li><a href="#stories">Stories</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Bring Your Story to Life. Inspire Generations.</h1>
+    <p>African stories. African voices. African legacies—crafted to influence the world.</p>
+    <div class="hero-buttons">
+      <button class="btn btn-primary">Start Your Journey</button>
+      <button class="btn btn-secondary">Meet Our Authors</button>
+    </div>
+  </section>
+
+  <!-- Featured Authors -->
+  <section class="section" id="authors">
+    <div class="section-title">
+      <h2>Featured Authors</h2>
+    </div>
+    
+    <div class="authors">
+      <div class="author-card">
+        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Andrew Mutha Kabeke" class="author-img">
+        <div class="author-content">
+          <h3>Andrew Mutha Kabeke</h3>
+          <em>UNSILENCED</em>
+          <p>A battle cry for the unheard that challenges conventions and gives voice to the marginalized.</p>
+          <a href="#" class="author-link">View Profile <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      
+      <div class="author-card">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gakinya Ndegwa" class="author-img">
+        <div class="author-content">
+          <h3>Gakinya Ndegwa</h3>
+          <em>The Man Who Refused to Fail</em>
+          <p>40 failures. One unshakable purpose. A testament to resilience and determination.</p>
+          <a href="#" class="author-link">View Profile <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      
+      <div class="author-card">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Funmi Akinyemi" class="author-img">
+        <div class="author-content">
+          <h3>Funmi Akinyemi</h3>
+          <em>Cracking the Gen Z Code</em>
+          <p>Decode the generation reshaping the world. Essential reading for leaders and educators.</p>
+          <a href="#" class="author-link">View Profile <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Publish With Us -->
+  <section class="section why-publish" id="publish">
+    <div class="section-title">
+      <h2>Why Publish With Us</h2>
+    </div>
+    
+    <div class="why-publish-grid">
+      <div class="publish-card">
+        <div class="publish-icon">
+          <i class="fas fa-microphone-alt"></i>
+        </div>
+        <strong>Guided Interviews</strong>
+        <p>Extract your story with ease through our structured interview process</p>
+      </div>
+      
+      <div class="publish-card">
+        <div class="publish-icon">
+          <i class="fas fa-pen-fancy"></i>
+        </div>
+        <strong>Ghostwriting & Editing</strong>
+        <p>From idea to final manuscript with our expert writing team</p>
+      </div>
+      
+      <div class="publish-card">
+        <div class="publish-icon">
+          <i class="fas fa-paint-brush"></i>
+        </div>
+        <strong>Professional Design</strong>
+        <p>Cover and layout crafted with excellence and cultural sensitivity</p>
+      </div>
+      
+      <div class="publish-card">
+        <div class="publish-icon">
+          <i class="fas fa-globe-africa"></i>
+        </div>
+        <strong>Global Distribution</strong>
+        <p>Amazon & local publishing—globally listed, locally printed</p>
+      </div>
+      
+      <div class="publish-card">
+        <div class="publish-icon">
+          <i class="fas fa-chalkboard-teacher"></i>
+        </div>
+        <strong>Author Coaching</strong>
+        <p>Influence training and media preparation for maximum impact</p>
+      </div>
+    </div>
+    
+    <div class="quote-container">
+      <p class="quote">"In 90 days, you'll be holding your book in your hands, ready to share your story with the world."</p>
+    </div>
+  </section>
+
+  <!-- Stories Section -->
+  <section class="section" id="stories">
+    <div class="section-title">
+      <h2>Voices That Move Nations</h2>
+    </div>
+    
+    <div class="stories-container">
+      <div class="story-card">
+        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Failure story" class="story-img">
+        <div class="story-content">
+          <strong>"How Failure Became Gakinya's Greatest Mentor"</strong>
+          <p>Discover how embracing setbacks transformed one man's journey to success.</p>
+          <a href="#" class="story-link">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+      
+      <div class="story-card">
+        <img src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gen Z story" class="story-img">
+        <div class="story-content">
+          <strong>"Why Gen Z Won't Work for You Unless You Do This"</strong>
+          <p>Insights into the values and expectations of the generation reshaping workplaces.</p>
+          <a href="#" class="story-link">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+      
+      <div class="story-card">
+        <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Power story" class="story-img">
+        <div class="story-content">
+          <strong>"Turning Pain Into Power – Andrew's Path to the Top"</strong>
+          <p>A transformative journey from adversity to influential leadership.</p>
+          <a href="#" class="story-link">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="section mission" id="about">
+    <div class="mission-overlay">
+      <div class="section-title">
+        <h2>Our Mission</h2>
+      </div>
+      
+      <p class="mission-quote">
+        "Our vision is to have our books in every African home.<br>
+        Our mission is to make every African's voice <span>heard</span>."
+      </p>
+      
+      <div>
+        <button class="btn btn-primary">Get Published With Us</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="section-title">
+      <h2>Get in Touch</h2>
+    </div>
+    
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-details">
+            <h3>Email</h3>
+            <p>christine@powertalks.biz</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <div class="contact-details">
+            <h3>WhatsApp</h3>
+            <p>+254 745 679735</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-details">
+            <h3>Visit Us</h3>
+            <p>Nairobi, Kenya</p>
+            <p>Mon-Fri: 9:00 AM - 5:00 PM</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" class="form-control" placeholder="Your name">
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" class="form-control" placeholder="Your email">
+        </div>
+        
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" class="form-control" placeholder="Subject">
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" class="form-control" placeholder="How can we help you?"></textarea>
+        </div>
+        
+        <button class="btn btn-primary" style="width: 100%;">Send Message</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <div class="logo-text">African Legends</div>
+        <p>Bringing African stories to the world. Preserving heritage, inspiring futures.</p>
+        <p>&copy; 2025 African Legends Publishing. All Rights Reserved.</p>
+      </div>
+      
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+          <li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li>
+          <li><a href="#authors"><i class="fas fa-chevron-right"></i> Authors</a></li>
+          <li><a href="#publish"><i class="fas fa-chevron-right"></i> Get Published</a></li>
+          <li><a href="#stories"><i class="fas fa-chevron-right"></i> Stories</a></li>
+          <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-social">
+        <h3>Connect With Us</h3>
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="copyright">
+      <p>Proudly African. Globally Inspired.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      const icon = mobileMenuBtn.querySelector('i');
+      if (icon.classList.contains('fa-bars')) {
+        icon.classList.replace('fa-bars', 'fa-times');
+      } else {
+        icon.classList.replace('fa-times', 'fa-bars');
+      }
+    });
+    
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        mobileMenuBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
+      });
+    });
+    
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 100) {
+        header.style.padding = '10px 5%';
+        header.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.2)';
+      } else {
+        header.style.padding = '15px 5%';
+        header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
+      }
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 90,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
