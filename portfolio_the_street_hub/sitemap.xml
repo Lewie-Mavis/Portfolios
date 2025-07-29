@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://thestreethub.africa/</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- About Section -->
+  <url>
+    <loc>https://thestreethub.africa/#about</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Services Section -->
+  <url>
+    <loc>https://thestreethub.africa/#services</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Values Section -->
+  <url>
+    <loc>https://thestreethub.africa/#values</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Contact Section -->
+  <url>
+    <loc>https://thestreethub.africa/#contact</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+</urlset>
