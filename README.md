@@ -9,7 +9,7 @@ Welcome to the official GitHub repository showcasing the portfolio of **Lewie Ma
 I am the Founder of:
 
 - [**AI Drive**](https://aidrive.infy.uk) – An AI-powered digital solutions firm that transforms how businesses build and scale their online presence.
-- [**Lema Software**](portfolio_lewie_projects/index.html) – A custom software development company delivering world-class digital systems, platforms, and portfolios.
+- [**Lema Software**](https://lewie-mavis.github.io/Portfolios/portfolio_lewie_projects/index.html) – A custom software development company delivering world-class digital systems, platforms, and portfolios.
 
 I specialize in:
 - **Software & Systems Engineering**
