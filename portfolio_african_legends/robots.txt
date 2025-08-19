@@ -1,0 +1,7 @@
+# Allow all user agents full access
+User-agent: *
+Disallow:
+
+# Link to XML sitemap
+Sitemap: https://africanlegends.africa/sitemap.xml
+
