@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oyato Beespoke — Wear Distinction</title>
+  <meta name="description" content="Oyato Beespoke is an authentic Nigerian fashion house creating bespoke outfits — from casual to wedding — for a global clientele."/>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind-config.js"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-brand-deep text-white font-sans tracking-wide">
+
+  <!-- === NAV === -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-black/50 backdrop-blur supports-[backdrop-filter]:bg-black/40">
+    <div class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="h-8 w-8 rounded-full bg-brand.gold"></div>
+        <span class="text-lg md:text-2xl font-semibold" onclick="scrollToTop()">Oyato <span class="gold-gradient">Beespoke</span></span>
+      </div>
+      <nav class="hidden md:flex items-center gap-8 text-sm">
+        <a href="#about" class="hover:text-brand.gold">About</a>
+        <a href="#collections" class="hover:text-brand.gold">Collections</a>
+        <a href="#experience" class="hover:text-brand.gold">Experience</a>
+        <a href="#gallery" class="hover:text-brand.gold">Gallery</a>
+        <a href="#measurements" class="hover:text-brand.gold">Measurements</a>
+        <a href="#contact" class="hover:text-brand.gold">Contact</a>
+      </nav>
+      <a href="#measurements" class="md:inline-flex hidden px-4 py-2 rounded-xl bg-white text-black hover:bg-brand.gold transition">Start Your Bespoke Journey</a>
+    </div>
+  </header>
+  
+  
+<script>
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>	
+  
+
+  <!-- === HERO === -->
+  <section class="relative min-h-[92vh] flex items-end md:items-center mt-24">
+    <img src="assets/couple_flowers.jpg" alt="Elegant couple in traditional attire" class="absolute inset-0 w-full h-full object-cover object-center opacity-90">
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/10"></div>
+    <div class="relative mx-auto max-w-7xl px-6 py-20 md:py-32">
+      <div class="max-w-3xl">
+        <h1 class="font-serif text-4xl md:text-6xl leading-tight font-semibold slide-left">
+          Wear <span class="gold-gradient">Distinction</span>. Live Confidence.
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-gray-200 fade-up">
+          Authentic Nigerian craftsmanship tailored to perfection for a global audience.
+          From casual to wedding wear, we create outfits that command presence and tell your story.
+        </p>
+        <div class="mt-8 flex gap-4 fade-up">
+          <a href="#collections" class="px-6 py-3 rounded-xl bg-white text-black hover:bg-brand.gold transition">Explore Collections</a>
+          <a href="#measurements" class="px-6 py-3 rounded-xl bg-brand.purple/80 hover:bg-brand.purple transition">Get Measured</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- About -->
+<section id="about" class="bg-black py-20">
+  <div class="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-12 items-center">
+    
+    <!-- Text Content -->
+    <div class="order-2 md:order-1">
+      <h2 class="font-serif text-3xl md:text-4xl slide-left">
+        About <span class="gold-gradient">Oyato</span>
+      </h2>
+      <p class="mt-6 text-gray-300 leading-relaxed fade-up">
+        “Oyato” means <em>different</em> — and that is our promise. Different in craftsmanship.
+        Different in attention to detail. Different in the experience you receive from consultation to final fitting.
+      </p>
+      <p class="mt-4 text-gray-300 leading-relaxed fade-up">
+        We believe true style goes beyond fabric — it tells a story.
+        Every stitch is intentional, infused with the richness of Nigerian heritage and the finesse of world-class tailoring.
+        When you step out in Oyato, you don’t just get noticed — <strong>you get remembered</strong>.
+      </p>
+      <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-200 fade-up">
+        <li class="flex gap-3 items-start"><span class="text-brand.gold">◆</span> Bespoke designs that enhance your presence</li>
+        <li class="flex gap-3 items-start"><span class="text-brand.gold">◆</span> Heritage silhouettes with a modern edge</li>
+        <li class="flex gap-3 items-start"><span class="text-brand.gold">◆</span> Premium aso-oke, lace, brocade and fine suiting</li>
+        <li class="flex gap-3 items-start"><span class="text-brand.gold">◆</span> Global delivery and virtual fittings</li>
+      </ul>
+    </div>
+
+    <!-- Image -->
+    <div class="order-1 md:order-2 slide-right">
+      <img src="assets/bride_purple_fan.jpg" 
+           alt="Bride in regal aso-oke with fan" 
+           class="rounded-2xl soft-shadow object-cover w-full h-[520px]">
+    </div>
+  </div>
+</section>
+
+
+  <!-- Collections -->
+  <section id="collections" class="py-20 bg-[#0E0E0E]">
+    <div class="mx-auto max-w-7xl px-6">
+      <h2 class="font-serif text-3xl md:text-4xl slide-left">Our <span class="gold-gradient">Collections</span></h2>
+      <p class="mt-4 text-gray-300 max-w-3xl fade-up">
+        We cater to all your style needs, blending timeless Nigerian tradition with contemporary fashion.
+        Each design is customized to reflect the excellence already inherent in our clients.
+      </p>
+      <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <article class="rounded-2xl overflow-hidden bg-black/40 border border-white/10 soft-shadow fade-up">
+          <img src="assets/wale_black_cap.png" class="h-56 w-full object-cover">
+          <div class="p-6"><h3 class="font-semibold">Casual Elegance</h3><p class="mt-2 text-sm text-gray-300">Relaxed silhouettes with refined finishing for everyday distinction.</p></div>
+        </article>
+        <article class="rounded-2xl overflow-hidden bg-black/40 border border-white/10 soft-shadow fade-up">
+          <img src="assets/wale_blue_cap.png" class="h-56 w-full object-cover">
+          <div class="p-6"><h3 class="font-semibold">Smart Casual</h3><p class="mt-2 text-sm text-gray-300">Modern looks for professionals who lead with presence.</p></div>
+        </article>
+        <article class="rounded-2xl overflow-hidden bg-black/40 border border-white/10 soft-shadow fade-up">
+          <img src="assets/groom_blue_cane.jpg" class="h-56 w-full object-cover">
+          <div class="p-6"><h3 class="font-semibold">Formal Wear</h3><p class="mt-2 text-sm text-gray-300">Suits, kaftans and agbadas that radiate prestige.</p></div>
+        </article>
+        <article class="rounded-2xl overflow-hidden bg-black/40 border border-white/10 soft-shadow fade-up">
+          <img src="assets/bridesmaids.jpg" class="h-56 w-full object-cover">
+          <div class="p-6"><h3 class="font-semibold">Weddings & Special Occasions</h3><p class="mt-2 text-sm text-gray-300">Unforgettable ensembles for your most important celebrations.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+<!-- Experience -->
+<section id="experience" class="py-20 bg-black">
+  <div class="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-12 items-center">
+    <div class="slide-left">
+      <img src="assets/groomsmen_white.jpg" alt="Groomsmen in white agbada" class="rounded-2xl soft-shadow object-cover w-full h-[520px]">
+    </div>
+    <div class="slide-right">
+      <h2 class="font-serif text-3xl md:text-4xl">The Oyato <span class="gold-gradient">Experience</span></h2>
+      <p class="mt-6 text-gray-300 fade-up">Choosing Oyato is more than tailoring — it’s a journey of transformation.</p>
+      <div class="mt-6 grid sm:grid-cols-2 gap-6">
+        <div class="bg-white/5 rounded-xl p-5 fade-up">
+          <div class="text-brand.gold">01</div>
+          <h4 class="mt-2 font-semibold">Consult & Design</h4>
+          <p class="text-gray-300 text-sm mt-1">We listen, sketch, source fabric and align to your story.</p>
+        </div>
+        <div class="bg-white/5 rounded-xl p-5 fade-up">
+          <div class="text-brand.gold">02</div>
+          <h4 class="mt-2 font-semibold">Bespoke Tailoring</h4>
+          <p class="text-gray-300 text-sm mt-1">Precision patterning and hand-finishing for an impeccable fit.</p>
+        </div>
+        <div class="bg-white/5 rounded-xl p-5 fade-up">
+          <div class="text-brand.gold">03</div>
+          <h4 class="mt-2 font-semibold">Fitting & Refinement</h4>
+          <p class="text-gray-300 text-sm mt-1">We refine every detail until the garment feels like you.</p>
+        </div>
+        <div class="bg-white/5 rounded-xl p-5 fade-up">
+          <div class="text-brand.gold">04</div>
+          <h4 class="mt-2 font-semibold">Worldwide Delivery</h4>
+          <p class="text-gray-300 text-sm mt-1">From Lagos to Nairobi to London — we ship with care.</p>
+        </div>
+      </div>
+      <a href="#measurements" class="inline-block mt-8 px-6 py-3 rounded-xl bg-white text-black hover:bg-brand.gold transition fade-up">Begin Your Fitting</a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Gallery -->
+  <section id="gallery" class="py-20 bg-[#0E0E0E]">
+    <div class="mx-auto max-w-7xl px-6">
+      <h2 class="font-serif text-3xl md:text-4xl slide-left">Lookbook <span class="gold-gradient">& Gallery</span></h2>
+      <div class="mt-8 grid md:grid-cols-3 gap-4">
+        <img src="assets/cultural_group_award.jpg" class="rounded-xl w-full h-72 object-cover soft-shadow fade-up">
+        <img src="assets/groom_blue_cane.jpg" class="rounded-xl w-full h-72 object-cover soft-shadow fade-up">
+        <img src="assets/bridesmaids.jpg" class="rounded-xl w-full h-72 object-cover soft-shadow fade-up">
+        <img src="assets/bride_purple_fan.jpg" class="rounded-xl w-full h-72 object-cover soft-shadow fade-up">
+        <img src="assets/groomsmen_white.jpg" class="rounded-xl w-full h-72 object-cover soft-shadow fade-up">
+        <img src="assets/couple_flowers.jpg" class="rounded-xl w-full h-72 object-cover soft-shadow fade-up">
+      </div>
+    </div>
+  </section>
+
+  <!-- Measurements -->
+  <section id="measurements" class="py-20 bg-black">
+    <div class="mx-auto max-w-7xl px-6">
+      <h2 class="font-serif text-3xl md:text-4xl slide-left">Send Your <span class="gold-gradient">Measurements</span></h2>
+      <p class="mt-3 text-gray-300 max-w-3xl fade-up">Fill in your details below...</p>
+      <form id="measureForm" class="mt-8 grid lg:grid-cols-3 gap-6 bg-white/5 p-6 rounded-2xl fade-up">
+        <!-- Form as-is -->
+		
+        <!-- Column 1: Personal -->
+        <div class="space-y-4">
+          <div>
+            <label class="block text-sm text-gray-300">Full Name</label>
+            <input name="name" required class="mt-1 w-full bg-black/40 border border-white/10 rounded-lg px-4 py-2 outline-none focus:ring-2 focus:ring-brand.gold"/>
+          </div>
+          <div>
+            <label class="block text-sm text-gray-300">Email</label>
+            <input name="email" type="email" required class="mt-1 w-full bg-black/40 border border-white/10 rounded-lg px-4 py-2 outline-none focus:ring-2 focus:ring-brand.gold"/>
+          </div>
+          <div>
+            <label class="block text-sm text-gray-300">Phone (WhatsApp preferred)</label>
+            <input name="phone" class="mt-1 w-full bg-black/40 border border-white/10 rounded-lg px-4 py-2 outline-none focus:ring-2 focus:ring-brand.gold"/>
+          </div>
+          <div>
+            <label class="block text-sm text-gray-300">City / Country</label>
+            <input name="location" class="mt-1 w-full bg-black/40 border border-white/10 rounded-lg px-4 py-2 outline-none focus:ring-2 focus:ring-brand.gold"/>
+          </div>
+        </div>
+
+        <!-- Column 2: Core Measurements -->
+        <div class="space-y-4">
+          <div class="grid grid-cols-2 gap-4">
+            <div><label class="block text-sm text-gray-300">Chest</label><input name="chest" class="mt-1 w-full bg-black/40 border border-white/10 rounded-lg px-3 py-2"/></div>
+            <div><label class="block text-sm text-gray-300">Waist</label><input name="waist" class="mt-1 w-full bg-black/40 border border-white/10 rounded-lg px-3 py-2"/></div>
+            <div><label class="block text-sm text-gray-300">Hips</label><input name="hips" class="mt-1 w-full bg-black/40 border border-white/10 rounded-lg px-3 py-2"/></div>
+            <div><label class="block text-sm text-gray-300">Shoulder</label><input name="shoulder" class="mt-1 w-full bg-black/40 border border-white/10 rounded-lg px-3 py-2"/></div>
+            <div><label class="block text-sm text-gray-300">Neck</label><input name="neck" class="mt-1 w-full bg-black/40 border border-white/10 rounded-lg px-3 py-2"/></div>
+            <div><label class="block text-sm text-gray-300">Sleeve Length</label><input name="sleeve" class="mt-1 w-full bg-black/40 border border-white/10 rounded-lg px-3 py-2"/></div>
+            <div><label class="block text-sm text-gray-300">Top Length</label><input name="top_length" class="mt-1 w-full bg-black/40 border border-white/10 rounded-lg px-3 py-2"/></div>
+            <div><label class="block text-sm text-gray-300">Trouser Length</label><input name="trouser_length" class="mt-1 w-full bg-black/40 border border-white/10 rounded-lg px-3 py-2"/></div>
+          </div>
+          <div>
+            <label class="block text-sm text-gray-300">Occasion / Notes</label>
+            <textarea name="notes" rows="3" class="mt-1 w-full bg-black/40 border border-white/10 rounded-lg px-3 py-2"></textarea>
+          </div>
+        </div>
+
+        <!-- Column 3: Actions -->
+        <div class="space-y-4">
+          <div class="p-4 rounded-xl bg-white/10">
+            <p class="text-sm text-gray-300">Optional: upload a reference look (image or PDF)</p>
+            <input type="file" accept="image/*,.pdf" class="mt-2 text-sm"/>
+          </div>
+          <button type="button" id="emailBtn" class="w-full px-4 py-3 rounded-xl bg-white text-black hover:bg-brand.gold transition">Email These Measurements</button>
+          <button type="button" id="printBtn" class="w-full px-4 py-3 rounded-xl bg-brand.purple/80 hover:bg-brand.purple transition">Print/Save as PDF</button>
+          <a id="waBtn" href="#" target="_blank" class="block text-center px-4 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700">Send via WhatsApp</a>
+          <p class="text-xs text-gray-400">We’ll reply within 24 hours to confirm your order, fabric options, and delivery timeline.</p>
+        </div>
+		
+      </form>
+    </div>
+  </section>
+
+<!-- Contact -->
+<section id="contact" class="py-20 bg-[#0E0E0E]">
+  <div class="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <h2 class="font-serif text-3xl md:text-4xl slide-left">Ready to <span class="gold-gradient">Stand Out</span>?</h2>
+      <p class="mt-4 text-gray-300 fade-up">Book a consultation or fitting. We work with clients worldwide.</p>
+      <div class="mt-8 flex flex-wrap gap-4 fade-up">
+        <a href="#measurements" class="px-6 py-3 rounded-xl bg-white text-black hover:bg-brand.gold transition">Start Your Bespoke Journey</a>
+        <a href="mailto:orders@oyatobeespoke.com" class="px-6 py-3 rounded-xl border border-white/20 hover:border-brand.gold">orders@oyatobeespoke.com</a>
+      </div>
+      <p class="mt-4 text-sm text-gray-400 fade-up">
+        Prefer WhatsApp? Message us: <span class="text-white">+254 700 000 000</span> (edit in code).
+      </p>
+    </div>
+    <div class="slide-right">
+      <img src="assets/groom_blue_cane.jpg" alt="Luxury bespoke menswear" class="rounded-2xl soft-shadow w-full h-[420px] object-cover">
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="border-t border-white/10 bg-black">
+  <div class="mx-auto max-w-7xl px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 slide-up">
+    <!-- Left -->
+    <p class="text-sm text-gray-400">
+      © <span id="year"></span> Oyato Beespoke. All rights reserved.
+    </p>
+
+    <!-- Middle -->
+    <div class="text-sm text-gray-400 text-center">
+      Built with ❤️ in Nigeria • Serving clients worldwide
+    </div>
+
+
+  </div>
+</footer>
+
+<!-- Script to auto-update year -->
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+  <script src="js/scripts.js"></script>
+  
+  <script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 60, // adjust "60" if sticky header height is different
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
