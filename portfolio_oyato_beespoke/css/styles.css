@@ -1,0 +1,184 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* Gradient Text */
+    .gold-gradient {
+      background: linear-gradient(90deg, #C5A452 0%, #E7D6A2 50%, #C5A452 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .soft-shadow { box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+
+/* Scroll margin */
+#about, #collections, #experience, #gallery, #measurements, #contact {
+  scroll-margin-top: 100px;
+}
+
+/* Animations */
+.slide-left,
+.slide-right,
+.fade-up {
+  opacity: 0;
+  transition: all 1s ease;
+  will-change: transform, opacity;
+  position: relative;
+}
+
+.slide-left { transform: translateX(-50px); }
+.slide-right { transform: translateX(50px); }
+.fade-up { transform: translateY(40px); }
+
+.slide-left.show,
+.slide-right.show,
+.fade-up.show {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+@media print {
+  /* Show all sections */
+  header, nav, footer, #numbers {
+    display: block !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Ensure images print clearly */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+
+  /* Ensure form fields print values */
+  input, textarea, select {
+    border: 1px solid #000 !important;
+    background: #fff !important;
+    color: #000 !important;
+    padding: 4px;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #555 !important;
+  }
+
+  /* Print form values as text */
+  input, textarea, select {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Avoid splitting important sections */
+  section {
+    page-break-inside: avoid;
+  }
+
+  /* Hide interactive-only elements */
+  button, a[href^="mailto"], a[href^="https://wa.me"] {
+    display: none !important;
+  }
+
+  /* Keep measurement form neat */
+  #measurements {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+    background: #fff !important;
+  }
+}
+
+  .testimonial-card {
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    transform: translateY(40px);
+    opacity: 0;
+    transition: all 0.8s ease;
+  }
+  .testimonial-card.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+/* Slider Section */
+.oyato_beespoke-slider-section {
+  width: 100%;
+  overflow: hidden;
+  background: #f0f4f9;
+  position: relative;
+}
+
+/* Image Slider Styling */
+.about-photo-slider {
+    position: relative;
+    width: 100%; /* Full viewport width */
+    height: 600px; /* Increased height */
+    overflow: hidden;
+    border-radius: 0; /* Optional: full-width feel */
+    margin: 0 auto;
+    background-color: #000000;
+}
+
+.about-photo-slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.about-photo-slider .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Fill the container and crop if needed */
+    transition: transform 0.3s ease;
+    border-radius: 0;
+}
+
+/* Hover effect for the images */
+.about-photo-slider .slide img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .about-photo-slider {
+        height: 400px; /* Adjusted height for mobile */
+    }
+}
+
+#whatsapp-chat {
+  font-family: 'Inter', sans-serif;
+  background-color: #1A1A1A; /* slightly lighter dark gray */
+  color: #C5A452; /* gold text */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease-in-out;
+}
+
+#whatsapp-chat:hover {
+  background-color: #C5A452; /* gold background on hover */
+  color: black; /* text changes to black for contrast */
+  transform: scale(1.05);
+}
+
+#whatsapp-chat i {
+  color: #C5A452; /* gold icon normally */
+}
+
+#whatsapp-chat:hover i {
+  color: black; /* icon changes to black on hover */
+}
+
