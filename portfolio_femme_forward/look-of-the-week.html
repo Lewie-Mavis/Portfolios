@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Look of the Week – Femme Forward | Featured Professional Style</title>
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/look-of-the-week.css">
+</head>
+<body>
+<!-- Header -->
+<header id="header">
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            <img src="images/logos/1.jpg" alt="Femme Forward Logo" class="logo-img">
+            <span class="logo-text slide-in-left">Femme<span>Forward</span></span>
+        </a>
+        
+        <nav class="main-nav">
+            <ul class="nav-menu slide-in-right">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="look-of-the-week.html" class="active">Look of the Week</a></li>
+                <li><a href="about.html">About</a></li>
+                <!-- Auth buttons in main menu -->
+                <li class="auth-buttons">
+                    <a href="login.html" class="btn-auth btn-login">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Sign In
+                    </a>
+                    <a href="signup.html" class="btn-auth btn-signup">
+                        <i class="fas fa-user-plus"></i>
+                        Create Account
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="header-actions">
+            <div class="language-currency slide-in-right">
+                <select id="language">
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                    <option value="de">DE</option>
+                </select>
+                <select id="currency">
+                    <option value="eur">EUR</option>
+                    <option value="gbp">GBP</option>
+                    <option value="usd">USD</option>
+                </select>
+            </div>
+            
+            <!-- Shopping Bag Icon with Counter -->
+            <a href="shopping-bag.html" class="shopping-bag-count">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="bag-count-badge" style="display: none;">0</span>
+            </a>
+            
+            <!-- Account Dropdown -->
+            <div class="account-dropdown">
+                <a href="#" class="account-trigger">
+                    <i class="far fa-user"></i>
+                </a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-header">
+                        <h4>My Account</h4>
+                        <p>Access your account and preferences</p>
+                    </div>
+                    <div class="dropdown-links">
+                        <a href="dashboard.html" class="dropdown-link dashboard-link">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                        <a href="login.html" class="dropdown-link">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <span>Sign In</span>
+                        </a>
+                        <a href="signup.html" class="dropdown-link">
+                            <i class="fas fa-user-plus"></i>
+                            <span>Create Account</span>
+                        </a>
+                        <a href="profile.html" class="dropdown-link user-link">
+                            <i class="fas fa-user-edit"></i>
+                            <span>My Profile</span>
+                        </a>
+                        <a href="orders.html" class="dropdown-link user-link">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>My Orders</span>
+                        </a>
+                        <a href="wishlist.html" class="dropdown-link user-link">
+                            <i class="far fa-heart"></i>
+                            <span>Wishlist</span>
+                        </a>
+                        <a href="settings.html" class="dropdown-link user-link">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                        <a href="admin.html" class="dropdown-link admin-link">
+                            <i class="fas fa-user-shield"></i>
+                            <span>Admin Panel</span>
+                        </a>
+                    </div>
+                    <div class="dropdown-footer">
+                        <a href="logout.html" class="dropdown-link logout-link">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Log Out</span>
+                        </a>
+                        <a href="#" class="dropdown-link">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Help Center</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Single Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <div class="mobile-menu-container">
+            <div class="mobile-menu-header">
+                <span class="mobile-menu-close"><i class="fas fa-times"></i></span>
+            </div>
+            <div class="mobile-menu-content">
+                <ul class="mobile-nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="look-of-the-week.html" class="active">Look of the Week</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="size-guide.html">Size Guide</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                
+                <!-- Mobile Auth Buttons -->
+                <div class="mobile-auth-section">
+                    <h4>Account</h4>
+                    <div class="mobile-auth-buttons">
+                        <a href="login.html" class="mobile-auth-btn btn-login">
+                            <i class="fas fa-sign-in-alt"></i>
+                            Sign In
+                        </a>
+                        <a href="signup.html" class="mobile-auth-btn btn-signup">
+                            <i class="fas fa-user-plus"></i>
+                            Create Account
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Mobile Shopping Bag Link -->
+                <div class="mobile-additional-links">
+                    <a href="shopping-bag.html" class="mobile-shopping-bag-link">
+                        <i class="fas fa-shopping-bag"></i>
+                        Shopping Bag
+                        <span class="mobile-bag-count" style="display: none;">0</span>
+                    </a>
+                    <a href="#"><i class="far fa-heart"></i> Wishlist</a>
+                    <a href="#"><i class="fas fa-search"></i> Search</a>
+                </div>
+                
+                <!-- Mobile Language & Currency -->
+                <div class="mobile-settings-section">
+                    <h4>Settings</h4>
+                    <div class="mobile-language-currency">
+                        <select id="mobile-language">
+                            <option value="en">English</option>
+                            <option value="fr">Français</option>
+                            <option value="de">Deutsch</option>
+                        </select>
+                        <select id="mobile-currency">
+                            <option value="eur">EUR €</option>
+                            <option value="gbp">GBP £</option>
+                            <option value="usd">USD $</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Look of the Week Hero -->
+<section class="look-hero">
+    <div class="container">
+        <div class="look-hero-content">
+            <div class="look-badge slide-in-left">Look of the Week</div>
+            <h1 class="slide-in-left delay-200">The Parisian Executive</h1>
+            <p class="slide-in-right delay-400">Sophisticated navy tailoring meets timeless elegance in this week's featured ensemble, designed for the modern leader who commands attention with grace.</p>
+            <div class="look-meta stagger-children">
+                <div class="meta-item zoom-in">
+                    <i class="fas fa-calendar"></i>
+                    <span>Featured: Nov 15-21, 2024</span>
+                </div>
+                <div class="meta-item zoom-in">
+                    <i class="fas fa-heart"></i>
+                    <span>2.4K favorites this week</span>
+                </div>
+                <div class="meta-item zoom-in">
+                    <i class="fas fa-eye"></i>
+                    <span>15.7K views</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Look Spotlight Section -->
+<section class="look-spotlight-section">
+    <div class="container">
+        <div class="look-spotlight-container">
+            <!-- Look Images -->
+            <div class="look-images slide-in-left">
+                <div class="main-look-image">
+                    <img src="images/look-week/main-look.jpg" alt="The Parisian Executive Look" id="main-look-img">
+                    <button class="look-zoom-btn" id="zoom-btn">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                </div>
+                <div class="look-thumbnails">
+                    <div class="thumbnail active" data-image="images/look-week/main-look.jpg">
+                        <img src="images/look-week/thumb-1.jpg" alt="Full Look">
+                    </div>
+                    <div class="thumbnail" data-image="images/look-week/angle-1.jpg">
+                        <img src="images/look-week/thumb-2.jpg" alt="Side Angle">
+                    </div>
+                    <div class="thumbnail" data-image="images/look-week/angle-2.jpg">
+                        <img src="images/look-week/thumb-3.jpg" alt="Back View">
+                    </div>
+                    <div class="thumbnail" data-image="images/look-week/detail-1.jpg">
+                        <img src="images/look-week/thumb-4.jpg" alt="Fabric Detail">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Look Details -->
+            <div class="look-details slide-in-right">
+                <div class="look-header">
+                    <h2>Style Breakdown</h2>
+                    <div class="look-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-text">4.7 (2.1K reviews)</span>
+                    </div>
+                </div>
+
+                <div class="look-description">
+                    <p>This week's featured look combines the timeless sophistication of a tailored navy suit with contemporary details that elevate professional dressing. The ensemble features our signature double-breasted blazer, wide-leg trousers, and a silk blouse that creates the perfect foundation for power dressing.</p>
+                </div>
+
+                <div class="look-features">
+                    <h3>Key Features</h3>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Premium wool blend fabric</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Expert precision tailoring</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>All-day comfort stretch</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Sustainable production</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Wrinkle-resistant</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Professional dry clean only</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="look-actions">
+                    <button class="btn btn-primary" id="shop-entire-look">
+                        <i class="fas fa-shopping-bag"></i>
+                        Shop Entire Look
+                    </button>
+                    <button class="btn btn-secondary" id="save-look">
+                        <i class="far fa-heart"></i>
+                        Save to Wishlist
+                    </button>
+                    <button class="btn btn-outline" id="share-look">
+                        <i class="fas fa-share-alt"></i>
+                        Share Look
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Look Items Section -->
+<section class="look-items-section">
+    <div class="container">
+        <div class="section-title">
+            <h2 class="slide-up">Complete the Look</h2>
+            <p class="slide-up delay-200">Shop individual pieces from this week's featured ensemble</p>
+        </div>
+
+        <div class="look-items-grid stagger-children">
+            <!-- Blazer -->
+            <div class="look-item-card zoom-in">
+                <div class="item-image">
+                    <img src="images/look-week/item-blazer.jpg" alt="Sophie Double-Breasted Blazer">
+                    <div class="item-badge">Core Piece</div>
+                </div>
+                <div class="item-content">
+                    <h3>Sophie Double-Breasted Blazer</h3>
+                    <p class="item-price">€245</p>
+                    <div class="item-colors">
+                        <span class="color-label">Available in 4 colors:</span>
+                        <div class="color-options">
+                            <div class="color-option active" style="background-color: #001f3f;" data-color="navy"></div>
+                            <div class="color-option" style="background-color: #000;" data-color="black"></div>
+                            <div class="color-option" style="background-color: #f5f5dc;" data-color="beige"></div>
+                            <div class="color-option" style="background-color: #2e7d64;" data-color="green"></div>
+                        </div>
+                    </div>
+                    <div class="item-sizes">
+                        <span class="size-label">Sizes:</span>
+                        <div class="size-options">
+                            <span class="size-option">XS</span>
+                            <span class="size-option">S</span>
+                            <span class="size-option active">M</span>
+                            <span class="size-option">L</span>
+                            <span class="size-option">XL</span>
+                        </div>
+                    </div>
+                    <div class="item-actions">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity-display">1</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="btn-add-to-bag">
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trousers -->
+            <div class="look-item-card zoom-in">
+                <div class="item-image">
+                    <img src="images/look-week/item-trousers.jpg" alt="Wide-Leg Tailored Trousers">
+                    <div class="item-badge">Core Piece</div>
+                </div>
+                <div class="item-content">
+                    <h3>Wide-Leg Tailored Trousers</h3>
+                    <p class="item-price">€165</p>
+                    <div class="item-colors">
+                        <span class="color-label">Available in 3 colors:</span>
+                        <div class="color-options">
+                            <div class="color-option active" style="background-color: #001f3f;" data-color="navy"></div>
+                            <div class="color-option" style="background-color: #000;" data-color="black"></div>
+                            <div class="color-option" style="background-color: #f5f5dc;" data-color="beige"></div>
+                        </div>
+                    </div>
+                    <div class="item-sizes">
+                        <span class="size-label">Sizes:</span>
+                        <div class="size-options">
+                            <span class="size-option">XS</span>
+                            <span class="size-option">S</span>
+                            <span class="size-option active">M</span>
+                            <span class="size-option">L</span>
+                            <span class="size-option">XL</span>
+                        </div>
+                    </div>
+                    <div class="item-actions">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity-display">1</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="btn-add-to-bag">
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blouse -->
+            <div class="look-item-card zoom-in">
+                <div class="item-image">
+                    <img src="images/look-week/item-blouse.jpg" alt="Silk Signature Blouse">
+                </div>
+                <div class="item-content">
+                    <h3>Silk Signature Blouse</h3>
+                    <p class="item-price">€125</p>
+                    <div class="item-colors">
+                        <span class="color-label">Available in 5 colors:</span>
+                        <div class="color-options">
+                            <div class="color-option active" style="background-color: #fff; border: 1px solid #ddd;" data-color="white"></div>
+                            <div class="color-option" style="background-color: #f5f5dc;" data-color="beige"></div>
+                            <div class="color-option" style="background-color: #d9a6a0;" data-color="blush"></div>
+                            <div class="color-option" style="background-color: #001f3f;" data-color="navy"></div>
+                            <div class="color-option" style="background-color: #000;" data-color="black"></div>
+                        </div>
+                    </div>
+                    <div class="item-sizes">
+                        <span class="size-label">Sizes:</span>
+                        <div class="size-options">
+                            <span class="size-option">XS</span>
+                            <span class="size-option">S</span>
+                            <span class="size-option active">M</span>
+                            <span class="size-option">L</span>
+                        </div>
+                    </div>
+                    <div class="item-actions">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity-display">1</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="btn-add-to-bag">
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accessories -->
+            <div class="look-item-card zoom-in">
+                <div class="item-image">
+                    <img src="images/look-week/item-accessories.jpg" alt="Complete Look Accessories">
+                    <div class="item-badge">Accessories</div>
+                </div>
+                <div class="item-content">
+                    <h3>Complete Look Accessories</h3>
+                    <p class="item-price">From €45</p>
+                    <div class="accessory-items">
+                        <div class="accessory-item">
+                            <span class="accessory-name">Leather Tote Bag</span>
+                            <span class="accessory-price">€189</span>
+                        </div>
+                        <div class="accessory-item">
+                            <span class="accessory-name">Gold Statement Necklace</span>
+                            <span class="accessory-price">€65</span>
+                        </div>
+                        <div class="accessory-item">
+                            <span class="accessory-name">Leather Pumps</span>
+                            <span class="accessory-price">€145</span>
+                        </div>
+                        <div class="accessory-item">
+                            <span class="accessory-name">Leather Belt</span>
+                            <span class="accessory-price">€45</span>
+                        </div>
+                    </div>
+                    <div class="item-actions">
+                        <button class="btn-add-to-bag full-width">
+                            Shop All Accessories
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Styling Tips Section -->
+<section class="styling-tips-section">
+    <div class="container">
+        <div class="section-title">
+            <h2 class="slide-up">Professional Styling Tips</h2>
+            <p class="slide-up delay-200">Expert advice to make this look work for you</p>
+        </div>
+
+        <div class="styling-tips-container">
+            <div class="tips-content slide-in-left">
+                <div class="tip-card active" data-tip="1">
+                    <div class="tip-number">01</div>
+                    <h3>Perfect Fit Matters</h3>
+                    <p>Ensure your blazer sleeves hit at your wrist bone and shoulders align perfectly. The trousers should have a clean break at the shoes.</p>
+                </div>
+                <div class="tip-card" data-tip="2">
+                    <div class="tip-number">02</div>
+                    <h3>Accessorize Strategically</h3>
+                    <p>Choose one statement piece - either bold earrings or a necklace. Keep other accessories minimal to maintain professional elegance.</p>
+                </div>
+                <div class="tip-card" data-tip="3">
+                    <div class="tip-number">03</div>
+                    <h3>Color Coordination</h3>
+                    <p>Stick to a maximum of three colors. Navy pairs beautifully with cream, white, or subtle patterns for a sophisticated contrast.</p>
+                </div>
+                <div class="tip-card" data-tip="4">
+                    <div class="tip-number">04</div>
+                    <h3>Day to Evening Transition</h3>
+                    <p>Remove the blazer, add statement jewelry, and switch to elegant heels to transform this look from office to evening events.</p>
+                </div>
+            </div>
+            <div class="tips-visual slide-in-right">
+                <div class="tip-visual-content">
+                    <img src="images/look-week/tip-1.jpg" alt="Styling Tip Visual" id="tip-visual">
+                    <div class="tip-caption" id="tip-caption">
+                        Perfect blazer fit with proper sleeve length and shoulder alignment
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Previous Looks Section -->
+<section class="previous-looks-section">
+    <div class="container">
+        <div class="section-title">
+            <h2 class="slide-up">Previous Looks of the Week</h2>
+            <p class="slide-up delay-200">Explore our archive of featured professional styles</p>
+        </div>
+
+        <div class="previous-looks-grid stagger-children">
+            <div class="previous-look-card zoom-in">
+                <div class="previous-look-image">
+                    <img src="images/look-week/previous-1.jpg" alt="Modern Minimalist Look">
+                    <div class="look-date">Nov 8-14, 2024</div>
+                </div>
+                <div class="previous-look-content">
+                    <h3>Modern Minimalist</h3>
+                    <p>Clean lines and monochromatic elegance</p>
+                    <a href="#" class="btn-view-look">View Look</a>
+                </div>
+            </div>
+
+            <div class="previous-look-card zoom-in">
+                <div class="previous-look-image">
+                    <img src="images/look-week/previous-2.jpg" alt="Power Suiting Look">
+                    <div class="look-date">Nov 1-7, 2024</div>
+                </div>
+                <div class="previous-look-content">
+                    <h3>Power Suiting</h3>
+                    <p>Bold patterns and confident silhouettes</p>
+                    <a href="#" class="btn-view-look">View Look</a>
+                </div>
+            </div>
+
+            <div class="previous-look-card zoom-in">
+                <div class="previous-look-image">
+                    <img src="images/look-week/previous-3.jpg" alt="Autumn Elegance Look">
+                    <div class="look-date">Oct 25-31, 2024</div>
+                </div>
+                <div class="previous-look-content">
+                    <h3>Autumn Elegance</h3>
+                    <p>Rich textures and seasonal sophistication</p>
+                    <a href="#" class="btn-view-look">View Look</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="previous-looks-cta slide-up delay-400">
+            <a href="look-archive.html" class="btn btn-secondary">View All Previous Looks</a>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter">
+    <div class="container">
+        <h2 class="zoom-out">Never Miss a Look</h2>
+        <p class="zoom-out delay-200">Subscribe to get our Look of the Week delivered to your inbox every Monday.</p>
+        <form class="newsletter-form slide-up delay-400" id="look-newsletter">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-container stagger-children">
+            <div class="footer-col fade-in">
+                <h4 class="slide-up">Femme Forward</h4>
+                <p class="fade-in delay-100">Empowering professional women through elegant, high-quality fashion designed for confidence, sophistication, and cultural pride.</p>
+                <div class="social-links stagger-children">
+                    <a href="#" class="bounce-in"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="bounce-in delay-100"><i class="fab fa-pinterest"></i></a>
+                    <a href="#" class="bounce-in delay-200"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="bounce-in delay-300"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col fade-in">
+                <h4 class="slide-up">Shop</h4>
+                <ul class="stagger-children">
+                    <li><a href="#" class="fade-in">Suits</a></li>
+                    <li><a href="#" class="fade-in">Jumpsuits</a></li>
+                    <li><a href="#" class="fade-in">Dresses</a></li>
+                    <li><a href="#" class="fade-in">Skirt Suits</a></li>
+                    <li><a href="#" class="fade-in">Tops & Shirts</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col fade-in">
+                <h4 class="slide-up">Information</h4>
+                <ul class="stagger-children">
+                    <li><a href="#" class="fade-in">About Us</a></li>
+                    <li><a href="#" class="fade-in">Size Guide</a></li>
+                    <li><a href="#" class="fade-in">Shipping & Returns</a></li>
+                    <li><a href="#" class="fade-in">Privacy Policy</a></li>
+                    <li><a href="#" class="fade-in">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col fade-in">
+                <h4 class="slide-up">Contact</h4>
+                <ul class="stagger-children">
+                    <li class="fade-in"><i class="fas fa-map-marker-alt"></i> Paris, France</li>
+                    <li class="fade-in"><i class="fas fa-phone"></i> +33 1 23 45 67 89</li>
+                    <li class="fade-in"><i class="fas fa-envelope"></i> hello@femmeforward.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p class="fade-in delay-500">&copy; 2025 Femme Forward. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Image Zoom Modal -->
+<div class="image-zoom-modal" id="zoom-modal">
+    <div class="zoom-modal-content">
+        <span class="zoom-close" id="zoom-close">&times;</span>
+        <img src="" alt="Zoomed Look" id="zoomed-image">
+    </div>
+</div>
+
+<!-- Share Modal -->
+<div class="share-modal" id="share-modal">
+    <div class="share-modal-content">
+        <div class="share-modal-header">
+            <h3>Share This Look</h3>
+            <span class="share-close" id="share-close">&times;</span>
+        </div>
+        <div class="share-options">
+            <button class="share-option" data-platform="facebook">
+                <i class="fab fa-facebook-f"></i>
+                <span>Facebook</span>
+            </button>
+            <button class="share-option" data-platform="pinterest">
+                <i class="fab fa-pinterest"></i>
+                <span>Pinterest</span>
+            </button>
+            <button class="share-option" data-platform="twitter">
+                <i class="fab fa-twitter"></i>
+                <span>Twitter</span>
+            </button>
+            <button class="share-option" data-platform="linkedin">
+                <i class="fab fa-linkedin-in"></i>
+                <span>LinkedIn</span>
+            </button>
+            <button class="share-option" data-platform="email">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+            </button>
+            <button class="share-option" data-platform="link">
+                <i class="fas fa-link"></i>
+                <span>Copy Link</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+<script src="js/look-of-the-week.js"></script>
+</body>
+</html>

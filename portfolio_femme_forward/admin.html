@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Femme Forward</title>
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <div class="admin-header-container">
+            <div class="admin-logo">
+                <img src="images/logos/1.jpg" alt="Femme Forward Logo" class="logo-img">
+                <span class="logo-text">Femme<span>Forward</span> <small>Admin</small></span>
+            </div>
+            
+            <div class="admin-header-actions">
+                <div class="admin-user">
+                    <div class="user-avatar">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">Admin User</span>
+                        <span class="user-role">Administrator</span>
+                    </div>
+                </div>
+                <button class="admin-logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Layout -->
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <nav class="admin-nav">
+                <ul class="admin-nav-menu">
+                    <li class="nav-item active">
+                        <a href="#dashboard" class="nav-link">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#products" class="nav-link">
+                            <i class="fas fa-tshirt"></i>
+                            <span>Products</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#orders" class="nav-link">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Orders</span>
+                            <span class="badge">12</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#customers" class="nav-link">
+                            <i class="fas fa-users"></i>
+                            <span>Customers</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#collections" class="nav-link">
+                            <i class="fas fa-layer-group"></i>
+                            <span>Collections</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#analytics" class="nav-link">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>Analytics</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#content" class="nav-link">
+                            <i class="fas fa-newspaper"></i>
+                            <span>Content</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#settings" class="nav-link">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="admin-section active">
+                <div class="admin-section-header">
+                    <h1>Dashboard Overview</h1>
+                    <p>Welcome back! Here's what's happening with your store today.</p>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card fade-in">
+                        <div class="stat-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number">€24,580</h3>
+                            <p class="stat-label">Today's Revenue</p>
+                            <span class="stat-trend positive">
+                                <i class="fas fa-arrow-up"></i>
+                                12.5%
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card fade-in delay-100">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number">156</h3>
+                            <p class="stat-label">New Customers</p>
+                            <span class="stat-trend positive">
+                                <i class="fas fa-arrow-up"></i>
+                                8.2%
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card fade-in delay-200">
+                        <div class="stat-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number">342</h3>
+                            <p class="stat-label">Orders Today</p>
+                            <span class="stat-trend positive">
+                                <i class="fas fa-arrow-up"></i>
+                                5.7%
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card fade-in delay-300">
+                        <div class="stat-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number">2.4K</h3>
+                            <p class="stat-label">Store Visits</p>
+                            <span class="stat-trend negative">
+                                <i class="fas fa-arrow-down"></i>
+                                3.1%
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity & Quick Actions -->
+                <div class="dashboard-content">
+                    <div class="content-column">
+                        <div class="content-card slide-in-left">
+                            <div class="card-header">
+                                <h3>Recent Orders</h3>
+                                <a href="#" class="view-all">View All</a>
+                            </div>
+                            <div class="card-body">
+                                <div class="order-list">
+                                    <div class="order-item">
+                                        <div class="order-info">
+                                            <span class="order-id">#FF-7842</span>
+                                            <span class="order-customer">Sarah Johnson</span>
+                                        </div>
+                                        <div class="order-details">
+                                            <span class="order-amount">€245</span>
+                                            <span class="order-status completed">Completed</span>
+                                        </div>
+                                    </div>
+                                    <div class="order-item">
+                                        <div class="order-info">
+                                            <span class="order-id">#FF-7841</span>
+                                            <span class="order-customer">Maria Rodriguez</span>
+                                        </div>
+                                        <div class="order-details">
+                                            <span class="order-amount">€189</span>
+                                            <span class="order-status processing">Processing</span>
+                                        </div>
+                                    </div>
+                                    <div class="order-item">
+                                        <div class="order-info">
+                                            <span class="order-id">#FF-7840</span>
+                                            <span class="order-customer">Emily Chen</span>
+                                        </div>
+                                        <div class="order-details">
+                                            <span class="order-amount">€325</span>
+                                            <span class="order-status pending">Pending</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-column">
+                        <div class="content-card slide-in-right">
+                            <div class="card-header">
+                                <h3>Quick Actions</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="quick-actions">
+                                    <button class="quick-action-btn">
+                                        <i class="fas fa-plus"></i>
+                                        Add New Product
+                                    </button>
+                                    <button class="quick-action-btn">
+                                        <i class="fas fa-tags"></i>
+                                        Manage Collections
+                                    </button>
+                                    <button class="quick-action-btn">
+                                        <i class="fas fa-chart-bar"></i>
+                                        View Analytics
+                                    </button>
+                                    <button class="quick-action-btn">
+                                        <i class="fas fa-envelope"></i>
+                                        Send Newsletter
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-card slide-in-right delay-200">
+                            <div class="card-header">
+                                <h3>Top Products</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="product-ranking">
+                                    <div class="rank-item">
+                                        <span class="rank-number">1</span>
+                                        <span class="product-name">Emilia Jumpsuit</span>
+                                        <span class="product-sales">42 sales</span>
+                                    </div>
+                                    <div class="rank-item">
+                                        <span class="rank-number">2</span>
+                                        <span class="product-name">Sophie Blazer</span>
+                                        <span class="product-sales">38 sales</span>
+                                    </div>
+                                    <div class="rank-item">
+                                        <span class="rank-number">3</span>
+                                        <span class="product-name">Charlotte Dress</span>
+                                        <span class="product-sales">35 sales</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Products Section -->
+            <section id="products" class="admin-section">
+                <div class="admin-section-header">
+                    <h1>Product Management</h1>
+                    <p>Manage your product catalog and inventory.</p>
+                </div>
+                <!-- Products content would go here -->
+            </section>
+
+            <!-- Add other sections similarly -->
+        </main>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

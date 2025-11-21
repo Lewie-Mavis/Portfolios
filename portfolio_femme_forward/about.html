@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About – Femme Forward | Empowering Professional Women Through Fashion</title>
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+<!-- Header -->
+<header id="header">
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            <img src="images/logos/1.jpg" alt="Femme Forward Logo" class="logo-img">
+            <span class="logo-text slide-in-left">Femme<span>Forward</span></span>
+        </a>
+        
+        <nav class="main-nav">
+            <ul class="nav-menu slide-in-right">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="look-of-the-week.html">Look of the Week</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <!-- Auth buttons in main menu -->
+                <li class="auth-buttons">
+                    <a href="login.html" class="btn-auth btn-login">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Sign In
+                    </a>
+                    <a href="signup.html" class="btn-auth btn-signup">
+                        <i class="fas fa-user-plus"></i>
+                        Create Account
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="header-actions">
+            <div class="language-currency slide-in-right">
+                <select id="language">
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                    <option value="de">DE</option>
+                </select>
+                <select id="currency">
+                    <option value="eur">EUR</option>
+                    <option value="gbp">GBP</option>
+                    <option value="usd">USD</option>
+                </select>
+            </div>
+            
+            <!-- Shopping Bag Icon with Counter -->
+            <a href="shopping-bag.html" class="shopping-bag-count">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="bag-count-badge" style="display: none;">0</span>
+            </a>
+            
+            <!-- Account Dropdown -->
+            <div class="account-dropdown">
+                <a href="#" class="account-trigger">
+                    <i class="far fa-user"></i>
+                </a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-header">
+                        <h4>My Account</h4>
+                        <p>Access your account and preferences</p>
+                    </div>
+                    <div class="dropdown-links">
+                        <a href="dashboard.html" class="dropdown-link dashboard-link">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                        <a href="login.html" class="dropdown-link">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <span>Sign In</span>
+                        </a>
+                        <a href="signup.html" class="dropdown-link">
+                            <i class="fas fa-user-plus"></i>
+                            <span>Create Account</span>
+                        </a>
+                        <a href="profile.html" class="dropdown-link user-link">
+                            <i class="fas fa-user-edit"></i>
+                            <span>My Profile</span>
+                        </a>
+                        <a href="orders.html" class="dropdown-link user-link">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>My Orders</span>
+                        </a>
+                        <a href="wishlist.html" class="dropdown-link user-link">
+                            <i class="far fa-heart"></i>
+                            <span>Wishlist</span>
+                        </a>
+                        <a href="settings.html" class="dropdown-link user-link">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                        <a href="admin.html" class="dropdown-link admin-link">
+                            <i class="fas fa-user-shield"></i>
+                            <span>Admin Panel</span>
+                        </a>
+                    </div>
+                    <div class="dropdown-footer">
+                        <a href="logout.html" class="dropdown-link logout-link">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Log Out</span>
+                        </a>
+                        <a href="#" class="dropdown-link">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Help Center</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Single Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <div class="mobile-menu-container">
+            <div class="mobile-menu-header">
+                <span class="mobile-menu-close"><i class="fas fa-times"></i></span>
+            </div>
+            <div class="mobile-menu-content">
+                <ul class="mobile-nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="look-of-the-week.html">Look of the Week</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="size-guide.html">Size Guide</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                
+                <!-- Mobile Auth Buttons -->
+                <div class="mobile-auth-section">
+                    <h4>Account</h4>
+                    <div class="mobile-auth-buttons">
+                        <a href="login.html" class="mobile-auth-btn btn-login">
+                            <i class="fas fa-sign-in-alt"></i>
+                            Sign In
+                        </a>
+                        <a href="signup.html" class="mobile-auth-btn btn-signup">
+                            <i class="fas fa-user-plus"></i>
+                            Create Account
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Mobile Shopping Bag Link -->
+                <div class="mobile-additional-links">
+                    <a href="shopping-bag.html" class="mobile-shopping-bag-link">
+                        <i class="fas fa-shopping-bag"></i>
+                        Shopping Bag
+                        <span class="mobile-bag-count" style="display: none;">0</span>
+                    </a>
+                    <a href="#"><i class="far fa-heart"></i> Wishlist</a>
+                    <a href="#"><i class="fas fa-search"></i> Search</a>
+                </div>
+                
+                <!-- Mobile Language & Currency -->
+                <div class="mobile-settings-section">
+                    <h4>Settings</h4>
+                    <div class="mobile-language-currency">
+                        <select id="mobile-language">
+                            <option value="en">English</option>
+                            <option value="fr">Français</option>
+                            <option value="de">Deutsch</option>
+                        </select>
+                        <select id="mobile-currency">
+                            <option value="eur">EUR €</option>
+                            <option value="gbp">GBP £</option>
+                            <option value="usd">USD $</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- About Hero Section -->
+<section class="about-hero">
+    <div class="container">
+        <div class="about-hero-content">
+            <div class="hero-text slide-in-left">
+                <h1>Where Elegance Meets Empowerment</h1>
+                <p class="hero-subtitle">Redefining professional fashion for women who lead with confidence, sophistication, and purpose.</p>
+                <div class="hero-stats stagger-children">
+                    <div class="stat zoom-in">
+                        <span class="stat-number" data-count="8">0</span>
+                        <span class="stat-label">Years of Excellence</span>
+                    </div>
+                    <div class="stat zoom-in">
+                        <span class="stat-number" data-count="50">0</span>
+                        <span class="stat-label">+ Countries</span>
+                    </div>
+                    <div class="stat zoom-in">
+                        <span class="stat-number" data-count="25000">0</span>
+                        <span class="stat-label">Women Empowered</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image slide-in-right">
+                <img src="images/hero_background.avif" alt="Femme Forward Founder and Team">
+                <div class="image-overlay">
+                    <div class="overlay-content">
+                        <span class="established">Est. 2017</span>
+                        <span class="location">Paris, France</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Story Section -->
+<section class="our-story-section">
+    <div class="container">
+        <div class="section-title">
+            <h2 class="slide-up">Our Story</h2>
+            <p class="slide-up delay-200">From a Parisian atelier to a global movement empowering professional women</p>
+        </div>
+
+        <div class="story-timeline">
+            <div class="timeline-item slide-in-left">
+                <div class="timeline-year">2017</div>
+                <div class="timeline-content">
+                    <h3>The Beginning</h3>
+                    <p>Founded in a small Parisian atelier by Isabelle Moreau, Femme Forward began with a simple mission: to create professional wear that celebrated feminine power without compromising on elegance or comfort.</p>
+                </div>
+                <div class="timeline-image">
+                    <img src="images/about/timeline-1.jpg" alt="Founding Story">
+                </div>
+            </div>
+
+            <div class="timeline-item slide-in-right">
+                <div class="timeline-year">2019</div>
+                <div class="timeline-content">
+                    <h3>Global Expansion</h3>
+                    <p>Our commitment to quality and empowerment resonated worldwide. We expanded to serve professional women across Europe and North America, adapting our designs to diverse cultural contexts while maintaining our Parisian essence.</p>
+                </div>
+                <div class="timeline-image">
+                    <img src="images/about/timeline-2.jpg" alt="Global Expansion">
+                </div>
+            </div>
+
+            <div class="timeline-item slide-in-left">
+                <div class="timeline-year">2021</div>
+                <div class="timeline-content">
+                    <h3>Sustainable Innovation</h3>
+                    <p>We launched our sustainable collection, committing to ethical production practices and eco-friendly materials. Our atelier became a model for responsible luxury fashion in the professional wear industry.</p>
+                </div>
+                <div class="timeline-image">
+                    <img src="images/about/timeline-3.jpg" alt="Sustainable Innovation">
+                </div>
+            </div>
+
+            <div class="timeline-item slide-in-right">
+                <div class="timeline-year">2024</div>
+                <div class="timeline-content">
+                    <h3>The Future Forward</h3>
+                    <p>Today, we continue to innovate with smart fabrics, inclusive sizing, and digital styling services. Our community of professional women grows stronger each day, united by a shared vision of empowerment through elegant dressing.</p>
+                </div>
+                <div class="timeline-image">
+                    <img src="images/about/timeline-4.jpg" alt="Future Vision">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Values Section -->
+<section class="values-section">
+    <div class="container">
+        <div class="section-title">
+            <h2 class="slide-up">Our Values</h2>
+            <p class="slide-up delay-200">The principles that guide everything we do</p>
+        </div>
+
+        <div class="values-grid stagger-children">
+            <div class="value-card zoom-in">
+                <div class="value-icon">
+                    <i class="fas fa-chess-queen"></i>
+                </div>
+                <h3>Empowerment</h3>
+                <p>We believe clothing should be armor for the modern professional woman, enhancing confidence and commanding respect in every room she enters.</p>
+            </div>
+
+            <div class="value-card zoom-in">
+                <div class="value-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h3>Excellence</h3>
+                <p>From fabric selection to final stitch, we maintain the highest standards of craftsmanship, ensuring every piece meets our rigorous quality expectations.</p>
+            </div>
+
+            <div class="value-card zoom-in">
+                <div class="value-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h3>Sustainability</h3>
+                <p>We're committed to responsible fashion, using sustainable materials and ethical production practices that respect both people and the planet.</p>
+            </div>
+
+            <div class="value-card zoom-in">
+                <div class="value-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Inclusivity</h3>
+                <p>Professional elegance knows no size, age, or background. We design for all women who aspire to lead with style and substance.</p>
+            </div>
+
+            <div class="value-card zoom-in">
+                <div class="value-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3>Innovation</h3>
+                <p>We continuously evolve our designs and practices, embracing new technologies and ideas that enhance both style and functionality.</p>
+            </div>
+
+            <div class="value-card zoom-in">
+                <div class="value-icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h3>Community</h3>
+                <p>We're more than a brand—we're a movement. We foster connections and support among professional women worldwide.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="team-section">
+    <div class="container">
+        <div class="section-title">
+            <h2 class="slide-up">Meet Our Leadership</h2>
+            <p class="slide-up delay-200">The visionary women behind Femme Forward</p>
+        </div>
+
+        <div class="team-grid stagger-children">
+            <div class="team-member zoom-in">
+                <div class="member-image">
+                    <img src="images/about/team-1.jpg" alt="Isabelle Moreau - Founder & CEO">
+                    <div class="member-overlay">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h3>Isabelle Moreau</h3>
+                    <p class="member-role">Founder & CEO</p>
+                    <p class="member-bio">Former luxury fashion director with 15+ years experience. Passionate about empowering women through intentional design.</p>
+                </div>
+            </div>
+
+            <div class="team-member zoom-in">
+                <div class="member-image">
+                    <img src="images/about/team-2.jpg" alt="Sophie Laurent - Creative Director">
+                    <div class="member-overlay">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h3>Sophie Laurent</h3>
+                    <p class="member-role">Creative Director</p>
+                    <p class="member-bio">Graduate of Central Saint Martins. Blends Parisian elegance with global perspectives in every collection.</p>
+                </div>
+            </div>
+
+            <div class="team-member zoom-in">
+                <div class="member-image">
+                    <img src="images/about/team-3.jpg" alt="Chloé Dubois - Head of Sustainability">
+                    <div class="member-overlay">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h3>Chloé Dubois</h3>
+                    <p class="member-role">Head of Sustainability</p>
+                    <p class="member-bio">Environmental scientist turned fashion innovator. Leads our commitment to ethical and sustainable practices.</p>
+                </div>
+            </div>
+
+            <div class="team-member zoom-in">
+                <div class="member-image">
+                    <img src="images/about/team-4.jpg" alt="Marie-Claire Rousseau - Head of Design">
+                    <div class="member-overlay">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fas fa-palette"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h3>Marie-Claire Rousseau</h3>
+                    <p class="member-role">Head of Design</p>
+                    <p class="member-bio">Master tailor with expertise in precision cutting and innovative fabric technologies for professional wear.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sustainability Section -->
+<section class="sustainability-section">
+    <div class="container">
+        <div class="sustainability-container">
+            <div class="sustainability-content slide-in-left">
+                <div class="section-title">
+                    <h2>Our Commitment to Sustainability</h2>
+                    <p>Building a fashion-forward future that respects our planet</p>
+                </div>
+
+                <div class="sustainability-stats">
+                    <div class="sustainability-stat">
+                        <span class="stat-number" data-count="85">0</span>
+                        <span class="stat-label">% Sustainable Materials</span>
+                    </div>
+                    <div class="sustainability-stat">
+                        <span class="stat-number" data-count="100">0</span>
+                        <span class="stat-label">% Ethical Production</span>
+                    </div>
+                    <div class="sustainability-stat">
+                        <span class="stat-number" data-count="60">0</span>
+                        <span class="stat-label">% Carbon Neutral</span>
+                    </div>
+                </div>
+
+                <div class="sustainability-initiatives">
+                    <div class="initiative">
+                        <i class="fas fa-recycle"></i>
+                        <div class="initiative-content">
+                            <h4>Circular Design</h4>
+                            <p>All our pieces are designed for longevity and eventual recycling through our take-back program.</p>
+                        </div>
+                    </div>
+                    <div class="initiative">
+                        <i class="fas fa-tint"></i>
+                        <div class="initiative-content">
+                            <h4>Water Conservation</h4>
+                            <p>We've reduced water usage in our production process by 75% through innovative dyeing techniques.</p>
+                        </div>
+                    </div>
+                    <div class="initiative">
+                        <i class="fas fa-solar-panel"></i>
+                        <div class="initiative-content">
+                            <h4>Renewable Energy</h4>
+                            <p>Our atelier runs on 100% renewable energy, with plans to extend this to our entire supply chain by 2026.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sustainability-visual slide-in-right">
+                <div class="sustainability-badge">
+                    <i class="fas fa-leaf"></i>
+                    <span>Certified B Corporation</span>
+                </div>
+                <img src="images/hero_background.avif" alt="Sustainable Practices">
+                <div class="certification-logos">
+                    <div class="certification">
+                        <img src="images/about/b-corp.png" alt="B Corporation Certified">
+                        <span>B Corp Certified</span>
+                    </div>
+                    <div class="certification">
+                        <img src="images/about/gots.png" alt="GOTS Certified">
+                        <span>GOTS Organic</span>
+                    </div>
+                    <div class="certification">
+                        <img src="images/about/fair-trade.png" alt="Fair Trade Certified">
+                        <span>Fair Trade</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Press & Recognition -->
+<section class="press-section">
+    <div class="container">
+        <div class="section-title">
+            <h2 class="slide-up">Press & Recognition</h2>
+            <p class="slide-up delay-200">Celebrating our journey and achievements</p>
+        </div>
+
+        <div class="press-logos stagger-children">
+            <div class="press-logo zoom-in">
+                <img src="images/about/vogue-logo.png" alt="Vogue">
+            </div>
+            <div class="press-logo zoom-in">
+                <img src="images/about/forbes-logo.png" alt="Forbes">
+            </div>
+            <div class="press-logo zoom-in">
+                <img src="images/about/wwd-logo.png" alt="Women's Wear Daily">
+            </div>
+            <div class="press-logo zoom-in">
+                <img src="images/about/business-logo.png" alt="Business of Fashion">
+            </div>
+            <div class="press-logo zoom-in">
+                <img src="images/about/ft-logo.png" alt="Financial Times">
+            </div>
+        </div>
+
+        <div class="testimonials-slider">
+            <div class="testimonial active">
+                <div class="testimonial-content">
+                    <p>"Femme Forward has redefined professional dressing for women. Their commitment to both style and substance sets a new standard in the industry."</p>
+                    <div class="testimonial-author">
+                        <strong>Emma Richardson</strong>
+                        <span>Fashion Editor, Vogue Paris</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p>"In a world of fast fashion, Femme Forward's dedication to quality, sustainability, and empowering women is both refreshing and necessary."</p>
+                    <div class="testimonial-author">
+                        <strong>Dr. Sarah Chen</strong>
+                        <span>Sustainability Expert, Harvard Business Review</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p>"The perfect blend of Parisian elegance and modern functionality. Every piece is an investment in your professional confidence."</p>
+                    <div class="testimonial-author">
+                        <strong>Michelle Lambert</strong>
+                        <span>CEO, Global Women in Business</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="about-cta-section">
+    <div class="container">
+        <div class="about-cta-content slide-up">
+            <h2>Join Our Movement</h2>
+            <p>Be part of a community that celebrates professional women and their incredible journeys.</p>
+            <div class="cta-buttons">
+                <a href="shop.html" class="btn btn-primary">Explore Collections</a>
+                <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+                <a href="careers.html" class="btn btn-outline">Join Our Team</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter">
+    <div class="container">
+        <h2 class="zoom-out">Stay Connected</h2>
+        <p class="zoom-out delay-200">Subscribe for updates on new collections, sustainability initiatives, and women's empowerment programs.</p>
+        <form class="newsletter-form slide-up delay-400" id="about-newsletter">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-container stagger-children">
+            <div class="footer-col fade-in">
+                <h4 class="slide-up">Femme Forward</h4>
+                <p class="fade-in delay-100">Empowering professional women through elegant, high-quality fashion designed for confidence, sophistication, and cultural pride.</p>
+                <div class="social-links stagger-children">
+                    <a href="#" class="bounce-in"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="bounce-in delay-100"><i class="fab fa-pinterest"></i></a>
+                    <a href="#" class="bounce-in delay-200"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="bounce-in delay-300"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col fade-in">
+                <h4 class="slide-up">Shop</h4>
+                <ul class="stagger-children">
+                    <li><a href="#" class="fade-in">Suits</a></li>
+                    <li><a href="#" class="fade-in">Jumpsuits</a></li>
+                    <li><a href="#" class="fade-in">Dresses</a></li>
+                    <li><a href="#" class="fade-in">Skirt Suits</a></li>
+                    <li><a href="#" class="fade-in">Tops & Shirts</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col fade-in">
+                <h4 class="slide-up">Information</h4>
+                <ul class="stagger-children">
+                    <li><a href="#" class="fade-in">About Us</a></li>
+                    <li><a href="#" class="fade-in">Size Guide</a></li>
+                    <li><a href="#" class="fade-in">Shipping & Returns</a></li>
+                    <li><a href="#" class="fade-in">Privacy Policy</a></li>
+                    <li><a href="#" class="fade-in">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col fade-in">
+                <h4 class="slide-up">Contact</h4>
+                <ul class="stagger-children">
+                    <li class="fade-in"><i class="fas fa-map-marker-alt"></i> Paris, France</li>
+                    <li class="fade-in"><i class="fas fa-phone"></i> +33 1 23 45 67 89</li>
+                    <li class="fade-in"><i class="fas fa-envelope"></i> hello@femmeforward.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p class="fade-in delay-500">&copy; 2025 Femme Forward. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/about.js"></script>
+</body>
+</html>

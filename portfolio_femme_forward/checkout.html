@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Femme Forward</title>
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+<!-- Header -->
+<header id="header">
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            <img src="images/logos/1.jpg" alt="Femme Forward Logo" class="logo-img">
+            <span class="logo-text slide-in-left">Femme<span>Forward</span></span>
+        </a>
+        
+        <nav class="main-nav">
+            <ul class="nav-menu slide-in-right">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="look-of-the-week.html">Look of the Week</a></li>
+                <li><a href="about.html">About</a></li>
+                <!-- Auth buttons in main menu -->
+                <li class="auth-buttons">
+                    <a href="login.html" class="btn-auth btn-login">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Sign In
+                    </a>
+                    <a href="signup.html" class="btn-auth btn-signup">
+                        <i class="fas fa-user-plus"></i>
+                        Create Account
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="header-actions">
+            <div class="language-currency slide-in-right">
+                <select id="language">
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                    <option value="de">DE</option>
+                </select>
+                <select id="currency">
+                    <option value="eur">EUR</option>
+                    <option value="gbp">GBP</option>
+                    <option value="usd">USD</option>
+                </select>
+            </div>
+            
+            <!-- Shopping Bag Icon with Counter -->
+            <a href="shopping-bag.html" class="shopping-bag-count">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="bag-count-badge" style="display: none;">0</span>
+            </a>
+            
+            <!-- Account Dropdown -->
+            <div class="account-dropdown">
+                <a href="#" class="account-trigger">
+                    <i class="far fa-user"></i>
+                </a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-header">
+                        <h4>My Account</h4>
+                        <p>Access your account and preferences</p>
+                    </div>
+                    <div class="dropdown-links">
+                        <a href="dashboard.html" class="dropdown-link dashboard-link">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                        <a href="login.html" class="dropdown-link">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <span>Sign In</span>
+                        </a>
+                        <a href="signup.html" class="dropdown-link">
+                            <i class="fas fa-user-plus"></i>
+                            <span>Create Account</span>
+                        </a>
+                        <a href="profile.html" class="dropdown-link user-link">
+                            <i class="fas fa-user-edit"></i>
+                            <span>My Profile</span>
+                        </a>
+                        <a href="orders.html" class="dropdown-link user-link">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>My Orders</span>
+                        </a>
+                        <a href="wishlist.html" class="dropdown-link user-link">
+                            <i class="far fa-heart"></i>
+                            <span>Wishlist</span>
+                        </a>
+                        <a href="settings.html" class="dropdown-link user-link">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                        <a href="admin.html" class="dropdown-link admin-link">
+                            <i class="fas fa-user-shield"></i>
+                            <span>Admin Panel</span>
+                        </a>
+                    </div>
+                    <div class="dropdown-footer">
+                        <a href="logout.html" class="dropdown-link logout-link">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Log Out</span>
+                        </a>
+                        <a href="#" class="dropdown-link">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Help Center</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Single Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <div class="mobile-menu-container">
+            <div class="mobile-menu-header">
+                <span class="mobile-menu-close"><i class="fas fa-times"></i></span>
+            </div>
+            <div class="mobile-menu-content">
+                <ul class="mobile-nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html" class="active">Shop</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="look-of-the-week.html">Look of the Week</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="size-guide.html">Size Guide</a></li>
+                    <li><a href="index.html?id=#contact">Contact</a></li>
+                </ul>
+                
+                <!-- Mobile Auth Buttons -->
+                <div class="mobile-auth-section">
+                    <h4>Account</h4>
+                    <div class="mobile-auth-buttons">
+                        <a href="login.html" class="mobile-auth-btn btn-login">
+                            <i class="fas fa-sign-in-alt"></i>
+                            Sign In
+                        </a>
+                        <a href="signup.html" class="mobile-auth-btn btn-signup">
+                            <i class="fas fa-user-plus"></i>
+                            Create Account
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Mobile Shopping Bag Link -->
+                <div class="mobile-additional-links">
+                    <a href="shopping-bag.html" class="mobile-shopping-bag-link">
+                        <i class="fas fa-shopping-bag"></i>
+                        Shopping Bag
+                        <span class="mobile-bag-count" style="display: none;">0</span>
+                    </a>
+                    <a href="#"><i class="far fa-heart"></i> Wishlist</a>
+                    <a href="#"><i class="fas fa-search"></i> Search</a>
+                </div>
+                
+                <!-- Mobile Language & Currency -->
+                <div class="mobile-settings-section">
+                    <h4>Settings</h4>
+                    <div class="mobile-language-currency">
+                        <select id="mobile-language">
+                            <option value="en">English</option>
+                            <option value="fr">Français</option>
+                            <option value="de">Deutsch</option>
+                        </select>
+                        <select id="mobile-currency">
+                            <option value="eur">EUR €</option>
+                            <option value="gbp">GBP £</option>
+                            <option value="usd">USD $</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <!-- Checkout Section -->
+    <section class="section checkout-section">
+        <div class="container">
+            <div class="checkout-header">
+                <a href="shopping-bag.html" class="back-to-bag">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Shopping Bag
+                </a>
+                <div class="checkout-progress">
+                    <div class="progress-step active">
+                        <span class="step-number">1</span>
+                        <span class="step-label">Shipping</span>
+                    </div>
+                    <div class="progress-step">
+                        <span class="step-number">2</span>
+                        <span class="step-label">Payment</span>
+                    </div>
+                    <div class="progress-step">
+                        <span class="step-number">3</span>
+                        <span class="step-label">Confirmation</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkout-container">
+                <!-- Checkout Form -->
+                <div class="checkout-form-container">
+                    <form class="checkout-form" id="checkout-form">
+                        <!-- Shipping Information -->
+                        <div class="form-section active" id="shipping-section">
+                            <div class="section-header">
+                                <h2><i class="fas fa-truck"></i> Shipping Information</h2>
+                                <p>Enter your shipping details</p>
+                            </div>
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                    <div class="form-hint">Order confirmation will be sent to this email</div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="address">Street Address *</label>
+                                <input type="text" id="address" name="address" required>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City *</label>
+                                    <input type="text" id="city" name="city" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="postalCode">Postal Code *</label>
+                                    <input type="text" id="postalCode" name="postalCode" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="country">Country *</label>
+                                    <select id="country" name="country" required>
+                                        <option value="">Select Country</option>
+                                        <option value="FR">France</option>
+                                        <option value="DE">Germany</option>
+                                        <option value="IT">Italy</option>
+                                        <option value="ES">Spain</option>
+                                        <option value="UK">United Kingdom</option>
+                                        <option value="US">United States</option>
+                                        <option value="CA">Canada</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="saveAddress" name="saveAddress">
+                                <label for="saveAddress">Save this address for future orders</label>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-next" id="next-to-payment">
+                                    Continue to Payment
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Payment Information -->
+                        <div class="form-section" id="payment-section">
+                            <div class="section-header">
+                                <h2><i class="fas fa-credit-card"></i> Payment Method</h2>
+                                <p>Choose your preferred payment method</p>
+                            </div>
+
+                            <div class="payment-methods">
+                                <div class="payment-method active" data-method="card">
+                                    <input type="radio" id="payment-card" name="paymentMethod" value="card" checked>
+                                    <label for="payment-card">
+                                        <i class="fas fa-credit-card"></i>
+                                        Credit/Debit Card
+                                    </label>
+                                </div>
+                                
+                                <div class="payment-method" data-method="paypal">
+                                    <input type="radio" id="payment-paypal" name="paymentMethod" value="paypal">
+                                    <label for="payment-paypal">
+                                        <i class="fab fa-paypal"></i>
+                                        PayPal
+                                    </label>
+                                </div>
+                                
+                                <div class="payment-method" data-method="apple-pay">
+                                    <input type="radio" id="payment-apple-pay" name="paymentMethod" value="apple-pay">
+                                    <label for="payment-apple-pay">
+                                        <i class="fab fa-apple-pay"></i>
+                                        Apple Pay
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Card Payment Form -->
+                            <div class="payment-form active" id="card-form">
+                                <div class="form-group">
+                                    <label for="cardNumber">Card Number *</label>
+                                    <div class="input-with-icon">
+                                        <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                                        <i class="fas fa-credit-card"></i>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="expiryDate">Expiry Date *</label>
+                                        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" maxlength="5">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv">CVV *</label>
+                                        <div class="input-with-icon">
+                                            <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="4">
+                                            <i class="fas fa-lock"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="cardName">Name on Card *</label>
+                                    <input type="text" id="cardName" name="cardName" placeholder="John Doe">
+                                </div>
+
+                                <div class="form-group checkbox-group">
+                                    <input type="checkbox" id="saveCard" name="saveCard">
+                                    <label for="saveCard">Save card for future purchases</label>
+                                </div>
+                            </div>
+
+                            <!-- PayPal Payment Form -->
+                            <div class="payment-form" id="paypal-form">
+                                <div class="paypal-info">
+                                    <p>You will be redirected to PayPal to complete your payment securely.</p>
+                                    <div class="paypal-benefits">
+                                        <div class="benefit">
+                                            <i class="fas fa-shield-alt"></i>
+                                            <span>Secure payment</span>
+                                        </div>
+                                        <div class="benefit">
+                                            <i class="fas fa-bolt"></i>
+                                            <span>Fast checkout</span>
+                                        </div>
+                                        <div class="benefit">
+                                            <i class="fas fa-globe"></i>
+                                            <span>Worldwide acceptance</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Apple Pay Payment Form -->
+                            <div class="payment-form" id="apple-pay-form">
+                                <div class="apple-pay-info">
+                                    <p>Pay securely with Apple Pay using your device.</p>
+                                    <button type="button" class="btn-apple-pay">
+                                        <i class="fab fa-apple-pay"></i>
+                                        Pay with Apple Pay
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-back" id="back-to-shipping">
+                                    <i class="fas fa-arrow-left"></i>
+                                    Back to Shipping
+                                </button>
+                                <button type="submit" class="btn btn-primary btn-place-order" id="place-order">
+                                    <i class="fas fa-lock"></i>
+                                    Place Order
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="order-summary-sidebar">
+                    <div class="order-summary-card">
+                        <h3>Order Summary</h3>
+                        
+                        <div class="order-items" id="checkout-items">
+                            <!-- Items will be populated by JavaScript -->
+                        </div>
+
+                        <div class="order-totals">
+                            <div class="total-line">
+                                <span>Subtotal</span>
+                                <span id="checkout-subtotal">€0.00</span>
+                            </div>
+                            <div class="total-line">
+                                <span>Shipping</span>
+                                <span id="checkout-shipping">€0.00</span>
+                            </div>
+                            <div class="total-line">
+                                <span>Tax</span>
+                                <span id="checkout-tax">€0.00</span>
+                            </div>
+                            <div class="total-line grand-total">
+                                <span>Total</span>
+                                <span id="checkout-total">€0.00</span>
+                            </div>
+                        </div>
+
+                        <div class="shipping-info">
+                            <div class="shipping-method">
+                                <i class="fas fa-shipping-fast"></i>
+                                <div>
+                                    <strong>Standard Shipping</strong>
+                                    <span>3-5 business days</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="security-badges">
+                            <div class="security-badge">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>256-bit SSL Secure</span>
+                            </div>
+                            <div class="security-badge">
+                                <i class="fas fa-lock"></i>
+                                <span>PCI Compliant</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="customer-support">
+                        <h4>Need Help?</h4>
+                        <p>Our customer service team is here to assist you.</p>
+                        <div class="support-contacts">
+                            <div class="support-contact">
+                                <i class="fas fa-phone"></i>
+                                <span>+33 1 23 45 67 89</span>
+                            </div>
+                            <div class="support-contact">
+                                <i class="fas fa-envelope"></i>
+                                <span>support@femmeforward.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container stagger-children">
+                <div class="footer-col fade-in">
+                    <h4 class="slide-up">Femme Forward</h4>
+                    <p class="fade-in delay-100">Empowering professional women through elegant, high-quality fashion designed for confidence, sophistication, and cultural pride.</p>
+                    <div class="social-links stagger-children">
+                        <a href="#" class="bounce-in"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="bounce-in delay-100"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="bounce-in delay-200"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="bounce-in delay-300"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col fade-in">
+                    <h4 class="slide-up">Shop</h4>
+                    <ul class="stagger-children">
+                        <li><a href="#" class="fade-in">Suits</a></li>
+                        <li><a href="#" class="fade-in">Jumpsuits</a></li>
+                        <li><a href="#" class="fade-in">Dresses</a></li>
+                        <li><a href="#" class="fade-in">Skirt Suits</a></li>
+                        <li><a href="#" class="fade-in">Tops & Shirts</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col fade-in">
+                    <h4 class="slide-up">Information</h4>
+                    <ul class="stagger-children">
+                        <li><a href="#" class="fade-in">About Us</a></li>
+                        <li><a href="#" class="fade-in">Size Guide</a></li>
+                        <li><a href="#" class="fade-in">Shipping & Returns</a></li>
+                        <li><a href="#" class="fade-in">Privacy Policy</a></li>
+                        <li><a href="#" class="fade-in">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col fade-in">
+                    <h4 class="slide-up">Contact</h4>
+                    <ul class="stagger-children">
+                        <li class="fade-in"><i class="fas fa-map-marker-alt"></i> Paris, France</li>
+                        <li class="fade-in"><i class="fas fa-phone"></i> +33 1 23 45 67 89</li>
+                        <li class="fade-in"><i class="fas fa-envelope"></i> hello@femmeforward.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="fade-in delay-500">&copy; 2025 Femme Forward. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

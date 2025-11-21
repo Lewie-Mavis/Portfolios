@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop – Femme Forward | Professional Women's Fashion</title>
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+<body>
+<!-- Header -->
+<header id="header">
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            <img src="images/logos/1.jpg" alt="Femme Forward Logo" class="logo-img">
+            <span class="logo-text slide-in-left">Femme<span>Forward</span></span>
+        </a>
+        
+        <nav class="main-nav">
+            <ul class="nav-menu slide-in-right">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="look-of-the-week.html">Look of the Week</a></li>
+                <li><a href="about.html">About</a></li>
+                <!-- Auth buttons in main menu -->
+                <li class="auth-buttons">
+                    <a href="login.html" class="btn-auth btn-login">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Sign In
+                    </a>
+                    <a href="signup.html" class="btn-auth btn-signup">
+                        <i class="fas fa-user-plus"></i>
+                        Create Account
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="header-actions">
+            <div class="language-currency slide-in-right">
+                <select id="language">
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                    <option value="de">DE</option>
+                </select>
+                <select id="currency">
+                    <option value="eur">EUR</option>
+                    <option value="gbp">GBP</option>
+                    <option value="usd">USD</option>
+                </select>
+            </div>
+            
+            <!-- Shopping Bag Icon with Counter -->
+            <a href="shopping-bag.html" class="shopping-bag-count">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="bag-count-badge" style="display: none;">0</span>
+            </a>
+            
+            <!-- Account Dropdown -->
+            <div class="account-dropdown">
+                <a href="#" class="account-trigger">
+                    <i class="far fa-user"></i>
+                </a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-header">
+                        <h4>My Account</h4>
+                        <p>Access your account and preferences</p>
+                    </div>
+                    <div class="dropdown-links">
+                        <a href="dashboard.html" class="dropdown-link dashboard-link">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                        <a href="login.html" class="dropdown-link">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <span>Sign In</span>
+                        </a>
+                        <a href="signup.html" class="dropdown-link">
+                            <i class="fas fa-user-plus"></i>
+                            <span>Create Account</span>
+                        </a>
+                        <a href="profile.html" class="dropdown-link user-link">
+                            <i class="fas fa-user-edit"></i>
+                            <span>My Profile</span>
+                        </a>
+                        <a href="orders.html" class="dropdown-link user-link">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>My Orders</span>
+                        </a>
+                        <a href="wishlist.html" class="dropdown-link user-link">
+                            <i class="far fa-heart"></i>
+                            <span>Wishlist</span>
+                        </a>
+                        <a href="settings.html" class="dropdown-link user-link">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                        <a href="admin.html" class="dropdown-link admin-link">
+                            <i class="fas fa-user-shield"></i>
+                            <span>Admin Panel</span>
+                        </a>
+                    </div>
+                    <div class="dropdown-footer">
+                        <a href="logout.html" class="dropdown-link logout-link">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Log Out</span>
+                        </a>
+                        <a href="#" class="dropdown-link">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Help Center</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Single Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <div class="mobile-menu-container">
+            <div class="mobile-menu-header">
+                <span class="mobile-menu-close"><i class="fas fa-times"></i></span>
+            </div>
+            <div class="mobile-menu-content">
+                <ul class="mobile-nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html" class="active">Shop</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="look-of-the-week.html">Look of the Week</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="size-guide.html">Size Guide</a></li>
+                    <li><a href="index.html?id=#contact">Contact</a></li>
+                </ul>
+                
+                <!-- Mobile Auth Buttons -->
+                <div class="mobile-auth-section">
+                    <h4>Account</h4>
+                    <div class="mobile-auth-buttons">
+                        <a href="login.html" class="mobile-auth-btn btn-login">
+                            <i class="fas fa-sign-in-alt"></i>
+                            Sign In
+                        </a>
+                        <a href="signup.html" class="mobile-auth-btn btn-signup">
+                            <i class="fas fa-user-plus"></i>
+                            Create Account
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Mobile Shopping Bag Link -->
+                <div class="mobile-additional-links">
+                    <a href="shopping-bag.html" class="mobile-shopping-bag-link">
+                        <i class="fas fa-shopping-bag"></i>
+                        Shopping Bag
+                        <span class="mobile-bag-count" style="display: none;">0</span>
+                    </a>
+                    <a href="#"><i class="far fa-heart"></i> Wishlist</a>
+                    <a href="#"><i class="fas fa-search"></i> Search</a>
+                </div>
+                
+                <!-- Mobile Language & Currency -->
+                <div class="mobile-settings-section">
+                    <h4>Settings</h4>
+                    <div class="mobile-language-currency">
+                        <select id="mobile-language">
+                            <option value="en">English</option>
+                            <option value="fr">Français</option>
+                            <option value="de">Deutsch</option>
+                        </select>
+                        <select id="mobile-currency">
+                            <option value="eur">EUR €</option>
+                            <option value="gbp">GBP £</option>
+                            <option value="usd">USD $</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Shop Hero Section -->
+<section class="shop-hero">
+    <div class="container">
+        <div class="shop-hero-content">
+            <h1 class="slide-in-left">Professional Wardrobe Essentials</h1>
+            <p class="slide-in-right delay-200">Discover our curated collection of sophisticated suits, jumpsuits, and dresses designed for the modern professional woman.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Shop Main Content -->
+<section class="shop-section">
+    <div class="container">
+        <div class="shop-container">
+            <!-- Sidebar Filters -->
+            <aside class="shop-sidebar slide-in-left">
+                <div class="filter-section">
+                    <h3>Filters</h3>
+                    <button class="clear-filters">Clear All</button>
+                </div>
+
+                <!-- Category Filter -->
+                <div class="filter-group">
+                    <h4 class="filter-title">Category</h4>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="suits">
+                            <span class="checkmark"></span>
+                            Suits
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="jumpsuits">
+                            <span class="checkmark"></span>
+                            Jumpsuits
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="dresses">
+                            <span class="checkmark"></span>
+                            Dresses
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="tops">
+                            <span class="checkmark"></span>
+                            Tops & Shirts
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="skirts">
+                            <span class="checkmark"></span>
+                            Skirts
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="accessories">
+                            <span class="checkmark"></span>
+                            Accessories
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Size Filter -->
+                <div class="filter-group">
+                    <h4 class="filter-title">Size</h4>
+                    <div class="filter-options size-options">
+                        <label class="size-option">
+                            <input type="checkbox" name="size" value="xs">
+                            <span class="size-box">XS</span>
+                        </label>
+                        <label class="size-option">
+                            <input type="checkbox" name="size" value="s">
+                            <span class="size-box">S</span>
+                        </label>
+                        <label class="size-option">
+                            <input type="checkbox" name="size" value="m">
+                            <span class="size-box">M</span>
+                        </label>
+                        <label class="size-option">
+                            <input type="checkbox" name="size" value="l">
+                            <span class="size-box">L</span>
+                        </label>
+                        <label class="size-option">
+                            <input type="checkbox" name="size" value="xl">
+                            <span class="size-box">XL</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Color Filter -->
+                <div class="filter-group">
+                    <h4 class="filter-title">Color</h4>
+                    <div class="filter-options color-options">
+                        <label class="color-option">
+                            <input type="checkbox" name="color" value="black">
+                            <span class="color-box black"></span>
+                            Black
+                        </label>
+                        <label class="color-option">
+                            <input type="checkbox" name="color" value="navy">
+                            <span class="color-box navy"></span>
+                            Navy
+                        </label>
+                        <label class="color-option">
+                            <input type="checkbox" name="color" value="white">
+                            <span class="color-box white"></span>
+                            White
+                        </label>
+                        <label class="color-option">
+                            <input type="checkbox" name="color" value="beige">
+                            <span class="color-box beige"></span>
+                            Beige
+                        </label>
+                        <label class="color-option">
+                            <input type="checkbox" name="color" value="red">
+                            <span class="color-box red"></span>
+                            Red
+                        </label>
+                        <label class="color-option">
+                            <input type="checkbox" name="color" value="green">
+                            <span class="color-box green"></span>
+                            Green
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Price Filter -->
+                <div class="filter-group">
+                    <h4 class="filter-title">Price Range</h4>
+                    <div class="price-range">
+                        <div class="price-inputs">
+                            <input type="number" id="min-price" placeholder="Min" value="0">
+                            <span>-</span>
+                            <input type="number" id="max-price" placeholder="Max" value="500">
+                        </div>
+                        <div class="price-slider">
+                            <div class="slider-track"></div>
+                            <input type="range" min="0" max="500" value="0" class="range-min">
+                            <input type="range" min="0" max="500" value="500" class="range-max">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Occasion Filter -->
+                <div class="filter-group">
+                    <h4 class="filter-title">Occasion</h4>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="occasion" value="office">
+                            <span class="checkmark"></span>
+                            Office Wear
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="occasion" value="meetings">
+                            <span class="checkmark"></span>
+                            Business Meetings
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="occasion" value="events">
+                            <span class="checkmark"></span>
+                            Corporate Events
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="occasion" value="evening">
+                            <span class="checkmark"></span>
+                            Evening Wear
+                        </label>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Products Grid -->
+            <main class="shop-main">
+                <div class="shop-header slide-in-right">
+                    <div class="results-info">
+                        <p>Showing <span id="products-count">24</span> products</p>
+                    </div>
+                    <div class="sort-options">
+                        <label for="sort-by">Sort by:</label>
+                        <select id="sort-by">
+                            <option value="featured">Featured</option>
+                            <option value="newest">Newest</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="name">Name: A to Z</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="products-grid stagger-children" id="products-grid">
+                    <!-- Products will be loaded here via JavaScript -->
+                </div>
+
+                <div class="pagination">
+                    <button class="pagination-btn prev" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                        Previous
+                    </button>
+                    <div class="pagination-numbers">
+                        <span class="pagination-number active">1</span>
+                        <span class="pagination-number">2</span>
+                        <span class="pagination-number">3</span>
+                        <span class="pagination-number">4</span>
+                    </div>
+                    <button class="pagination-btn next">
+                        Next
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </main>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter">
+    <div class="container">
+        <h2 class="zoom-out">Join the Femme Forward Community</h2>
+        <p class="zoom-out delay-200">Subscribe to our newsletter for exclusive offers, styling tips, and early access to new collections.</p>
+        <form class="newsletter-form slide-up delay-400">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-container stagger-children">
+            <div class="footer-col fade-in">
+                <h4 class="slide-up">Femme Forward</h4>
+                <p class="fade-in delay-100">Empowering professional women through elegant, high-quality fashion designed for confidence, sophistication, and cultural pride.</p>
+                <div class="social-links stagger-children">
+                    <a href="#" class="bounce-in"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="bounce-in delay-100"><i class="fab fa-pinterest"></i></a>
+                    <a href="#" class="bounce-in delay-200"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="bounce-in delay-300"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col fade-in">
+                <h4 class="slide-up">Shop</h4>
+                <ul class="stagger-children">
+                    <li><a href="#" class="fade-in">Suits</a></li>
+                    <li><a href="#" class="fade-in">Jumpsuits</a></li>
+                    <li><a href="#" class="fade-in">Dresses</a></li>
+                    <li><a href="#" class="fade-in">Skirt Suits</a></li>
+                    <li><a href="#" class="fade-in">Tops & Shirts</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col fade-in">
+                <h4 class="slide-up">Information</h4>
+                <ul class="stagger-children">
+                    <li><a href="#" class="fade-in">About Us</a></li>
+                    <li><a href="#" class="fade-in">Size Guide</a></li>
+                    <li><a href="#" class="fade-in">Shipping & Returns</a></li>
+                    <li><a href="#" class="fade-in">Privacy Policy</a></li>
+                    <li><a href="#" class="fade-in">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col fade-in">
+                <h4 class="slide-up">Contact</h4>
+                <ul class="stagger-children">
+                    <li class="fade-in"><i class="fas fa-map-marker-alt"></i> Paris, France</li>
+                    <li class="fade-in"><i class="fas fa-phone"></i> +33 1 23 45 67 89</li>
+                    <li class="fade-in"><i class="fas fa-envelope"></i> hello@femmeforward.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p class="fade-in delay-500">&copy; 2025 Femme Forward. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Mobile Filter Button -->
+<div class="mobile-filter-btn">
+    <i class="fas fa-filter"></i>
+    <span>Filters</span>
+</div>
+
+<!-- Mobile Filter Overlay -->
+<div class="mobile-filter-overlay">
+    <div class="mobile-filter-container">
+        <div class="mobile-filter-header">
+            <h3>Filters</h3>
+            <span class="mobile-filter-close"><i class="fas fa-times"></i></span>
+        </div>
+        <div class="mobile-filter-content">
+            <!-- Mobile filter content will be the same as desktop sidebar -->
+        </div>
+        <div class="mobile-filter-actions">
+            <button class="btn btn-secondary clear-filters-mobile">Clear All</button>
+            <button class="btn btn-primary apply-filters">Apply Filters</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+<script src="js/shop.js"></script>
+</body>
+</html>

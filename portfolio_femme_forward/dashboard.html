@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard – Femme Forward | Your Personal Style Hub</title>
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+<!-- Header -->
+<header id="header">
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            <img src="images/logos/1.jpg" alt="Femme Forward Logo" class="logo-img">
+            <span class="logo-text slide-in-left">Femme<span>Forward</span></span>
+        </a>
+        
+        <nav class="main-nav">
+            <ul class="nav-menu slide-in-right">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="look-of-the-week.html">Look of the Week</a></li>
+                <li><a href="about.html">About</a></li>
+                <!-- Auth buttons in main menu -->
+                <li class="auth-buttons">
+                    <a href="dashboard.html" class="btn-auth btn-login" style="background: var(--terracotta); color: var(--ivory);">
+                        <i class="fas fa-tachometer-alt"></i>
+                        Dashboard
+                    </a>
+                    <a href="login.html" class="btn-auth btn-signup">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Sign Out
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="header-actions">
+            <div class="language-currency slide-in-right">
+                <select id="language">
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                    <option value="de">DE</option>
+                </select>
+                <select id="currency">
+                    <option value="eur">EUR</option>
+                    <option value="gbp">GBP</option>
+                    <option value="usd">USD</option>
+                </select>
+            </div>
+            
+            <!-- Shopping Bag Icon with Counter -->
+            <a href="shopping-bag.html" class="shopping-bag-count">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="bag-count-badge">3</span>
+            </a>
+            
+            <!-- Account Dropdown -->
+            <div class="account-dropdown logged-in">
+                <a href="#" class="account-trigger">
+                    <i class="far fa-user"></i>
+                </a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-header">
+                        <h4>Welcome, Sophia!</h4>
+                        <p>Executive Member since 2022</p>
+                    </div>
+                    <div class="dropdown-links">
+                        <a href="dashboard.html" class="dropdown-link dashboard-link">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                        <a href="profile.html" class="dropdown-link user-link">
+                            <i class="fas fa-user-edit"></i>
+                            <span>My Profile</span>
+                        </a>
+                        <a href="orders.html" class="dropdown-link user-link">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>My Orders</span>
+                        </a>
+                        <a href="wishlist.html" class="dropdown-link user-link">
+                            <i class="far fa-heart"></i>
+                            <span>Wishlist</span>
+                        </a>
+                        <a href="settings.html" class="dropdown-link user-link">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                        <a href="styling.html" class="dropdown-link user-link">
+                            <i class="fas fa-magic"></i>
+                            <span>Personal Styling</span>
+                        </a>
+                    </div>
+                    <div class="dropdown-footer">
+                        <a href="login.html" class="dropdown-link logout-link">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Log Out</span>
+                        </a>
+                        <a href="#" class="dropdown-link">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Help Center</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Single Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <div class="mobile-menu-container">
+            <div class="mobile-menu-header">
+                <span class="mobile-menu-close"><i class="fas fa-times"></i></span>
+            </div>
+            <div class="mobile-menu-content">
+                <ul class="mobile-nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="look-of-the-week.html">Look of the Week</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="size-guide.html">Size Guide</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                
+                <!-- Mobile Auth Buttons -->
+                <div class="mobile-auth-section">
+                    <h4>Account</h4>
+                    <div class="mobile-auth-buttons">
+                        <a href="dashboard.html" class="mobile-auth-btn btn-dashboard">
+                            <i class="fas fa-tachometer-alt"></i>
+                            Dashboard
+                        </a>
+                        <a href="profile.html" class="mobile-auth-btn btn-profile">
+                            <i class="fas fa-user-edit"></i>
+                            My Profile
+                        </a>
+                        <a href="orders.html" class="mobile-auth-btn btn-orders">
+                            <i class="fas fa-shopping-bag"></i>
+                            My Orders
+                        </a>
+                        <a href="wishlist.html" class="mobile-auth-btn btn-wishlist">
+                            <i class="far fa-heart"></i>
+                            Wishlist
+                        </a>
+                        <a href="login.html" class="mobile-auth-btn btn-logout">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Sign Out
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Mobile Shopping Bag Link -->
+                <div class="mobile-additional-links">
+                    <a href="shopping-bag.html" class="mobile-shopping-bag-link">
+                        <i class="fas fa-shopping-bag"></i>
+                        Shopping Bag
+                        <span class="mobile-bag-count">3</span>
+                    </a>
+                    <a href="wishlist.html"><i class="far fa-heart"></i> Wishlist</a>
+                    <a href="#"><i class="fas fa-search"></i> Search</a>
+                </div>
+                
+                <!-- Mobile Language & Currency -->
+                <div class="mobile-settings-section">
+                    <h4>Settings</h4>
+                    <div class="mobile-language-currency">
+                        <select id="mobile-language">
+                            <option value="en">English</option>
+                            <option value="fr">Français</option>
+                            <option value="de">Deutsch</option>
+                        </select>
+                        <select id="mobile-currency">
+                            <option value="eur">EUR €</option>
+                            <option value="gbp">GBP £</option>
+                            <option value="usd">USD $</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Dashboard Header -->
+<section class="dashboard-header">
+    <div class="container">
+        <div class="dashboard-header-content">
+            <div class="user-welcome slide-in-left">
+                <h1>Welcome back, Sophia!</h1>
+                <p>Here's your style overview for today</p>
+                <div class="user-badges">
+                    <span class="badge executive">Executive Member</span>
+                    <span class="badge loyalty">Gold Tier</span>
+                </div>
+            </div>
+            <div class="user-quick-actions slide-in-right">
+                <button class="quick-action">
+                    <i class="fas fa-bell"></i>
+                    <span>Alerts</span>
+                </button>
+                <button class="quick-action">
+                    <i class="fas fa-gift"></i>
+                    <span>Rewards</span>
+                </button>
+                <button class="quick-action">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Help</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Dashboard Main Content -->
+<section class="dashboard-main">
+    <div class="container">
+        <div class="dashboard-container">
+            <!-- Sidebar Navigation -->
+            <aside class="dashboard-sidebar slide-in-left">
+                <nav class="sidebar-nav">
+                    <div class="nav-section">
+                        <h3>Dashboard</h3>
+                        <ul>
+                            <li class="active"><a href="#"><i class="fas fa-home"></i> Overview</a></li>
+                            <li><a href="#"><i class="fas fa-chart-line"></i> Analytics</a></li>
+                            <li><a href="#"><i class="fas fa-star"></i> Rewards</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="nav-section">
+                        <h3>My Account</h3>
+                        <ul>
+                            <li><a href="#"><i class="fas fa-user-edit"></i> Profile</a></li>
+                            <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                            <li><a href="#"><i class="fas fa-shield-alt"></i> Security</a></li>
+                            <li><a href="#"><i class="fas fa-bell"></i> Notifications</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="nav-section">
+                        <h3>Shopping</h3>
+                        <ul>
+                            <li><a href="#"><i class="fas fa-shopping-bag"></i> Orders</a></li>
+                            <li><a href="#"><i class="far fa-heart"></i> Wishlist</a></li>
+                            <li><a href="#"><i class="fas fa-exchange-alt"></i> Returns</a></li>
+                            <li><a href="#"><i class="fas fa-credit-card"></i> Payment Methods</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="nav-section">
+                        <h3>Style & Support</h3>
+                        <ul>
+                            <li><a href="#"><i class="fas fa-magic"></i> Personal Styling</a></li>
+                            <li><a href="#"><i class="fas fa-ruler-combined"></i> Size Profile</a></li>
+                            <li><a href="#"><i class="fas fa-calendar-alt"></i> Appointments</a></li>
+                            <li><a href="#"><i class="fas fa-comments"></i> Style Support</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                
+                <div class="sidebar-promo">
+                    <div class="promo-content">
+                        <h4>Executive Benefits</h4>
+                        <p>Enjoy free alterations, priority shipping, and exclusive events</p>
+                        <a href="#" class="btn-promo">Upgrade Now</a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Dashboard Content -->
+            <main class="dashboard-content">
+                <!-- Quick Stats -->
+                <div class="stats-grid stagger-children">
+                    <div class="stat-card zoom-in">
+                        <div class="stat-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>12</h3>
+                            <p>Orders This Year</p>
+                            <span class="stat-trend positive">+18% from last year</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card zoom-in">
+                        <div class="stat-icon">
+                            <i class="far fa-heart"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>24</h3>
+                            <p>Wishlist Items</p>
+                            <span class="stat-trend">3 on sale</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card zoom-in">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>1,250</h3>
+                            <p>Reward Points</p>
+                            <span class="stat-trend positive">Earn 250 more for gold status</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card zoom-in">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>2</h3>
+                            <p>Upcoming Appointments</p>
+                            <span class="stat-trend">Next: Nov 20</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity & Orders -->
+                <div class="dashboard-row">
+                    <!-- Recent Orders -->
+                    <div class="dashboard-col large slide-in-left">
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3>Recent Orders</h3>
+                                <a href="#" class="view-all">View All</a>
+                            </div>
+                            <div class="card-content">
+                                <div class="orders-list">
+                                    <div class="order-item">
+                                        <div class="order-info">
+                                            <div class="order-image">
+                                                <img src="images/dashboard/order-1.jpg" alt="Sophie Blazer">
+                                            </div>
+                                            <div class="order-details">
+                                                <h4>Sophie Double-Breasted Blazer</h4>
+                                                <p>Order #FF-7892 • Placed on Nov 12, 2024</p>
+                                                <div class="order-status delivered">
+                                                    <i class="fas fa-check-circle"></i>
+                                                    Delivered
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-actions">
+                                            <button class="btn-action">Track</button>
+                                            <button class="btn-action">Reorder</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="order-item">
+                                        <div class="order-info">
+                                            <div class="order-image">
+                                                <img src="images/dashboard/order-2.jpg" alt="Wide-Leg Trousers">
+                                            </div>
+                                            <div class="order-details">
+                                                <h4>Wide-Leg Tailored Trousers</h4>
+                                                <p>Order #FF-7891 • Placed on Nov 5, 2024</p>
+                                                <div class="order-status shipped">
+                                                    <i class="fas fa-shipping-fast"></i>
+                                                    Shipped
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-actions">
+                                            <button class="btn-action">Track</button>
+                                            <button class="btn-action">View Details</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="order-item">
+                                        <div class="order-info">
+                                            <div class="order-image">
+                                                <img src="images/dashboard/order-3.jpg" alt="Silk Blouse">
+                                            </div>
+                                            <div class="order-details">
+                                                <h4>Silk Signature Blouse</h4>
+                                                <p>Order #FF-7889 • Placed on Oct 28, 2024</p>
+                                                <div class="order-status processing">
+                                                    <i class="fas fa-clock"></i>
+                                                    Processing
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-actions">
+                                            <button class="btn-action">Track</button>
+                                            <button class="btn-action">View Details</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="dashboard-col small slide-in-right">
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3>Quick Actions</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="quick-actions-grid">
+                                    <button class="quick-action-btn">
+                                        <i class="fas fa-redo"></i>
+                                        <span>Reorder Favorites</span>
+                                    </button>
+                                    <button class="quick-action-btn">
+                                        <i class="fas fa-magic"></i>
+                                        <span>Style Consultation</span>
+                                    </button>
+                                    <button class="quick-action-btn">
+                                        <i class="fas fa-sync-alt"></i>
+                                        <span>Schedule Return</span>
+                                    </button>
+                                    <button class="quick-action-btn">
+                                        <i class="fas fa-gift"></i>
+                                        <span>Use Rewards</span>
+                                    </button>
+                                    <button class="quick-action-btn">
+                                        <i class="fas fa-calendar-plus"></i>
+                                        <span>Book Fitting</span>
+                                    </button>
+                                    <button class="quick-action-btn">
+                                        <i class="fas fa-download"></i>
+                                        <span>Download Invoice</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Style Profile -->
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3>Your Style Profile</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="style-profile">
+                                    <div class="profile-completion">
+                                        <div class="completion-bar">
+                                            <div class="completion-fill" style="width: 85%"></div>
+                                        </div>
+                                        <span>85% Complete</span>
+                                    </div>
+                                    <div class="profile-details">
+                                        <div class="detail-item">
+                                            <strong>Size:</strong>
+                                            <span>US 6 / EU 38</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <strong>Style:</strong>
+                                            <span>Modern Classic</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <strong>Colors:</strong>
+                                            <span>Navy, Black, Cream</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <strong>Fit:</strong>
+                                            <span>Tailored</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn-update-profile">Update Profile</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wishlist & Recommendations -->
+                <div class="dashboard-row">
+                    <!-- Wishlist -->
+                    <div class="dashboard-col medium slide-in-left">
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3>Your Wishlist</h3>
+                                <a href="#" class="view-all">View All</a>
+                            </div>
+                            <div class="card-content">
+                                <div class="wishlist-items">
+                                    <div class="wishlist-item">
+                                        <div class="wishlist-image">
+                                            <img src="images/dashboard/wishlist-1.jpg" alt="Emilia Jumpsuit">
+                                            <button class="wishlist-remove">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                        <div class="wishlist-details">
+                                            <h4>Emilia Jumpsuit</h4>
+                                            <p class="price">€245</p>
+                                            <div class="wishlist-actions">
+                                                <button class="btn-move-to-bag">Add to Bag</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="wishlist-item">
+                                        <div class="wishlist-image">
+                                            <img src="images/dashboard/wishlist-2.jpg" alt="Charlotte Dress">
+                                            <button class="wishlist-remove">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                            <div class="sale-badge">Sale</div>
+                                        </div>
+                                        <div class="wishlist-details">
+                                            <h4>Charlotte Dress</h4>
+                                            <p class="price">
+                                                <span class="current-price">€165</span>
+                                                <span class="original-price">€195</span>
+                                            </p>
+                                            <div class="wishlist-actions">
+                                                <button class="btn-move-to-bag">Add to Bag</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Personalized Recommendations -->
+                    <div class="dashboard-col medium slide-in-right">
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3>Recommended For You</h3>
+                                <a href="#" class="view-all">See More</a>
+                            </div>
+                            <div class="card-content">
+                                <div class="recommendations-grid">
+                                    <div class="recommendation-item">
+                                        <div class="recommendation-image">
+                                            <img src="images/dashboard/recommendation-1.jpg" alt="Executive Suit Set">
+                                            <button class="quick-add">
+                                                <i class="fas fa-shopping-bag"></i>
+                                            </button>
+                                        </div>
+                                        <div class="recommendation-details">
+                                            <h4>Executive Suit Set</h4>
+                                            <p class="price">€345</p>
+                                            <div class="match-score">
+                                                <span class="score">95% match</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="recommendation-item">
+                                        <div class="recommendation-image">
+                                            <img src="images/dashboard/recommendation-2.jpg" alt="Silk Camisole">
+                                            <button class="quick-add">
+                                                <i class="fas fa-shopping-bag"></i>
+                                            </button>
+                                        </div>
+                                        <div class="recommendation-details">
+                                            <h4>Silk Camisole</h4>
+                                            <p class="price">€89</p>
+                                            <div class="match-score">
+                                                <span class="score">88% match</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Appointments & Style Updates -->
+                <div class="dashboard-row">
+                    <!-- Upcoming Appointments -->
+                    <div class="dashboard-col medium slide-in-left">
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3>Upcoming Appointments</h3>
+                                <a href="#" class="view-all">Schedule New</a>
+                            </div>
+                            <div class="card-content">
+                                <div class="appointments-list">
+                                    <div class="appointment-item">
+                                        <div class="appointment-date">
+                                            <span class="date">20</span>
+                                            <span class="month">NOV</span>
+                                        </div>
+                                        <div class="appointment-details">
+                                            <h4>Personal Styling Session</h4>
+                                            <p>With Sophie Laurent • 3:00 PM CET</p>
+                                            <span class="appointment-type">Virtual Consultation</span>
+                                        </div>
+                                        <div class="appointment-actions">
+                                            <button class="btn-action">Join</button>
+                                            <button class="btn-action outline">Reschedule</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="appointment-item">
+                                        <div class="appointment-date">
+                                            <span class="date">25</span>
+                                            <span class="month">NOV</span>
+                                        </div>
+                                        <div class="appointment-details">
+                                            <h4>In-Store Fitting</h4>
+                                            <p>Paris Flagship Store • 11:00 AM CET</p>
+                                            <span class="appointment-type">In-Person</span>
+                                        </div>
+                                        <div class="appointment-actions">
+                                            <button class="btn-action">Details</button>
+                                            <button class="btn-action outline">Reschedule</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Style Updates -->
+                    <div class="dashboard-col medium slide-in-right">
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3>Style Updates</h3>
+                                <a href="#" class="view-all">View All</a>
+                            </div>
+                            <div class="card-content">
+                                <div class="updates-list">
+                                    <div class="update-item">
+                                        <div class="update-icon new-collection">
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="update-content">
+                                            <h4>New Collection Launched</h4>
+                                            <p>The Winter Luxe collection is now available. Early access for Executive members.</p>
+                                            <span class="update-time">2 hours ago</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="update-item">
+                                        <div class="update-icon sale">
+                                            <i class="fas fa-tag"></i>
+                                        </div>
+                                        <div class="update-content">
+                                            <h4>Exclusive Sale</h4>
+                                            <p>Items from your wishlist are now on sale. Limited time offer.</p>
+                                            <span class="update-time">1 day ago</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="update-item">
+                                        <div class="update-icon event">
+                                            <i class="fas fa-calendar"></i>
+                                        </div>
+                                        <div class="update-content">
+                                            <h4>Upcoming Event</h4>
+                                            <p>Executive members evening at our Paris flagship store next week.</p>
+                                            <span class="update-time">3 days ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter">
+    <div class="container">
+        <h2 class="zoom-out">Stay Inspired</h2>
+        <p class="zoom-out delay-200">Get personalized style tips and exclusive offers delivered to your inbox.</p>
+        <form class="newsletter-form slide-up delay-400" id="dashboard-newsletter">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-container stagger-children">
+            <div class="footer-col fade-in">
+                <h4 class="slide-up">Femme Forward</h4>
+                <p class="fade-in delay-100">Empowering professional women through elegant, high-quality fashion designed for confidence, sophistication, and cultural pride.</p>
+                <div class="social-links stagger-children">
+                    <a href="#" class="bounce-in"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="bounce-in delay-100"><i class="fab fa-pinterest"></i></a>
+                    <a href="#" class="bounce-in delay-200"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="bounce-in delay-300"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col fade-in">
+                <h4 class="slide-up">Shop</h4>
+                <ul class="stagger-children">
+                    <li><a href="#" class="fade-in">Suits</a></li>
+                    <li><a href="#" class="fade-in">Jumpsuits</a></li>
+                    <li><a href="#" class="fade-in">Dresses</a></li>
+                    <li><a href="#" class="fade-in">Skirt Suits</a></li>
+                    <li><a href="#" class="fade-in">Tops & Shirts</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col fade-in">
+                <h4 class="slide-up">Information</h4>
+                <ul class="stagger-children">
+                    <li><a href="#" class="fade-in">About Us</a></li>
+                    <li><a href="#" class="fade-in">Size Guide</a></li>
+                    <li><a href="#" class="fade-in">Shipping & Returns</a></li>
+                    <li><a href="#" class="fade-in">Privacy Policy</a></li>
+                    <li><a href="#" class="fade-in">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col fade-in">
+                <h4 class="slide-up">Contact</h4>
+                <ul class="stagger-children">
+                    <li class="fade-in"><i class="fas fa-map-marker-alt"></i> Paris, France</li>
+                    <li class="fade-in"><i class="fas fa-phone"></i> +33 1 23 45 67 89</li>
+                    <li class="fade-in"><i class="fas fa-envelope"></i> hello@femmeforward.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p class="fade-in delay-500">&copy; 2025 Femme Forward. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>
