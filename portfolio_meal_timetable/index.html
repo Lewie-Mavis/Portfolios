@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriPlan | World-Class Meal Planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍽️</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+                <h1>NutriPlan</h1>
+            </div>
+            <div class="nav-links">
+                <button id="today-btn" class="nav-btn">
+                    <i class="fas fa-calendar-day"></i>
+                    <span>Today</span>
+                </button>
+                <button id="full-week-btn" class="nav-btn">
+                    <i class="fas fa-calendar-week"></i>
+                    <span>Full Week</span>
+                </button>
+                <button id="add-meal-btn" class="nav-btn primary-btn">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Add Meal</span>
+                </button>
+                <button id="theme-toggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+	
+	
+	
+	    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+    
+    <!-- Mobile Menu Sidebar -->
+    <div class="mobile-menu-sidebar" id="mobile-menu-sidebar">
+        <div class="mobile-menu-header">
+            <div class="mobile-logo">
+                <i class="fas fa-utensils"></i>
+                <h2>NutriPlan</h2>
+            </div>
+            <button class="mobile-menu-close" id="mobile-menu-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="mobile-menu-links">
+            <button class="mobile-nav-btn" id="mobile-today-btn">
+                <i class="fas fa-calendar-day"></i>
+                <span>Today</span>
+            </button>
+            <button class="mobile-nav-btn" id="mobile-full-week-btn">
+                <i class="fas fa-calendar-week"></i>
+                <span>Full Week</span>
+            </button>
+            <button class="mobile-nav-btn primary-btn" id="mobile-add-meal-btn">
+                <i class="fas fa-plus-circle"></i>
+                <span>Add Meal</span>
+            </button>
+            <div class="mobile-menu-divider"></div>
+            <button class="mobile-theme-toggle" id="mobile-theme-toggle">
+                <i class="fas fa-moon"></i>
+                <span>Toggle Theme</span>
+            </button>
+        </div>
+        <div class="mobile-menu-footer">
+            <p>Plan better. Eat better. Live better.</p>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content animate-fade-up">
+            <h1 class="hero-title">Plan Your Meals, <span class="gradient-text">Eat Better</span> Every Day</h1>
+            <p class="hero-subtitle">A beautifully designed meal planner to organize your nutrition with style and precision.</p>
+            <div class="hero-actions">
+                <button id="hero-add-meal" class="hero-btn">
+                    <i class="fas fa-plus"></i>
+                    Add Your First Meal
+                </button>
+                <button id="view-week" class="hero-btn secondary">
+                    <i class="fas fa-calendar-alt"></i>
+                    View Weekly Plan
+                </button>
+            </div>
+        </div>
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </section>
+
+    <!-- Add Meal Form -->
+    <section id="meal-form-section" class="meal-form-section animate-slide-up">
+        <div class="container">
+            <h2 class="section-title">Plan Your Day</h2>
+            <p class="section-subtitle">Select a day and add meals to create your perfect nutrition schedule</p>
+            
+            <div class="form-card glass-card">
+                <div class="form-header">
+                    <h3><i class="fas fa-edit"></i> Meal Details</h3>
+                    <button id="clear-day" class="clear-btn">
+                        <i class="fas fa-trash-alt"></i> Clear Day
+                    </button>
+                </div>
+                
+                <div class="form-body">
+                    <div class="form-group">
+                        <label for="day-select"><i class="fas fa-calendar-alt"></i> Select Day</label>
+                        <select id="day-select" class="form-select">
+                            <option value="monday">Monday</option>
+                            <option value="tuesday">Tuesday</option>
+                            <option value="wednesday">Wednesday</option>
+                            <option value="thursday">Thursday</option>
+                            <option value="friday">Friday</option>
+                            <option value="saturday">Saturday</option>
+                            <option value="sunday">Sunday</option>
+                        </select>
+                    </div>
+                    
+                    <div class="meal-inputs">
+                        <div class="meal-input-group">
+                            <label for="breakfast"><i class="fas fa-sun"></i> Breakfast</label>
+                            <input type="text" id="breakfast" placeholder="Oatmeal with fruits, yogurt, orange juice...">
+                        </div>
+                        
+                        <div class="meal-input-group">
+                            <label for="snack1"><i class="fas fa-apple-alt"></i> Morning Snack</label>
+                            <input type="text" id="snack1" placeholder="Apple, nuts, protein bar...">
+                        </div>
+                        
+                        <div class="meal-input-group">
+                            <label for="lunch"><i class="fas fa-utensils"></i> Lunch</label>
+                            <input type="text" id="lunch" placeholder="Grilled chicken salad, quinoa, vegetables...">
+                        </div>
+                        
+                        <div class="meal-input-group">
+                            <label for="snack2"><i class="fas fa-carrot"></i> Afternoon Snack</label>
+                            <input type="text" id="snack2" placeholder="Greek yogurt, carrots, hummus...">
+                        </div>
+                        
+                        <div class="meal-input-group">
+                            <label for="dinner"><i class="fas fa-moon"></i> Dinner</label>
+                            <input type="text" id="dinner" placeholder="Salmon, sweet potatoes, steamed broccoli...">
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button id="save-meal" class="save-btn">
+                            <i class="fas fa-save"></i> Save Meal Plan
+                        </button>
+                        <button id="cancel-meal" class="cancel-btn">
+                            Cancel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daily Meal Display -->
+    <section id="daily-display" class="daily-display-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Today's Meals</h2>
+                <p class="section-subtitle">Your nutrition plan for <span id="current-day">Monday</span></p>
+                <div class="day-navigation">
+                    <button id="prev-day" class="day-nav-btn"><i class="fas fa-chevron-left"></i></button>
+                    <button id="next-day" class="day-nav-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            
+            <div class="meals-container" id="meals-container">
+                <!-- Meals will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Weekly Overview -->
+    <section id="weekly-overview" class="weekly-section">
+        <div class="container">
+            <h2 class="section-title">Weekly Overview</h2>
+            <p class="section-subtitle">Your complete nutrition plan at a glance</p>
+            
+            <div class="week-grid" id="week-grid">
+                <!-- Weekly cards will be dynamically inserted here -->
+            </div>
+            
+            <div class="week-actions">
+                <button id="print-week" class="action-btn">
+                    <i class="fas fa-print"></i> Print Weekly Plan
+                </button>
+                <button id="export-json" class="action-btn secondary">
+                    <i class="fas fa-file-export"></i> Export as JSON
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-utensils"></i>
+                    <h3>NutriPlan</h3>
+                    <p>Plan better. Eat better. Live better.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">About</a>
+                    <a href="#" class="footer-link">Features</a>
+                    <a href="#" class="footer-link">Tips</a>
+                    <a href="#" class="footer-link">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NutriPlan. All rights reserved. Made with <i class="fas fa-heart"></i> for healthy living.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle toast-icon"></i>
+            <div class="toast-message">Meal plan saved successfully!</div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle toast-icon"></i>
+            <div class="toast-message">Meal plan saved successfully!</div>
+        </div>
+    </div>
+
+    <!-- Debug Buttons (hidden in production) -->
+    <div style="position: fixed; bottom: 20px; left: 20px; z-index: 9999; display: flex; flex-direction: column; gap: 10px;">
+        <button onclick="debugApp()" style="padding: 10px 15px; background: #3b82f6; color: white; border: none; border-radius: 50px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+            <i class="fas fa-bug"></i> Debug
+        </button>
+        <button onclick="addTestData()" style="padding: 10px 15px; background: #10b981; color: white; border: none; border-radius: 50px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+            <i class="fas fa-vial"></i> Add Test Data
+        </button>
+        <button onclick="localStorage.clear(); location.reload();" style="padding: 10px 15px; background: #ef4444; color: white; border: none; border-radius: 50px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+            <i class="fas fa-trash"></i> Clear All Data
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
