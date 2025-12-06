@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinguaLearn | Language Learning Companion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header with Navigation -->
+    <header class="header" role="banner">
+        <div class="container header-container">
+            <!-- Logo and Site Title -->
+            <div class="logo-container">
+                <div class="logo" aria-label="LinguaLearn Logo">🌐</div>
+                <h1 class="site-title">LinguaLearn</h1>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="main-nav" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a href="#translate" class="nav-link active" data-section="translate">Translate</a></li>
+                    <li><a href="#flashcards" class="nav-link" data-section="flashcards">Flashcards</a></li>
+                    <li><a href="#history" class="nav-link" data-section="history">History</a></li>
+                    <li><a href="#phrases" class="nav-link" data-section="phrases">Phrases</a></li>
+                </ul>
+            </nav>
+
+            <!-- User Actions -->
+            <div class="user-actions">
+                <button class="icon-btn theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="icon-btn settings-toggle" aria-label="Open settings" aria-expanded="false">
+                    <i class="fas fa-cog"></i>
+                </button>
+                <!-- Mobile Menu Toggle -->
+                <button class="icon-btn mobile-menu-toggle" aria-label="Menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" aria-hidden="true">
+            <ul class="mobile-nav-list">
+                <li><a href="#translate" class="mobile-nav-link active" data-section="translate">Translate</a></li>
+                <li><a href="#flashcards" class="mobile-nav-link" data-section="flashcards">Flashcards</a></li>
+                <li><a href="#history" class="mobile-nav-link" data-section="history">History</a></li>
+                <li><a href="#phrases" class="mobile-nav-link" data-section="phrases">Phrases</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Settings Panel (hidden by default) -->
+    <aside class="settings-panel" role="dialog" aria-labelledby="settings-heading" aria-hidden="true">
+        <div class="settings-header">
+            <h2 id="settings-heading">Settings</h2>
+            <button class="icon-btn settings-close" aria-label="Close settings">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="settings-content">
+            <div class="setting-group">
+                <h3>Language Preferences</h3>
+                <div class="setting-item">
+                    <label for="default-target">Default Target Language</label>
+                    <select id="default-target" class="select-input">
+                        <option value="fr">French</option>
+                        <option value="es">Spanish</option>
+                        <option value="de">German</option>
+                        <option value="zh">Chinese</option>
+                        <option value="ar">Arabic</option>
+                        <option value="sw">Swahili</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="auto-detect" checked>
+                        <span class="checkmark"></span>
+                        Auto-detect source language
+                    </label>
+                </div>
+            </div>
+
+            <div class="setting-group">
+                <h3>Privacy & Data</h3>
+                <div class="setting-item">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="use-remote-api">
+                        <span class="checkmark"></span>
+                        Enable remote translation API
+                        <span class="help-text">(Requires internet connection)</span>
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="store-history" checked>
+                        <span class="checkmark"></span>
+                        Save translation history
+                    </label>
+                </div>
+                <div class="privacy-notice">
+                    <p><strong>Privacy Notice:</strong> When remote API is enabled, your text may be sent to third-party translation services. Disable this option for local-only processing.</p>
+                </div>
+            </div>
+
+            <div class="setting-group">
+                <h3>Audio & Voice</h3>
+                <div class="setting-item">
+                    <label for="playback-speed">Default Playback Speed</label>
+                    <select id="playback-speed" class="select-input">
+                        <option value="0.8">0.8x Slow</option>
+                        <option value="1.0" selected>1.0x Normal</option>
+                        <option value="1.2">1.2x Fast</option>
+                        <option value="1.4">1.4x Faster</option>
+                        <option value="1.6">1.6x Very Fast</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="settings-actions">
+                <button class="btn btn-secondary" id="clear-data">Clear All Data</button>
+                <button class="btn btn-primary" id="save-settings">Save Settings</button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content">
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 id="hero-heading" class="hero-title">Learn Languages Through Immersion</h1>
+                    <p class="hero-subtitle">Translate, listen, and practice with intelligent flashcards. Start by typing or pasting text below.</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number" id="total-translations">0</span>
+                            <span class="stat-label">Translations</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" id="total-flashcards">0</span>
+                            <span class="stat-label">Flashcards</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" id="total-words">0</span>
+                            <span class="stat-label">Words Learned</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Translation Section (default view) -->
+        <section id="translate" class="section active-section" aria-labelledby="translate-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="translate-heading">Translation</h2>
+                    <div class="section-controls">
+                        <div class="language-switcher">
+                            <div class="language-selector">
+                                <label for="source-lang">From:</label>
+                                <select id="source-lang" class="select-input" aria-label="Source language">
+                                    <option value="auto">Auto-detect</option>
+                                    <option value="en">English</option>
+                                    <option value="fr">French</option>
+                                    <option value="es">Spanish</option>
+                                    <option value="de">German</option>
+                                    <option value="zh">Chinese</option>
+                                    <option value="ar">Arabic</option>
+                                    <option value="sw">Swahili</option>
+                                </select>
+                            </div>
+                            <button class="icon-btn swap-languages" aria-label="Swap languages">
+                                <i class="fas fa-exchange-alt"></i>
+                            </button>
+                            <div class="language-selector">
+                                <label for="target-lang">To:</label>
+                                <select id="target-lang" class="select-input" aria-label="Target language">
+                                    <option value="fr">French</option>
+                                    <option value="es">Spanish</option>
+                                    <option value="en">English</option>
+                                    <option value="de">German</option>
+                                    <option value="zh">Chinese</option>
+                                    <option value="ar">Arabic</option>
+                                    <option value="sw">Swahili</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="translation-container">
+                    <!-- Input Card -->
+                    <div class="card input-card">
+                        <div class="card-header">
+                            <h3>Input Text</h3>
+                            <div class="card-actions">
+                                <button class="icon-btn clear-input" aria-label="Clear input">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                                <button class="icon-btn microphone-btn" aria-label="Voice input" id="microphone-btn">
+                                    <i class="fas fa-microphone"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="input-container">
+                                <textarea 
+                                    id="source-text" 
+                                    class="text-input" 
+                                    placeholder="Type or paste text here..."
+                                    rows="8"
+                                    aria-label="Text to translate"
+                                ></textarea>
+                                <div class="input-footer">
+                                    <span class="char-count">
+                                        <span id="char-count">0</span> characters
+                                    </span>
+                                    <div class="input-actions">
+                                        <button class="btn btn-secondary" id="example-btn">
+                                            <i class="fas fa-lightbulb"></i> Get Example
+                                        </button>
+                                        <button class="btn btn-primary" id="translate-btn">
+                                            <i class="fas fa-language"></i> Translate
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Output Card -->
+                    <div class="card output-card">
+                        <div class="card-header">
+                            <h3>Translation</h3>
+                            <div class="translation-status" id="translation-status">
+                                <span class="status-indicator idle"></span>
+                                <span class="status-text">Ready</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="output-container">
+                                <div id="translated-text" class="translated-text" aria-live="polite">
+                                    <p class="placeholder">Translation will appear here...</p>
+                                </div>
+                                
+                                <!-- Audio Controls -->
+                                <div class="audio-controls" id="audio-controls" aria-label="Audio playback controls">
+                                    <div class="audio-header">
+                                        <h4>Pronunciation</h4>
+                                        <div class="voice-selector">
+                                            <label for="voice-select">Voice:</label>
+                                            <select id="voice-select" class="select-input" aria-label="Select voice">
+                                                <option value="">Loading voices...</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="audio-buttons">
+                                        <button class="icon-btn audio-btn" id="play-audio" aria-label="Play audio">
+                                            <i class="fas fa-play"></i>
+                                        </button>
+                                        <button class="icon-btn audio-btn" id="pause-audio" aria-label="Pause audio" disabled>
+                                            <i class="fas fa-pause"></i>
+                                        </button>
+                                        <button class="icon-btn audio-btn" id="stop-audio" aria-label="Stop audio" disabled>
+                                            <i class="fas fa-stop"></i>
+                                        </button>
+                                        <div class="speed-control">
+                                            <label for="speed-select">Speed:</label>
+                                            <select id="speed-select" class="select-input" aria-label="Playback speed">
+                                                <option value="0.8">0.8x</option>
+                                                <option value="1.0" selected>1.0x</option>
+                                                <option value="1.2">1.2x</option>
+                                                <option value="1.4">1.4x</option>
+                                                <option value="1.6">1.6x</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="wave-animation" id="wave-animation" aria-hidden="true">
+                                        <div class="wave-bar"></div>
+                                        <div class="wave-bar"></div>
+                                        <div class="wave-bar"></div>
+                                        <div class="wave-bar"></div>
+                                        <div class="wave-bar"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Translation Details -->
+                                <div class="translation-details" id="translation-details">
+                                    <div class="detail-item">
+                                        <span class="detail-label">Confidence:</span>
+                                        <span class="detail-value" id="confidence-value">N/A</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Detected Language:</span>
+                                        <span class="detail-value" id="detected-lang">N/A</span>
+                                    </div>
+                                </div>
+
+                                <!-- Action Buttons -->
+                                <div class="output-actions">
+                                    <button class="btn btn-secondary" id="save-flashcard-btn">
+                                        <i class="fas fa-save"></i> Save to Flashcards
+                                    </button>
+                                    <button class="btn btn-secondary" id="copy-translation-btn">
+                                        <i class="fas fa-copy"></i> Copy Translation
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Word Details Panel (hidden by default) -->
+                <div class="word-details-panel" id="word-details-panel" aria-hidden="true">
+                    <div class="panel-header">
+                        <h4 id="word-details-heading">Word Details</h4>
+                        <button class="icon-btn close-details" aria-label="Close word details">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="panel-body" id="word-details-content">
+                        <!-- Word details will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flashcards Section -->
+        <section id="flashcards" class="section" aria-labelledby="flashcards-heading" hidden>
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="flashcards-heading">Flashcards</h2>
+                    <div class="section-controls">
+                        <button class="btn btn-secondary" id="practice-mode-btn">
+                            <i class="fas fa-brain"></i> Practice Mode
+                        </button>
+                        <button class="btn btn-secondary" id="export-flashcards-btn">
+                            <i class="fas fa-download"></i> Export
+                        </button>
+                    </div>
+                </div>
+                <div class="flashcards-container">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="flashcards-header">
+                                <h3>Your Flashcards (<span id="flashcards-count">0</span>)</h3>
+                                <div class="flashcards-filter">
+                                    <label for="filter-language">Filter by language:</label>
+                                    <select id="filter-language" class="select-input">
+                                        <option value="all">All Languages</option>
+                                        <option value="fr">French</option>
+                                        <option value="es">Spanish</option>
+                                        <option value="de">German</option>
+                                        <option value="zh">Chinese</option>
+                                        <option value="ar">Arabic</option>
+                                        <option value="sw">Swahili</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="flashcards-list" id="flashcards-list">
+                                <p class="empty-state">No flashcards yet. Save translations to build your collection.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section id="history" class="section" aria-labelledby="history-heading" hidden>
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="history-heading">Translation History</h2>
+                    <div class="section-controls">
+                        <button class="btn btn-secondary" id="clear-history-btn">
+                            <i class="fas fa-trash"></i> Clear History
+                        </button>
+                        <button class="btn btn-secondary" id="export-history-btn">
+                            <i class="fas fa-download"></i> Export
+                        </button>
+                    </div>
+                </div>
+                <div class="history-container">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="history-header">
+                                <h3>Recent Translations</h3>
+                                <div class="history-filter">
+                                    <label for="history-date-filter">Filter by date:</label>
+                                    <select id="history-date-filter" class="select-input">
+                                        <option value="all">All Time</option>
+                                        <option value="today">Today</option>
+                                        <option value="week">This Week</option>
+                                        <option value="month">This Month</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="history-list" id="history-list">
+                                <p class="empty-state">No translation history yet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Example Phrases Section -->
+        <section id="phrases" class="section" aria-labelledby="phrases-heading" hidden>
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="phrases-heading">Example Phrases</h2>
+                    <div class="section-controls">
+                        <div class="phrase-category-filter">
+                            <label for="phrase-category">Category:</label>
+                            <select id="phrase-category" class="select-input">
+                                <option value="all">All Categories</option>
+                                <option value="greetings">Greetings</option>
+                                <option value="travel">Travel</option>
+                                <option value="food">Food</option>
+                                <option value="numbers">Numbers</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="phrases-container">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="phrases-grid" id="phrases-grid">
+                                <!-- Phrases will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practice Mode Modal (hidden by default) -->
+        <div class="practice-modal" id="practice-modal" role="dialog" aria-labelledby="practice-heading" aria-hidden="true">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="practice-heading">Practice Mode</h3>
+                    <button class="icon-btn close-practice" aria-label="Close practice mode">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="practice-stats">
+                        <div class="practice-stat">
+                            <span class="practice-stat-label">Cards Remaining:</span>
+                            <span class="practice-stat-value" id="cards-remaining">0</span>
+                        </div>
+                        <div class="practice-stat">
+                            <span class="practice-stat-label">Correct:</span>
+                            <span class="practice-stat-value" id="cards-correct">0</span>
+                        </div>
+                        <div class="practice-stat">
+                            <span class="practice-stat-label">Streak:</span>
+                            <span class="practice-stat-value" id="streak">0</span>
+                        </div>
+                    </div>
+                    <div class="practice-card" id="practice-card">
+                        <div class="card-front">
+                            <div class="card-content">
+                                <p class="card-text" id="practice-question"></p>
+                                <div class="card-hint" id="practice-hint"></div>
+                            </div>
+                            <button class="btn btn-secondary" id="reveal-answer">Reveal Answer</button>
+                        </div>
+                        <div class="card-back" hidden>
+                            <div class="card-content">
+                                <p class="card-text" id="practice-answer"></p>
+                                <div class="answer-audio" id="answer-audio"></div>
+                            </div>
+                            <div class="card-feedback">
+                                <p>How well did you know this?</p>
+                                <div class="feedback-buttons">
+                                    <button class="btn btn-feedback incorrect" data-strength="0">Incorrect</button>
+                                    <button class="btn btn-feedback hard" data-strength="1">Hard</button>
+                                    <button class="btn btn-feedback good" data-strength="2">Good</button>
+                                    <button class="btn btn-feedback easy" data-strength="3">Easy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Toasts for notifications -->
+    <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+    <!-- Scripts -->
+    <script src="app.js" defer></script>
+</body>
+</html>
