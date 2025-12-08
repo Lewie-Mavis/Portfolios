@@ -1,0 +1,22 @@
+/* Client-specific styles */
+.patient-interface {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.admin-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}

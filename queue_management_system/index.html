@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ✅ Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediQueue Pro - Advanced Hospital Queue Management System</title>
+    <meta name="description" content="MediQueue Pro is an advanced hospital queue management system designed to streamline patient flow, reduce waiting times, and enhance healthcare efficiency.">
+    <meta name="keywords" content="hospital queue management system, MediQueue Pro, patient management, healthcare software, hospital software, hospital automation, medical IT systems, clinic queue system, hospital waiting system, queue management Kenya, healthcare technology">
+    <meta name="author" content="Lewie Mavis">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2563eb">
+
+    <!-- ✅ Open Graph (for social media preview) -->
+    <meta property="og:title" content="MediQueue Pro - Advanced Hospital Queue Management System">
+    <meta property="og:description" content="Streamline hospital operations and enhance patient experience with MediQueue Pro – the intelligent queue management system for modern healthcare.">
+    <meta property="og:image" content="https://yourdomain.com/images/mediqueue-preview.jpg"> <!-- replace with your preview image -->
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta property="og:type" content="website">
+
+    <!-- ✅ Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MediQueue Pro - Advanced Hospital Queue Management System">
+    <meta name="twitter:description" content="Enhance hospital efficiency and improve patient satisfaction with MediQueue Pro, the intelligent queue management system for healthcare institutions.">
+    <meta name="twitter:image" content="https://yourdomain.com/images/mediqueue-preview.jpg"> <!-- replace with your preview image -->
+
+  <!-- ✅ FAVICON -->
+  <link rel="icon" href="images/icon.png" type="image/png">
+
+    <!-- ✅ External Resources -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	
+	  	  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+</head>
+<body>
+<!-- Header -->
+<header id="header">
+    <div class="container">
+        <div class="header-content">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-hospital-alt"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>MediQueue <span>Pro</span></h1>
+                    <span>Premium Hospital Queue Management</span>
+                </div>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#payment" class="nav-link">Payment Options</a>
+                <a href="#roi" class="nav-link">ROI</a>
+                <a href="#footer" class="nav-link">Contact</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <a href="#features" class="btn btn-outline">Modules</a>
+                <a href="#pricing" class="btn btn-primary">Get Started</a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+        <div class="mobile-menu-logo">
+            <div class="logo-icon">
+                <i class="fas fa-hospital-alt"></i>
+            </div>
+            <div class="mobile-menu-logo-text">
+                <h2>MediQueue <span>Pro</span></h2>
+                <span>Premium Queue Management</span>
+            </div>
+        </div>
+        <button class="mobile-menu-close" id="mobileMenuClose">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    
+    <nav class="mobile-nav">
+        <ul class="mobile-nav-links">
+            <li>
+                <a href="#features" class="mobile-nav-link" data-section="features">
+                    <i class="fas fa-star"></i>
+                    Features
+                </a>
+            </li>
+            <li>
+                <a href="#pricing" class="mobile-nav-link" data-section="pricing">
+                    <i class="fas fa-tag"></i>
+                    Pricing
+                </a>
+            </li>
+            <li>
+                <a href="#payment" class="mobile-nav-link" data-section="payment">
+                    <i class="fas fa-credit-card"></i>
+                    Payment Options
+                </a>
+            </li>
+            <li>
+                <a href="#roi" class="mobile-nav-link" data-section="roi">
+                    <i class="fas fa-chart-line"></i>
+                    ROI
+                </a>
+            </li>
+            <li>
+                <a href="#footer" class="mobile-nav-link" data-section="contact">
+                    <i class="fas fa-envelope"></i>
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+    <div class="mobile-menu-footer">
+        <div class="mobile-menu-actions">
+            <a href="#features" class="btn btn-outline">
+                <i class="fas fa-cube"></i> View Modules
+            </a>
+            <a href="#pricing" class="btn btn-primary">
+                <i class="fas fa-rocket"></i> Get Started
+            </a>
+        </div>
+        
+        <div class="mobile-contact-info">
+            <div class="mobile-contact-item">
+                <i class="fas fa-phone"></i>
+                <span>+254 711 190 029</span>
+            </div>
+            <div class="mobile-contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>lewielom@gmail.com</span>
+            </div>
+            <div class="mobile-contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Upperhill, Nairobi</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <i class="fas fa-crown"></i> Premium Healthcare Solution
+                    </div>
+                    <h1 class="hero-title">Enterprise-Grade Hospital <span>Queue Management</span></h1>
+                    <p class="hero-description">MediQueue Pro Premium delivers unmatched efficiency with 90% reduced wait times, 90% staff productivity improvement, and enterprise-level security for healthcare institutions.</p>
+                    
+                    <div class="hero-actions">
+                        <a href="#pricing" class="btn btn-primary btn-lg">
+                            <i class="fas fa-crown"></i> View Premium Plans
+                        </a>
+                        <a href="#footer" class="btn btn-outline btn-lg">
+                            <i class="fas fa-calendar-check"></i> Book Enterprise Demo
+                        </a>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">90%</div>
+                            <div class="stat-label">Reduced Wait Times</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">90%</div>
+                            <div class="stat-label">Staff Productivity</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Patient Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <img src="images/hospital.avif" alt="MediQueue Pro Dashboard" class="dashboard-preview">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Enterprise Features</div>
+                <h2 class="section-title">Premium Healthcare Queue Management</h2>
+                <p class="section-description">MediQueue Pro Premium combines cutting-edge technology with enterprise-grade security and support for mission-critical healthcare operations.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon blue">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Advanced Digital Ticketing</h3>
+                    <p class="feature-description">Premium digital queue system with custom branding, multi-language support, and advanced patient engagement features.</p>
+
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon green">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3 class="feature-title">Enterprise Voice System</h3>
+                    <p class="feature-description">Multi-zone audio management with emergency broadcast capabilities and voice customization options.</p>
+
+                </div>
+                
+                
+                <div class="feature-card">
+                    <div class="feature-icon purple">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3 class="feature-title">Multi-Branch Enterprise</h3>
+                    <p class="feature-description">Centralized management for hospital chains with cross-facility reporting and consolidated analytics.</p>
+
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon blue">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Enterprise Security</h3>
+                    <p class="feature-description">Healthcare-grade security with data encryption, compliance protocols, and audit trail management.</p>
+
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon green">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="feature-title">Premium Support</h3>
+                    <p class="feature-description">24/7 dedicated support with guaranteed SLAs, strategic business reviews, and vendor management.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Premium Pricing</div>
+                <h2 class="section-title">Enterprise-Grade Investment Plans</h2>
+                <p class="section-description">Premium pricing reflects our enterprise-level features, enhanced security, and dedicated support services.</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Silver Package</h3>
+                        <p class="pricing-description">For small to medium healthcare facilities</p>
+                    </div>
+                    
+                    <div class="pricing-price">
+                        <span class="price-currency">KES</span>
+                        <span class="price-amount">2,225,000</span>
+                    </div>
+                    
+                    <div class="pricing-features">
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>All 5 Premium Software Modules</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Basic Hardware Package</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Standard Implementation</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>1 Year Basic Support</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Documentation & Training</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>30-day Money-back Guarantee</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="btn btn-outline">Get Started</a>
+                </div>
+                
+                <div class="pricing-card popular">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Gold Package</h3>
+                        <p class="pricing-description">Ideal for medium to large hospitals</p>
+                    </div>
+                    
+                    <div class="pricing-price">
+                        <span class="price-currency">KES</span>
+                        <span class="price-amount">3,135,000</span>
+                    </div>
+                    
+                    <div class="pricing-features">
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>All 5 Premium Software Modules</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Advanced Hardware Package</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Premium Implementation</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>2 Years Premium Support</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Multi-branch Management</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Priority Feature Development</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Dedicated Account Manager</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Extended Warranty</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Platinum Package</h3>
+                        <p class="pricing-description">For enterprise hospital chains</p>
+                    </div>
+                    
+                    <div class="pricing-price">
+                        <span class="price-currency">KES</span>
+                        <span class="price-amount">4,155,000</span>
+                    </div>
+                    
+                    <div class="pricing-features">
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>All 5 Premium Software Modules</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Enterprise Hardware Package</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Premium Implementation</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>3 Years Enterprise Support</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Custom Features Development</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Unlimited Training Sessions</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>24/7 Dedicated Support</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Strategic Partnership Benefits</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="btn btn-outline">Contact Enterprise Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Options Section -->
+    <section class="section payment-options" id="payment">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Flexible Payment</div>
+                <h2 class="section-title">Choose Your Payment Plan</h2>
+                <p class="section-description">We offer flexible payment options to accommodate your institution's budget and financial planning.</p>
+            </div>
+            
+            <div class="payment-cards">
+                <div class="payment-card">
+                    <div class="payment-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3 class="payment-title">Full Payment</h3>
+                    <p class="payment-description">Pay the full amount upfront and enjoy exclusive benefits.</p>
+                    <ul class="payment-benefits">
+                        <li><i class="fas fa-check"></i> 5% discount on total package</li>
+                        <li><i class="fas fa-check"></i> Priority implementation scheduling</li>
+                        <li><i class="fas fa-check"></i> 3 extra months of free support</li>
+                        <li><i class="fas fa-check"></i> Extended warranty coverage</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Choose This Option</a>
+                </div>
+                
+                <div class="payment-card">
+                    <div class="payment-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3 class="payment-title">50-50 Payment</h3>
+                    <p class="payment-description">Split your payment into two convenient installments.</p>
+                    <ul class="payment-benefits">
+                        <li><i class="fas fa-check"></i> 50% upfront, 50% after installation</li>
+                        <li><i class="fas fa-check"></i> Standard implementation timeline</li>
+                        <li><i class="fas fa-check"></i> Regular support terms apply</li>
+                        <li><i class="fas fa-check"></i> Flexible payment terms available</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Choose This Option</a>
+                </div>
+                
+                <div class="payment-card">
+                    <div class="payment-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3 class="payment-title">Quarterly Installments</h3>
+                    <p class="payment-description">Spread your investment over multiple payments.</p>
+                    <ul class="payment-benefits">
+                        <li><i class="fas fa-check"></i> 30% upfront, then 4 quarterly payments</li>
+                        <li><i class="fas fa-check"></i> 5% administrative fee applies</li>
+                        <li><i class="fas fa-check"></i> Suitable for budget-conscious facilities</li>
+                        <li><i class="fas fa-check"></i> Credit facilities available</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Choose This Option</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Section -->
+    <section class="section roi-section" id="roi">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Return on Investment</div>
+                <h2 class="section-title">Proven Financial Benefits</h2>
+                <p class="section-description">MediQueue Pro Premium delivers substantial ROI through operational efficiency and enhanced patient experience.</p>
+            </div>
+            
+            <div class="roi-grid">
+                <div class="roi-card">
+                    <div class="roi-number">KES 2,736,000</div>
+                    <div class="roi-label">Annual Savings</div>
+                </div>
+                <div class="roi-card">
+                    <div class="roi-number">10 Months</div>
+                    <div class="roi-label">Payback Period</div>
+                </div>
+                <div class="roi-card">
+                    <div class="roi-number">90%</div>
+                    <div class="roi-label">Wait Time Reduction</div>
+                </div>
+                <div class="roi-card">
+                    <div class="roi-number">90%</div>
+                    <div class="roi-label">Staff Productivity</div>
+                </div>
+            </div>
+            
+            <div class="cta-actions" style="justify-content: center; margin-top: 50px;">
+                <a href="#contact" class="btn btn-primary btn-lg">
+                    <i class="fas fa-calculator"></i> Calculate Your ROI
+                </a>
+                <a href="#footer" class="btn btn-outline btn-lg">
+                    <i class="fas fa-chart-line"></i> Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="contact">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready for Enterprise-Grade Queue Management?</h2>
+                <p class="cta-description">Join leading healthcare institutions that have transformed patient flow with MediQueue Pro Premium.</p>
+                
+                <div class="cta-actions">
+                    <a href="#footer" class="btn btn-light btn-lg">
+                        <i class="fas fa-crown"></i> Schedule Premium Demo
+                    </a>
+                    <a href="documents/MediQueue_Pro_Cost.pdf" class="btn btn-transparent btn-lg" target="blank">
+                        <i class="fas fa-file-invoice-dollar"></i> Download Pricing PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <a href="#" class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-hospital-alt"></i>
+                        </div>
+                        <div class="footer-logo-text">
+                            <h2>MediQueue <span>Pro</span></h2>
+                            <span>Premium Queue Management</span>
+                        </div>
+                    </a>
+                    <p class="footer-description">Enterprise-grade hospital queue management solution delivering unmatched efficiency, security, and patient satisfaction since 2020.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Solutions</h3>
+                    <ul class="footer-links">
+                        <li><a href="#features">Premium Features</a></li>
+                        <li><a href="#pricing">Enterprise Pricing</a></li>
+                        <li><a href="#payment">Payment Plans</a></li>
+                        <li><a href="#roi">ROI Calculator</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Leadership</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Upperhill, Nairobi, Kenya</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+254 711 190 029</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>lewielom@gmail.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Fri: 8:00 AM - 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2025 MediQueue Pro Premium. All rights reserved.
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+	<script>
+// Mobile Menu Functionality - COMPLETE FIXED VERSION
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('🚀 DOM loaded - initializing mobile menu');
+    
+    // Get all elements
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenuClose = document.getElementById('mobileMenuClose');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    // Debug logging
+    console.log('📱 Mobile Menu Elements:', {
+        mobileMenuBtn: mobileMenuBtn ? '✅ Found' : '❌ NOT FOUND',
+        mobileMenuClose: mobileMenuClose ? '✅ Found' : '❌ NOT FOUND',
+        mobileMenu: mobileMenu ? '✅ Found' : '❌ NOT FOUND',
+        mobileMenuOverlay: mobileMenuOverlay ? '✅ Found' : '❌ NOT FOUND',
+        mobileNavLinks: mobileNavLinks.length + ' links found'
+    });
+
+    // Open mobile menu
+    function openMobileMenu() {
+        console.log('📱 OPENING mobile menu');
+        if (mobileMenu) {
+            mobileMenu.classList.add('active');
+            console.log('✅ Added active class to mobile menu');
+        }
+        if (mobileMenuOverlay) {
+            mobileMenuOverlay.classList.add('active');
+            console.log('✅ Added active class to overlay');
+        }
+        document.body.classList.add('menu-open');
+        console.log('✅ Added menu-open class to body');
+    }
+
+    // Close mobile menu
+    function closeMobileMenu() {
+        console.log('❌ CLOSING mobile menu');
+        if (mobileMenu) {
+            mobileMenu.classList.remove('active');
+            console.log('✅ Removed active class from mobile menu');
+        }
+        if (mobileMenuOverlay) {
+            mobileMenuOverlay.classList.remove('active');
+            console.log('✅ Removed active class from overlay');
+        }
+        document.body.classList.remove('menu-open');
+        console.log('✅ Removed menu-open class from body');
+    }
+
+    // Event listeners with enhanced error handling
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            openMobileMenu();
+        });
+        console.log('✅ Mobile menu button event listener added');
+    } else {
+        console.error('❌ Mobile menu button NOT FOUND - check HTML ID');
+    }
+
+    if (mobileMenuClose) {
+        mobileMenuClose.addEventListener('click', function(e) {
+            e.stopPropagation();
+            closeMobileMenu();
+        });
+        console.log('✅ Mobile menu close button event listener added');
+    } else {
+        console.error('❌ Mobile menu close button NOT FOUND - check HTML ID');
+    }
+
+    if (mobileMenuOverlay) {
+        mobileMenuOverlay.addEventListener('click', function(e) {
+            if (e.target === mobileMenuOverlay) {
+                closeMobileMenu();
+            }
+        });
+        console.log('✅ Mobile menu overlay event listener added');
+    } else {
+        console.error('❌ Mobile menu overlay NOT FOUND - check HTML ID');
+    }
+
+    // Close menu when clicking on links
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.stopPropagation();
+            closeMobileMenu();
+        });
+    });
+    console.log('✅ Mobile nav links event listeners added');
+
+    // Close with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+            closeMobileMenu();
+        }
+    });
+
+    // Header scroll effect
+    window.addEventListener('scroll', function() {
+        const header = document.getElementById('header');
+        if (header) {
+            if (window.scrollY > 50) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        }
+    });
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                closeMobileMenu(); // Close menu when navigating
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Animation on scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements for animation
+    document.querySelectorAll('.feature-card, .pricing-card, .payment-card, .roi-card, .section-header').forEach(el => {
+        observer.observe(el);
+    });
+
+    console.log('🎉 MediQueue Pro JavaScript initialized successfully!');
+    console.log('👉 Test: Click the hamburger menu icon to open, then click the X to close');
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ✅ BASIC META TAGS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediQueue Pro - Smart Hospital Queue Management System</title>
+  <meta name="description" content="MediQueue Pro is an intelligent hospital queue management system that streamlines patient flow, reduces waiting times, and enhances healthcare efficiency. Built with modern web technologies for hospitals, clinics, and healthcare centers.">
+  <meta name="author" content="Lewie Mavis | Lewie Mavis Software Solutions">
+  <meta name="robots" content="index, follow">
+
+  <!-- ✅ FAVICON -->
+  <link rel="icon" href="images/icon.png" type="image/png">
+
+  <!-- ✅ KEYWORDS FOR SEO -->
+  <meta name="keywords" content="queue management system, hospital queue system, MediQueue Pro, hospital software, healthcare management, clinic queue app, hospital ticket system, patient queue management, digital healthcare solutions, healthcare IT, medical queue display, appointment management, hospital automation, smart queue, clinic queue management, electronic queue, hospital workflow, healthcare software, medical technology, hospital efficiency software, hospital IT system, patient flow management, hospital kiosk system, healthtech Kenya, Lewie Mavis Software Solutions">
+
+  <!-- ✅ OPEN GRAPH (for social sharing) -->
+  <meta property="og:title" content="MediQueue Pro - Hospital Queue Management System">
+  <meta property="og:description" content="MediQueue Pro optimizes patient flow and reduces hospital waiting times with an intelligent, web-based queue management solution.">
+  <meta property="og:image" content="https://yourdomain.com/images/mediqueue-preview.jpg">
+  <meta property="og:url" content="https://yourdomain.com/mediqueue-pro">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MediQueue Pro">
+
+  <!-- ✅ TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MediQueue Pro - Smart Hospital Queue Management System">
+  <meta name="twitter:description" content="Streamline hospital operations and patient flow with MediQueue Pro, a smart queue management solution for modern healthcare facilities.">
+  <meta name="twitter:image" content="https://yourdomain.com/images/mediqueue-preview.jpg">
+
+  <!-- ✅ CANONICAL LINK -->
+  <link rel="canonical" href="https://yourdomain.com/mediqueue-pro">
+
+  <!-- ✅ STYLESHEETS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  	  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/system_styles.css">
+</head>
+<body>
+      <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-hospital-alt"></i>
+                    <div>
+                        <h1>MediQueue <span>Pro</span></h1>
+                        <p>Advanced Hospital Queue Management</p>
+                    </div>
+                </div>
+                <div class="current-time" id="currentTime">
+                    <!-- Current time will be inserted by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="nav-tabs">
+            <div class="tab active" data-tab="patient">Patient Interface</div>
+            <div class="tab" data-tab="admin">Admin Dashboard</div>
+        </div>
+
+        <!-- Patient Interface -->
+        <div class="tab-content active" id="patient-tab">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Get Your Queue Ticket</h2>
+                </div>
+                <div class="card-body">
+                    <p>Welcome to City General Hospital. Please click the button below to get your queue ticket.</p>
+                    <div class="ticket-display" id="ticketDisplay">
+                        <div class="hospital-name">City General Hospital</div>
+                        <div class="ticket-number" id="displayTicketNumber">---</div>
+                        <div class="ticket-info">
+                            <div class="info-item">
+                                <span class="info-label">Date</span>
+                                <span class="info-value" id="displayDate">--/--/----</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Time</span>
+                                <span class="info-value" id="displayTime">--:--</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Queue</span>
+                                <span class="info-value" id="displayQueue">--</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" id="getTicketBtn">
+                            <i class="fas fa-ticket-alt"></i> Get Ticket
+                        </button>
+                        <button class="btn btn-secondary" id="downloadTicketBtn" disabled>
+                            <i class="fas fa-download"></i> Print Ticket
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Current Queue Status</h2>
+                </div>
+                <div class="card-body">
+<div class="counter-display">
+    <div class="counter">
+        <div class="counter-label">Last Called</div>
+        <div class="counter-number" id="counter1">---</div>
+        <div class="counter-label">Most Recent</div>
+    </div>
+    <div class="counter">
+        <div class="counter-label">Previously Called</div>
+        <div class="counter-number" id="counter2">---</div>
+        <div class="counter-label">Second Recent</div>
+    </div>
+    <div class="counter">
+        <div class="counter-label">Earlier Called</div>
+        <div class="counter-number" id="counter3">---</div>
+        <div class="counter-label">Third Recent</div>
+    </div>
+</div>
+                </div>
+            </div>
+
+            <div class="announcement-box">
+                <div class="announcement-text" id="announcementText">
+                    Welcome to City General Hospital. Please wait for your ticket to be called.
+                </div>
+            </div>
+        </div>
+
+        <!-- Admin Dashboard -->
+        <div class="tab-content" id="admin-tab">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Queue Management</h2>
+                    <button class="btn btn-danger" id="resetQueueBtn">
+                        <i class="fas fa-redo"></i> Reset Queue
+                    </button>
+                </div>
+                <div class="card-body">
+                    <div class="queue-list" id="queueList">
+                        <!-- Queue items will be inserted by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Call Next Patient</h2>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label class="form-label">Select Counter/Room</label>
+                        <select class="form-control" id="counterSelect">
+                            <option value="Health Information">Health Information</option>
+                            <option value="Cash Office">Cash Office</option>
+                            <option value="Triage">Triage</option>
+                            <option value="Laboratory">Laboratory</option>
+                            <option value="Pharmacy">Pharmacy</option>
+                            <option value="Radiology">Radiology</option>
+                            <option value="Doctor's Room 1">Doctor's Room 1</option>
+                            <option value="Doctor's Room 2">Doctor's Room 2</option>
+                            <option value="Doctor's Room 3">Doctor's Room 3</option>
+                            <option value="Doctor's Room 4">Doctor's Room 4</option>
+                            <option value="Doctor's Room 5">Doctor's Room 5</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" id="callNextBtn">
+                        <i class="fas fa-bullhorn"></i> Call Next Patient
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Manual Ticket Call</h2>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label class="form-label">Enter Ticket Number</label>
+                        <input type="text" class="form-control" id="manualTicketInput" placeholder="e.g., A001">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Select Counter/Room</label>
+                        <select class="form-control" id="manualCounterSelect">
+                            <option value="Health Information">Health Information</option>
+                            <option value="Cash Office">Cash Office</option>
+                            <option value="Triage">Triage</option>
+                            <option value="Laboratory">Laboratory</option>
+                            <option value="Pharmacy">Pharmacy</option>
+                            <option value="Radiology">Radiology</option>
+                            <option value="Doctor's Room 1">Doctor's Room 1</option>
+                            <option value="Doctor's Room 2">Doctor's Room 2</option>
+                            <option value="Doctor's Room 3">Doctor's Room 3</option>
+                            <option value="Doctor's Room 4">Doctor's Room 4</option>
+                            <option value="Doctor's Room 5">Doctor's Room 5</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-secondary" id="callManualBtn">
+                        <i class="fas fa-bullhorn"></i> Call This Ticket
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Voice Announcement</h2>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label class="form-label">Announcement Text</label>
+                        <textarea class="form-control" id="announcementInput" rows="3" placeholder="Type your announcement here..."></textarea>
+                    </div>
+                    <button class="btn btn-accent" id="makeAnnouncementBtn">
+                        <i class="fas fa-volume-up"></i> Make Announcement
+                    </button>
+                </div>
+            </div>
+			
+			
+				<!-- Add this to the Admin Dashboard section -->
+<div class="card">
+    <div class="card-header">
+        <h2 class="card-title">Daily Reports & Analytics</h2>
+    </div>
+    <div class="card-body">
+        <div class="form-group">
+            <label class="form-label">Select Date for Report</label>
+            <input type="date" class="form-control" id="reportDate">
+        </div>
+        
+        <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0;">
+            <div class="stat-card" style="background: #e8f5e9; padding: 15px; border-radius: 8px; text-align: center;">
+                <div class="stat-number" id="totalTickets">0</div>
+                <div class="stat-label">Total Tickets</div>
+            </div>
+            <div class="stat-card" style="background: #fff8e1; padding: 15px; border-radius: 8px; text-align: center;">
+                <div class="stat-number" id="calledTickets">0</div>
+                <div class="stat-label">Called Tickets</div>
+            </div>
+            <div class="stat-card" style="background: #e3f2fd; padding: 15px; border-radius: 8px; text-align: center;">
+                <div class="stat-number" id="waitingTickets">0</div>
+                <div class="stat-label">Waiting Tickets</div>
+            </div>
+            <div class="stat-card" style="background: #fce4ec; padding: 15px; border-radius: 8px; text-align: center;">
+                <div class="stat-number" id="avgWaitTime">0 min</div>
+                <div class="stat-label">Avg Wait Time</div>
+            </div>
+        </div>
+        
+ <div class="action-buttons">
+    <button class="btn btn-primary" id="generateReportBtn">
+        <i class="fas fa-chart-bar"></i> Generate Daily Report
+    </button>
+    <button class="btn btn-secondary" id="printReportBtn">
+        <i class="fas fa-download"></i> Print Report
+    </button>
+    <button class="btn btn-accent" id="viewAnalyticsBtn">
+        <i class="fas fa-chart-pie"></i> View Analytics
+    </button>
+    <button class="btn btn-info" id="printAnalyticsBtn">
+        <i class="fas fa-print"></i> Print Analytics
+    </button>
+</div>
+        
+        <div id="reportResults" style="margin-top: 20px; display: none;">
+            <h4>Report Summary</h4>
+            <div id="reportSummary"></div>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+	
+
+<footer>
+                <div class="coontainer">
+                    &copy; 2025 MediQueue Pro. All rights reserved.
+                </div>
+</footer>
+
+
+
+  <script src="js/system_script.js"></script>
+</body>
+</html>
