@@ -1,0 +1,21 @@
+{
+  "name": "Summit Media Africa",
+  "short_name": "Summit Media",
+  "description": "Media strategy, buying and analytics experts in East Africa",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FEF9F0",
+  "theme_color": "#E67E22",
+  "icons": [
+    {
+      "src": "images/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
