@@ -1,3 +1,8 @@
+
+
+<?php
+require_once 'config/db_config.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -275,6 +280,7 @@
     </div>
   </div>
 </section>
+
 
 
 <!-- About Section: image left, text right, slide-left animation -->
@@ -684,6 +690,7 @@
 
 
 <!-- Blog Section (slide-bottom) -->
+<!-- Blog Section (slide-bottom) -->
 <section id="blog" class="blog-section slide-animate slide-bottom">
   <div class="container">
     <div class="section-header">
@@ -691,55 +698,34 @@
       <h2><span class="first-name">From The</span> <span class="last-name">Blog</span></h2>
       <p>Marketing tips, strategies, and insights to grow your business</p>
     </div>
+    
     <div class="blog-grid">
+      <?php
+      // Fetch latest 3 blog posts for homepage
+      $home_query = "SELECT * FROM blog_posts WHERE status = 'published' ORDER BY created_at DESC LIMIT 3";
+      $home_result = $conn->query($home_query);
+      while ($post = $home_result->fetch_assoc()):
+      ?>
       <div class="blog-card">
         <div class="blog-image">
-          <img src="https://placehold.co/400x250/200F3B/white?text=Marketing+Strategy" alt="Marketing Strategy">
-          <div class="blog-category">Marketing</div>
+          <img src="<?php echo htmlspecialchars($post['image_url'] ?: 'https://placehold.co/400x250/200F3B/white?text=' . urlencode($post['category'])); ?>" alt="<?php echo htmlspecialchars($post['title']); ?>">
+          <div class="blog-category"><?php echo htmlspecialchars($post['category']); ?></div>
         </div>
         <div class="blog-content">
           <div class="blog-meta">
-            <span><i class="far fa-calendar-alt"></i> Jan 15, 2025</span>
-            <span><i class="far fa-clock"></i> 5 min read</span>
+            <span><i class="far fa-calendar-alt"></i> <?php echo date('M d, Y', strtotime($post['created_at'])); ?></span>
+            <span><i class="far fa-clock"></i> <?php echo ceil(str_word_count(strip_tags($post['content'])) / 200); ?> min read</span>
           </div>
-          <h3>10 Proven Strategies to Boost Your Social Media Engagement</h3>
-          <p>Discover actionable tips to increase engagement and grow your online presence organically.</p>
-          <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          <h3><?php echo htmlspecialchars($post['title']); ?></h3>
+          <p><?php echo htmlspecialchars(substr(strip_tags($post['excerpt'] ?: $post['content']), 0, 120)) . '...'; ?></p>
+          <a href="single-blog.php?slug=<?php echo $post['slug']; ?>" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
-      <div class="blog-card">
-        <div class="blog-image">
-          <img src="https://placehold.co/400x250/161E85/white?text=Customer+Experience" alt="Customer Experience">
-          <div class="blog-category">Customer Experience</div>
-        </div>
-        <div class="blog-content">
-          <div class="blog-meta">
-            <span><i class="far fa-calendar-alt"></i> Jan 8, 2025</span>
-            <span><i class="far fa-clock"></i> 4 min read</span>
-          </div>
-          <h3>How to Build a Customer Experience That Drives Loyalty</h3>
-          <p>Learn how exceptional customer service can turn one-time buyers into lifelong advocates.</p>
-          <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-      <div class="blog-card">
-        <div class="blog-image">
-          <img src="https://placehold.co/400x250/D1A52A/white?text=Productivity" alt="Productivity Tips">
-          <div class="blog-category">Productivity</div>
-        </div>
-        <div class="blog-content">
-          <div class="blog-meta">
-            <span><i class="far fa-calendar-alt"></i> Dec 20, 2024</span>
-            <span><i class="far fa-clock"></i> 6 min read</span>
-          </div>
-          <h3>5 Systems Every Entrepreneur Needs to Reclaim 10+ Hours Weekly</h3>
-          <p>Streamline your operations with these essential systems for business efficiency.</p>
-          <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
+      <?php endwhile; ?>
     </div>
+    
     <div class="blog-footer">
-      <a href="#" class="btn btn-outline">View All Articles <i class="fas fa-arrow-right"></i></a>
+      <a href="blog.php" class="btn btn-outline">View All Articles <i class="fas fa-arrow-right"></i></a>
     </div>
   </div>
 </section>
@@ -923,6 +909,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#contact">Contact</a></li>
+		  <li><a href="admin/login.php">Login</a></li>
         </ul>
       </div>
       <div class="footer-social">

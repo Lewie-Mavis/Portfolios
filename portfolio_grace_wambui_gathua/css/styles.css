@@ -1090,6 +1090,53 @@ main {
   }
 }
 
+
+
+
+
+/* Make service details clickable - No Underline */
+.service-detail {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 12px 24px;
+  border-radius: 60px;
+  font-weight: 500;
+  text-decoration: none !important;
+  color: var(--primary-deep);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  border-left: 4px solid var(--primary-gold);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.service-detail:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary-gold);
+  box-shadow: 0 8px 20px rgba(209, 165, 42, 0.15);
+  background: linear-gradient(135deg, white 0%, rgba(209, 165, 42, 0.05) 100%);
+  text-decoration: none !important;
+  color: var(--primary-deep);
+}
+
+.service-detail:focus,
+.service-detail:active,
+.service-detail:visited {
+  text-decoration: none !important;
+}
+
+.service-detail i {
+  transition: transform 0.3s ease;
+}
+
+.service-detail:hover i {
+  transform: scale(1.1);
+}
+
+
+
+
 /* ===== NUMBERS SECTION - NAVY BLUE WITH GOLD TEXT ===== */
 .numbers-section {
   padding: 100px 0;
